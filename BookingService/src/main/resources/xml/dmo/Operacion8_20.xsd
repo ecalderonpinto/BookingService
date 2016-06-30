@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp1 U (http://www.xmlspy.com) by any (Ru-Board) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dmo="http://www.sepblac.es/DMO" targetNamespace="http://www.sepblac.es/DMO">
+	<xs:include schemaLocation="dmo_tiposdatos.xsd" id="tiposdatos"/>
+	<xs:include schemaLocation="dmo_estructuras.xsd" id="estructuras"/>
+	<xs:element name="Operacion8_20">
+		<xs:annotation>
+			<xs:documentation>Estructura de la Operacion de tipo 8 al 20</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Operacion" type="dmo:CABECERAOP"/>
+				<xs:element name="Intervinientes">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PersonaFisica" type="dmo:PERSONAFIS" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="Sociedad" type="dmo:PERSONAJUR" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

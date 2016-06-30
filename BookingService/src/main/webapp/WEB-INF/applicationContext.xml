@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<context:annotation-config />
+
+	<context:component-scan base-package="com" />
+
+	<bean id="errorDAO" class="com.entities.dao.common.ErrorDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="userControlDAO" class="com.entities.dao.usermanager.UserControlDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="userDAO" class="com.entities.dao.usermanager.UserDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="userRolDAO" class="com.entities.dao.usermanager.UserRolDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="fileColumDAO" class="com.entities.dao.loader.FileColumDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="fileColumListDAO" class="com.entities.dao.loader.FileColumListDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="fileConfigDAO" class="com.entities.dao.loader.FileConfigDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="loadErrorDAO" class="com.entities.dao.loader.LoadErrorDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="loadFileDAO" class="com.entities.dao.loader.LoadFileDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="loadRawDAO" class="com.entities.dao.loader.LoadRawDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="loadRawDataDAO" class="com.entities.dao.loader.LoadRawDataDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="companyDAO" class="com.entities.dao.reportingtool.CompanyDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="departmentDAO" class="com.entities.dao.reportingtool.DepartmentDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="fundDAO" class="com.entities.dao.reportingtool.FundDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="fundGroupDAO" class="com.entities.dao.reportingtool.FundGroupDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="reportCatalogDAO" class="com.entities.dao.reportingtool.ReportCatalogDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="reportCustomDAO" class="com.entities.dao.reportingtool.ReportCustomDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="reportDataDAO" class="com.entities.dao.reportingtool.ReportDataDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="reportDataErrorDAO" class="com.entities.dao.reportingtool.ReportDataErrorDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="reportDataLongDAO" class="com.entities.dao.reportingtool.ReportDataLongDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="reportErrorDAO" class="com.entities.dao.reportingtool.ReportErrorDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="reportGroupDAO" class="com.entities.dao.reportingtool.ReportGroupDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="reportExecutionDAO" class="com.entities.dao.reportingtool.ReportExecutionDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="reportFieldDAO" class="com.entities.dao.reportingtool.ReportFieldDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="reportFieldListDAO" class="com.entities.dao.reportingtool.ReportFieldListDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="reportSemanticDAO" class="com.entities.dao.reportingtool.ReportSemanticDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>/WEB-INF/db.properties</value>
+		</property>
+	</bean>
+
+	<!-- org.apache.commons.dbcp.BasicDataSource -->
+	<bean id="dataSource" class="${db.dataSource}">
+		<property name="driverClassName" value="${db.driverClassName}"></property>
+		<property name="url" value="${db.url}" />
+		<property name="username" value="${db.username}"></property>
+		<property name="password" value="${db.password}"></property>
+		<!-- <property name="hibernate.connection.autocommit" value="false"></property> -->
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.entities.entity.common.Error</value>
+				<value>com.entities.entity.loader.FileColum</value>
+				<value>com.entities.entity.loader.FileColumList</value>
+				<value>com.entities.entity.loader.FileConfig</value>
+				<value>com.entities.entity.loader.LoadError</value>
+				<value>com.entities.entity.loader.LoadFile</value>
+				<value>com.entities.entity.loader.LoadRaw</value>
+				<value>com.entities.entity.loader.LoadRawData</value>
+				<value>com.entities.entity.reportingtool.Company</value>
+				<value>com.entities.entity.reportingtool.Fund</value>
+				<value>com.entities.entity.reportingtool.FundGroup</value>
+				<value>com.entities.entity.reportingtool.Department</value>
+				<value>com.entities.entity.reportingtool.ReportCatalog</value>
+				<value>com.entities.entity.reportingtool.ReportCustom</value>
+				<value>com.entities.entity.reportingtool.ReportData</value>
+				<value>com.entities.entity.reportingtool.ReportDataError</value>
+				<value>com.entities.entity.reportingtool.ReportDataLong</value>
+				<value>com.entities.entity.reportingtool.ReportError</value>
+				<value>com.entities.entity.reportingtool.ReportGroup</value>
+				<value>com.entities.entity.reportingtool.ReportExecution</value>
+				<value>com.entities.entity.reportingtool.ReportField</value>
+				<value>com.entities.entity.reportingtool.ReportFieldList</value>
+				<value>com.entities.entity.reportingtool.ReportSemantic</value>
+				<value>com.entities.entity.usermanager.User</value>
+				<value>com.entities.entity.usermanager.Role</value>
+				<value>com.entities.entity.usermanager.UserControl</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.hbm2ddl.auto">${db.hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.dialect">${db.hibernate.dialect}</prop>
+				<!-- <prop key="hibernate.show_sql">true</prop> -->
+				<prop key="hibernate.show_sql">${db.hibernate.show_sql}</prop>
+				<!-- to avoid boot warning of oracle driver -->
+				<prop key="hibernate.temp.use_jdbc_metadata_defaults">false</prop>
+			</props>
+		</property>
+	</bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+
+
+	<!-- <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager"> 
+		<property name="sessionFactory" ref="sessionFactory" /> </bean> <tx:annotation-driven 
+		transaction-manager="transactionManager" proxy-target-class="true" /> -->
+
+</beans>

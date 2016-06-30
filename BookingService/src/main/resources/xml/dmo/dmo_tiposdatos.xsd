@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp1 U (http://www.xmlspy.com) by any (Ru-Board) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dmo="http://www.sepblac.es/DMO" targetNamespace="http://www.sepblac.es/DMO">
+	<xs:simpleType name="FECHA">
+		<xs:annotation>
+			<xs:documentation>Estructura generica de fecha - personas</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-2][0-9]|[3][0-1])/([0][0-9]|[1][0-2])/(19[0-9]{2}|20[0-9]{2})"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FECHA_GEN">
+		<xs:annotation>
+			<xs:documentation>Estructura generica de fecha</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(10|20|[0-2][1-9]|[3][0-1])/([0][1-9]|[1][0-2])/(19[0-9]{2}|20[0-9]{2})"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="HORA">
+		<xs:annotation>
+			<xs:documentation>Estructura generica de hora</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-1][0-9]|[2][0-3]):([0-5][0-9]):([0-5][0-9])"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

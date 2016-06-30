@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp1 U (http://www.xmlspy.com) by any (Ru-Board) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dmo="http://www.sepblac.es/DMO" targetNamespace="http://www.sepblac.es/DMO">
+	<xs:include schemaLocation="DeclaracionMovimientos.xsd" id="tiposdatos"/>
+	<xs:include schemaLocation="DeclaracionNegativa.xsd"/>
+	<xs:include schemaLocation="DeclaracionPositiva.xsd"/>
+	<xs:include schemaLocation="Fraccionamiento.xsd"/>
+	<xs:element name="Declaracion">
+		<xs:annotation>
+			<xs:documentation>Declaración DMO</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="dmo:DeclaracionMovimientos"/>
+				<xs:element ref="dmo:DeclaracionNegativa"/>
+				<xs:element ref="dmo:DeclaracionPositiva"/>
+				<xs:element ref="dmo:Fraccionamiento"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

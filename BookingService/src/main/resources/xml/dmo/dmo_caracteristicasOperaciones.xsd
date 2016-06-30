@@ -1,0 +1,25 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dmo="http://www.sepblac.es/DMO" targetNamespace="http://www.sepblac.es/DMO">
+	<xs:simpleType name="CARACTERISTICAS_ENUM">
+		<xs:annotation>
+			<xs:documentation>Lista de Valores de Características de Operaciones</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="5"/>
+			<xs:enumeration value="6"/>
+			<xs:enumeration value="7"/>
+			<!--
+					Efectivo sin reflejo en cuenta - 1
+					Transferencia a países/territ. designados - 2
+					Transferencia desde países/territ. designados - 3
+					Op. con/de resident4es en países/territ. designados - 4
+					Operación con declaración S1 - 5
+					Operación sin declaración S1 - 6
+					Op. No ejecutada (doc. Insuficiente) - 7
+				-->
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

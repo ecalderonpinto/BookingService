@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp1 U (http://www.xmlspy.com) by any (Ru-Board) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dmo="http://www.sepblac.es/DMO" targetNamespace="http://www.sepblac.es/DMO">
+	<xs:include schemaLocation="dmo_tiposdatos.xsd" id="tiposdatos"/>
+	<xs:include schemaLocation="OperacionGeneral.xsd"/>
+	<xs:include schemaLocation="Operacion8_20.xsd"/>
+	<xs:include schemaLocation="Operacion23_25.xsd"/>
+	<xs:include schemaLocation="Operacion26y27.xsd"/>
+	<xs:include schemaLocation="Operacion28y29.xsd"/>
+	<xs:element name="DeclaracionPositiva">
+		<xs:annotation>
+			<xs:documentation>Estructura de una declaración  positiva</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DatosEntrada">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NombreEntidad">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="1"/>
+										<xs:maxLength value="80"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="CIFNIFEntidad">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="1"/>
+										<xs:maxLength value="15"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Representante">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="160"/>
+										<xs:minLength value="1"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="MesDeclaracion">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="7"/>
+										<xs:maxLength value="7"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="FechaDeclaracion" type="dmo:FECHA_GEN"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Operaciones" block="extension" nillable="false">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="dmo:OperacionGeneral" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element ref="dmo:Operacion8_20" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="ID" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="5"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="TYPE" type="dmo:TIPODECL_ENUM" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

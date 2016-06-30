@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp1 U (http://www.xmlspy.com) by any (Ru-Board) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dmo="http://www.sepblac.es/DMO" targetNamespace="http://www.sepblac.es/DMO">
+	<xs:include schemaLocation="dmo_tiposdatos.xsd" id="tiposdatos"/>
+	<xs:include schemaLocation="dmo_estructuras.xsd" id="estructuras"/>
+	<xs:element name="Operacion28y29">
+		<xs:annotation>
+			<xs:documentation>Estructura de la Operacion de tipo 28 y 29</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Operacion" type="dmo:CABECERAOP_S1"/>
+				<xs:element name="Intervinientes">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PersonaFisica" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="CDPERSONA">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="10"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="Nombre" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="80"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="PrimerApellido" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="40"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="SegundoApellido" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="40"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="Pais" type="dmo:PAIS_ENUM" minOccurs="0"/>
+										<xs:element name="DocIdentifsPF">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="DocIdentifPF" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:complexContent>
+																<xs:extension base="dmo:DOCIDENTIF_PF"/>
+															</xs:complexContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DomiciliosPF">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="DomicilioPF" type="dmo:DOMICILIO" minOccurs="0" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Telefonos">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Telefono" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:complexContent>
+																<xs:extension base="dmo:TELEFONO"/>
+															</xs:complexContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Relacion" type="dmo:REL_PER_CUENTA_ENUM" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Sociedad" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="CDPERSONA">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="10"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="RazonSocial">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="80"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="PaisNacionalidad" type="dmo:PAIS_ENUM" minOccurs="0"/>
+										<xs:element name="DocIdentifsPJ">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="DocIdentifPJ" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:complexContent>
+																<xs:extension base="dmo:DOCIDENTIF_PJ"/>
+															</xs:complexContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DomiciliosPJ">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="DomicilioPJ" type="dmo:DOMICILIO" minOccurs="0" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Telefonos">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Telefono" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:complexContent>
+																<xs:extension base="dmo:TELEFONO"/>
+															</xs:complexContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Relacion" type="dmo:REL_PER_CUENTA_ENUM" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

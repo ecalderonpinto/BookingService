@@ -1,0 +1,2139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp1 U (http://www.xmlspy.com) by any (Ru-Board) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dmo="http://www.sepblac.es/DMO" targetNamespace="http://www.sepblac.es/DMO">
+	<xs:simpleType name="TIPDIPF_ENUM">
+		<xs:annotation>
+			<xs:documentation>Tipos de documento identificativo - personas fisicas</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="98"/>
+			<!--1-Dni/Nif-->
+			<!--2-Nº identificación de extranjeros-->
+			<!--4-Pasaporte-->
+			<!--98-Otros docs de personas físicas-->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TIPDIPJ_ENUM">
+		<xs:annotation>
+			<xs:documentation>Tipos de documento identificativo - personas juridicas</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="20"/>
+			<xs:enumeration value="99"/>
+			<!--20-Cif-->
+			<!--99-Otros docs de personas jurídicas-->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TIPVIA_ENUM">
+		<xs:annotation>
+			<xs:documentation>Tipos de via</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="5"/>
+			<xs:enumeration value="6"/>
+			<xs:enumeration value="7"/>
+			<xs:enumeration value="8"/>
+			<xs:enumeration value="9"/>
+			<xs:enumeration value="10"/>
+			<xs:enumeration value="11"/>
+			<xs:enumeration value="32"/>
+			<xs:enumeration value="12"/>
+			<xs:enumeration value="13"/>
+			<xs:enumeration value="14"/>
+			<xs:enumeration value="15"/>
+			<xs:enumeration value="16"/>
+			<xs:enumeration value="17"/>
+			<xs:enumeration value="18"/>
+			<xs:enumeration value="19"/>
+			<xs:enumeration value="20"/>
+			<xs:enumeration value="21"/>
+			<xs:enumeration value="22"/>
+			<xs:enumeration value="23"/>
+			<xs:enumeration value="24"/>
+			<xs:enumeration value="25"/>
+			<xs:enumeration value="26"/>
+			<xs:enumeration value="27"/>
+			<xs:enumeration value="28"/>
+			<xs:enumeration value="29"/>
+			<xs:enumeration value="30"/>
+			<xs:enumeration value="31"/>
+			<!--1-Avenida-->
+			<!--2-Calle-->
+			<!--3-Carretera-->
+			<!--4-Glorieta-->
+			<!--5-Polígono-->
+			<!--6-Paseo-->
+			<!--7-Plaza-->
+			<!--8-Ronda-->
+			<!--9-Travesía-->
+			<!--10-Urbanización-->
+			<!--11-Vía-->
+			<!--32-Apartado de Correos-->
+			<!--12-Alameda,Aldea-->
+			<!--13-Apartamento-->
+			<!--14-Bloque-->
+			<!--15-Barrio-->
+			<!--16-Chalet-->
+			<!--17-Camino-->
+			<!--18-Colonia-->
+			<!--19-Caserío-->
+			<!--20-Cuesta-->
+			<!--21-Edificio-->
+			<!--22-Grupo-->
+			<!--23-Lugar-->
+			<!--24-Mercado-->
+			<!--25-Municipio-->
+			<!--26-Manzana-->
+			<!--27-Poblado-->
+			<!--28-Pasaje-->
+			<!--29-Parque-->
+			<!--30-Prolongación-->
+			<!--31-Rambla-->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TIPDOMPF_ENUM">
+		<xs:annotation>
+			<xs:documentation>Tipos de domicilio - personas fisicas</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="7"/>
+			<!-- "3 - Domicilio principal" -->
+			<!-- "7 - Otro" -->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TIPMOVMP_ENUM">
+		<xs:annotation>
+			<xs:documentation>Tipos de Movimientos de pago</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<!-- "1 - entrada en territorio nacional  -->
+			<!-- "2 - salida del territorio nacional" -->
+			<!-- "3 - movimiento por territorio nacional" -->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TIPCONCMP_ENUM">
+		<xs:annotation>
+			<xs:documentation>Tipos de Concepto</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<!-- "1 - Negocios -->
+			<!-- "2 - Turismo" -->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ADU_PF_ENUM">
+		<xs:annotation>
+			<xs:documentation>Aduana/Paso fronterizo</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="99999"/>
+			<xs:enumeration value="0001"/>
+			<xs:enumeration value="0002"/>
+			<xs:enumeration value="0003"/>
+			<xs:enumeration value="0004"/>
+			<xs:enumeration value="0005"/>
+			<xs:enumeration value="0006"/>
+			<xs:enumeration value="0007"/>
+			<xs:enumeration value="0008"/>
+			<xs:enumeration value="0009"/>
+			<xs:enumeration value="0010"/>
+			<xs:enumeration value="0011"/>
+			<xs:enumeration value="0012"/>
+			<xs:enumeration value="0013"/>
+			<xs:enumeration value="0014"/>
+			<xs:enumeration value="0015"/>
+			<xs:enumeration value="0016"/>
+			<xs:enumeration value="0017"/>
+			<xs:enumeration value="0018"/>
+			<xs:enumeration value="0019"/>
+			<xs:enumeration value="0020"/>
+			<xs:enumeration value="0021"/>
+			<xs:enumeration value="0022"/>
+			<xs:enumeration value="0023"/>
+			<xs:enumeration value="0024"/>
+			<xs:enumeration value="0025"/>
+			<xs:enumeration value="0026"/>
+			<xs:enumeration value="0027"/>
+			<xs:enumeration value="0028"/>
+			<xs:enumeration value="0029"/>
+			<xs:enumeration value="0030"/>
+			<xs:enumeration value="0031"/>
+			<xs:enumeration value="0032"/>
+			<xs:enumeration value="0033"/>
+			<xs:enumeration value="0034"/>
+			<xs:enumeration value="0035"/>
+			<xs:enumeration value="0036"/>
+			<xs:enumeration value="0037"/>
+			<xs:enumeration value="0038"/>
+			<xs:enumeration value="0039"/>
+			<xs:enumeration value="0040"/>
+			<xs:enumeration value="0041"/>
+			<xs:enumeration value="0042"/>
+			<xs:enumeration value="0043"/>
+			<xs:enumeration value="0044"/>
+			<xs:enumeration value="0045"/>
+			<xs:enumeration value="0046"/>
+			<xs:enumeration value="0047"/>
+			<xs:enumeration value="0048"/>
+			<xs:enumeration value="0049"/>
+			<xs:enumeration value="0050"/>
+			<xs:enumeration value="0051"/>
+			<xs:enumeration value="0052"/>
+			<xs:enumeration value="0053"/>
+			<xs:enumeration value="0054"/>
+			<xs:enumeration value="0055"/>
+			<xs:enumeration value="0056"/>
+			<xs:enumeration value="0100"/>
+			<xs:enumeration value="0101"/>
+			<xs:enumeration value="0141"/>
+			<xs:enumeration value="0150"/>
+			<xs:enumeration value="0200"/>
+			<xs:enumeration value="0241"/>
+			<xs:enumeration value="0300"/>
+			<xs:enumeration value="0301"/>
+			<xs:enumeration value="0304"/>
+			<xs:enumeration value="0311"/>
+			<xs:enumeration value="0315"/>
+			<xs:enumeration value="0321"/>
+			<xs:enumeration value="0341"/>
+			<xs:enumeration value="0371"/>
+			<xs:enumeration value="0400"/>
+			<xs:enumeration value="0401"/>
+			<xs:enumeration value="0411"/>
+			<xs:enumeration value="0441"/>
+			<xs:enumeration value="0500"/>
+			<xs:enumeration value="0541"/>
+			<xs:enumeration value="0600"/>
+			<xs:enumeration value="0641"/>
+			<xs:enumeration value="0700"/>
+			<xs:enumeration value="0701"/>
+			<xs:enumeration value="0706"/>
+			<xs:enumeration value="0707"/>
+			<xs:enumeration value="0708"/>
+			<xs:enumeration value="0711"/>
+			<xs:enumeration value="0713"/>
+			<xs:enumeration value="0717"/>
+			<xs:enumeration value="0720"/>
+			<xs:enumeration value="0721"/>
+			<xs:enumeration value="0730"/>
+			<xs:enumeration value="0731"/>
+			<xs:enumeration value="0800"/>
+			<xs:enumeration value="0801"/>
+			<xs:enumeration value="0803"/>
+			<xs:enumeration value="0811"/>
+			<xs:enumeration value="0812"/>
+			<xs:enumeration value="0814"/>
+			<xs:enumeration value="0821"/>
+			<xs:enumeration value="0841"/>
+			<xs:enumeration value="0851"/>
+			<xs:enumeration value="0860"/>
+			<xs:enumeration value="0881"/>
+			<xs:enumeration value="0900"/>
+			<xs:enumeration value="0941"/>
+			<xs:enumeration value="0951"/>
+			<xs:enumeration value="1000"/>
+			<xs:enumeration value="1041"/>
+			<xs:enumeration value="1100"/>
+			<xs:enumeration value="1101"/>
+			<xs:enumeration value="1110"/>
+			<xs:enumeration value="1111"/>
+			<xs:enumeration value="1114"/>
+			<xs:enumeration value="1115"/>
+			<xs:enumeration value="1120"/>
+			<xs:enumeration value="1121"/>
+			<xs:enumeration value="1130"/>
+			<xs:enumeration value="1131"/>
+			<xs:enumeration value="1132"/>
+			<xs:enumeration value="1133"/>
+			<xs:enumeration value="1141"/>
+			<xs:enumeration value="1151"/>
+			<xs:enumeration value="1160"/>
+			<xs:enumeration value="1161"/>
+			<xs:enumeration value="1165"/>
+			<xs:enumeration value="1167"/>
+			<xs:enumeration value="1171"/>
+			<xs:enumeration value="1200"/>
+			<xs:enumeration value="1211"/>
+			<xs:enumeration value="1241"/>
+			<xs:enumeration value="1247"/>
+			<xs:enumeration value="1291"/>
+			<xs:enumeration value="1300"/>
+			<xs:enumeration value="1341"/>
+			<xs:enumeration value="1400"/>
+			<xs:enumeration value="1441"/>
+			<xs:enumeration value="1500"/>
+			<xs:enumeration value="1501"/>
+			<xs:enumeration value="1507"/>
+			<xs:enumeration value="1511"/>
+			<xs:enumeration value="1514"/>
+			<xs:enumeration value="1517"/>
+			<xs:enumeration value="1521"/>
+			<xs:enumeration value="1541"/>
+			<xs:enumeration value="1551"/>
+			<xs:enumeration value="1571"/>
+			<xs:enumeration value="1600"/>
+			<xs:enumeration value="1641"/>
+			<xs:enumeration value="1700"/>
+			<xs:enumeration value="1701"/>
+			<xs:enumeration value="1711"/>
+			<xs:enumeration value="1741"/>
+			<xs:enumeration value="1761"/>
+			<xs:enumeration value="1771"/>
+			<xs:enumeration value="1800"/>
+			<xs:enumeration value="1801"/>
+			<xs:enumeration value="1810"/>
+			<xs:enumeration value="1811"/>
+			<xs:enumeration value="1841"/>
+			<xs:enumeration value="1900"/>
+			<xs:enumeration value="1941"/>
+			<xs:enumeration value="1950"/>
+			<xs:enumeration value="2000"/>
+			<xs:enumeration value="2001"/>
+			<xs:enumeration value="2010"/>
+			<xs:enumeration value="2011"/>
+			<xs:enumeration value="2020"/>
+			<xs:enumeration value="2021"/>
+			<xs:enumeration value="2045"/>
+			<xs:enumeration value="2050"/>
+			<xs:enumeration value="2051"/>
+			<xs:enumeration value="2061"/>
+			<xs:enumeration value="2071"/>
+			<xs:enumeration value="2073"/>
+			<xs:enumeration value="2100"/>
+			<xs:enumeration value="2111"/>
+			<xs:enumeration value="2141"/>
+			<xs:enumeration value="2171"/>
+			<xs:enumeration value="2200"/>
+			<xs:enumeration value="2300"/>
+			<xs:enumeration value="2341"/>
+			<xs:enumeration value="2400"/>
+			<xs:enumeration value="2441"/>
+			<xs:enumeration value="2500"/>
+			<xs:enumeration value="2519"/>
+			<xs:enumeration value="2541"/>
+			<xs:enumeration value="2550"/>
+			<xs:enumeration value="2561"/>
+			<xs:enumeration value="2600"/>
+			<xs:enumeration value="2641"/>
+			<xs:enumeration value="2650"/>
+			<xs:enumeration value="2651"/>
+			<xs:enumeration value="2700"/>
+			<xs:enumeration value="2711"/>
+			<xs:enumeration value="2800"/>
+			<xs:enumeration value="2801"/>
+			<xs:enumeration value="2803"/>
+			<xs:enumeration value="2811"/>
+			<xs:enumeration value="2841"/>
+			<xs:enumeration value="2861"/>
+			<xs:enumeration value="2871"/>
+			<xs:enumeration value="2900"/>
+			<xs:enumeration value="2901"/>
+			<xs:enumeration value="2911"/>
+			<xs:enumeration value="2914"/>
+			<xs:enumeration value="2915"/>
+			<xs:enumeration value="2941"/>
+			<xs:enumeration value="2971"/>
+			<xs:enumeration value="3000"/>
+			<xs:enumeration value="3001"/>
+			<xs:enumeration value="3010"/>
+			<xs:enumeration value="3011"/>
+			<xs:enumeration value="3021"/>
+			<xs:enumeration value="3041"/>
+			<xs:enumeration value="3051"/>
+			<xs:enumeration value="3081"/>
+			<xs:enumeration value="3100"/>
+			<xs:enumeration value="3161"/>
+			<xs:enumeration value="3171"/>
+			<xs:enumeration value="3200"/>
+			<xs:enumeration value="3300"/>
+			<xs:enumeration value="3301"/>
+			<xs:enumeration value="3310"/>
+			<xs:enumeration value="3311"/>
+			<xs:enumeration value="3321"/>
+			<xs:enumeration value="3331"/>
+			<xs:enumeration value="3341"/>
+			<xs:enumeration value="3351"/>
+			<xs:enumeration value="3371"/>
+			<xs:enumeration value="3400"/>
+			<xs:enumeration value="3500"/>
+			<xs:enumeration value="3520"/>
+			<xs:enumeration value="3521"/>
+			<xs:enumeration value="3530"/>
+			<xs:enumeration value="3533"/>
+			<xs:enumeration value="3541"/>
+			<xs:enumeration value="3551"/>
+			<xs:enumeration value="3561"/>
+			<xs:enumeration value="3571"/>
+			<xs:enumeration value="3581"/>
+			<xs:enumeration value="3591"/>
+			<xs:enumeration value="3593"/>
+			<xs:enumeration value="3600"/>
+			<xs:enumeration value="3601"/>
+			<xs:enumeration value="3610"/>
+			<xs:enumeration value="3611"/>
+			<xs:enumeration value="3613"/>
+			<xs:enumeration value="3621"/>
+			<xs:enumeration value="3631"/>
+			<xs:enumeration value="3639"/>
+			<xs:enumeration value="3641"/>
+			<xs:enumeration value="3651"/>
+			<xs:enumeration value="3681"/>
+			<xs:enumeration value="3691"/>
+			<xs:enumeration value="3700"/>
+			<xs:enumeration value="3741"/>
+			<xs:enumeration value="3800"/>
+			<xs:enumeration value="3805"/>
+			<xs:enumeration value="3806"/>
+			<xs:enumeration value="3809"/>
+			<xs:enumeration value="3817"/>
+			<xs:enumeration value="3820"/>
+			<xs:enumeration value="3827"/>
+			<xs:enumeration value="3841"/>
+			<xs:enumeration value="3842"/>
+			<xs:enumeration value="3861"/>
+			<xs:enumeration value="3871"/>
+			<xs:enumeration value="3881"/>
+			<xs:enumeration value="3883"/>
+			<xs:enumeration value="3891"/>
+			<xs:enumeration value="3893"/>
+			<xs:enumeration value="3900"/>
+			<xs:enumeration value="3901"/>
+			<xs:enumeration value="3911"/>
+			<xs:enumeration value="3913"/>
+			<xs:enumeration value="3921"/>
+			<xs:enumeration value="3941"/>
+			<xs:enumeration value="3971"/>
+			<xs:enumeration value="4000"/>
+			<xs:enumeration value="4100"/>
+			<xs:enumeration value="4101"/>
+			<xs:enumeration value="4111"/>
+			<xs:enumeration value="4114"/>
+			<xs:enumeration value="4121"/>
+			<xs:enumeration value="4141"/>
+			<xs:enumeration value="4171"/>
+			<xs:enumeration value="4200"/>
+			<xs:enumeration value="4300"/>
+			<xs:enumeration value="4301"/>
+			<xs:enumeration value="4311"/>
+			<xs:enumeration value="4315"/>
+			<xs:enumeration value="4320"/>
+			<xs:enumeration value="4321"/>
+			<xs:enumeration value="4341"/>
+			<xs:enumeration value="4371"/>
+			<xs:enumeration value="4400"/>
+			<xs:enumeration value="4500"/>
+			<xs:enumeration value="4541"/>
+			<xs:enumeration value="4600"/>
+			<xs:enumeration value="4601"/>
+			<xs:enumeration value="4604"/>
+			<xs:enumeration value="4610"/>
+			<xs:enumeration value="4611"/>
+			<xs:enumeration value="4621"/>
+			<xs:enumeration value="4631"/>
+			<xs:enumeration value="4350"/>
+			<xs:enumeration value="4641"/>
+			<xs:enumeration value="4647"/>
+			<xs:enumeration value="4650"/>
+			<xs:enumeration value="4651"/>
+			<xs:enumeration value="4661"/>
+			<xs:enumeration value="4667"/>
+			<xs:enumeration value="4700"/>
+			<xs:enumeration value="4701"/>
+			<xs:enumeration value="4741"/>
+			<xs:enumeration value="4742"/>
+			<xs:enumeration value="4800"/>
+			<xs:enumeration value="4801"/>
+			<xs:enumeration value="4811"/>
+			<xs:enumeration value="4821"/>
+			<xs:enumeration value="4842"/>
+			<xs:enumeration value="4850"/>
+			<xs:enumeration value="4874"/>
+			<xs:enumeration value="4900"/>
+			<xs:enumeration value="4942"/>
+			<xs:enumeration value="5000"/>
+			<xs:enumeration value="5001"/>
+			<xs:enumeration value="5004"/>
+			<xs:enumeration value="4825"/>
+			<xs:enumeration value="5041"/>
+			<xs:enumeration value="5500"/>
+			<xs:enumeration value="5503"/>
+			<xs:enumeration value="5511"/>
+			<xs:enumeration value="5512"/>
+			<xs:enumeration value="5513"/>
+			<xs:enumeration value="5541"/>
+			<xs:enumeration value="5600"/>
+			<xs:enumeration value="5601"/>
+			<xs:enumeration value="5611"/>
+			<xs:enumeration value="5612"/>
+			<xs:enumeration value="5613"/>
+			<xs:enumeration value="5641"/>
+			<!-- "99999 - Otro, especificar" -->
+			<!-- "0001 - ALAVA"-->
+			<!-- "0002 - ALBACETE"-->
+			<!-- "0003 - ALICANTE"-->
+			<!-- "0004 - ALMERIA"-->
+			<!-- "0005 - AVILA"-->
+			<!-- "0006 - BADAJOZ"-->
+			<!-- "0007 - BALEARES"-->
+			<!-- "0008 - BARCELONA"-->
+			<!-- "0009 - BURGOS"-->
+			<!-- "0010 - CACERES"-->
+			<!-- "0011 - CADIZ"-->
+			<!-- "0012 - CASTELLON"-->
+			<!-- "0013 - CIUDAD REAL"-->
+			<!-- "0014 - CORDOBA"-->
+			<!-- "0015 - A CORUÑA"-->
+			<!-- "0016 - CUENCA"-->
+			<!-- "0017 - GIRONA"-->
+			<!-- "0018 - GRANADA"-->
+			<!-- "0019 - GUADALAJARA"-->
+			<!-- "0020 - GUIPUZCOA"-->
+			<!-- "0021 - HUELVA"-->
+			<!-- "0022 - HUESCA"-->
+			<!-- "0023 - JAEN"-->
+			<!-- "0024 - LEON"-->
+			<!-- "0025 - LLEIDA"-->
+			<!-- "0026 - LA RIOJA"-->
+			<!-- "0027 - LUGO"-->
+			<!-- "0028 - MADRID"-->
+			<!-- "0029 - MALAGA"-->
+			<!-- "0030 - MURCIA"-->
+			<!-- "0031 - NAVARRA"-->
+			<!-- "0032 - OURENSE"-->
+			<!-- "0033 - ASTURIAS"-->
+			<!-- "0034 - PALENCIA"-->
+			<!-- "0035 - LAS PALMAS"-->
+			<!-- "0036 - PONTEVEDRA"-->
+			<!-- "0037 - SALAMANCA"-->
+			<!-- "0038 - S.C. DE TENERIFE"-->
+			<!-- "0039 - CANTABRIA"-->
+			<!-- "0040 - SEGOVIA"-->
+			<!-- "0041 - SEVILLA"-->
+			<!-- "0042 - SORIA"-->
+			<!-- "0043 - TARRAGONA"-->
+			<!-- "0044 - TERUEL"-->
+			<!-- "0045 - TOLEDO"-->
+			<!-- "0046 - VALENCIA"-->
+			<!-- "0047 - VALLADOLID"-->
+			<!-- "0048 - VIZCAYA"-->
+			<!-- "0049 - ZAMORA"-->
+			<!-- "0050 - ZARAGOZA"-->
+			<!-- "0051 - CARTAGENA"-->
+			<!-- "0052 - GIJON"-->
+			<!-- "0053 - JEREZ FRONTERA"-->
+			<!-- "0054 - VIGO"-->
+			<!-- "0055 - CEUTA"-->
+			<!-- "0056 - MELILLA"-->
+			<!-- "0100 - ALAVA ADMON.PROV.-->
+			<!-- "0101 - ALAVA AEROPUERTO"-->
+			<!-- "0141 - ALAVA"-->
+			<!-- "0150 - VITORIA DOMICILIACI?N"-->
+			<!-- "0200 - ALBACETE ADMON.PROV."-->
+			<!-- "0241 - ALBACETE"-->
+			<!-- "0300 - ALICANTE ADMON.PROV.ADUANAS II.EE."-->
+			<!-- "0301 - ALICANTE AEROPUERTO"-->
+			<!-- "0304 - ALICANTE ETIQ. VERDE"-->
+			<!-- "0311 - ALICANTE MARITIMA"-->
+			<!-- "0315 - ALICANTE DEP. FRANCO"-->
+			<!-- "0321 - TORREVIEJA MARITIMA"-->
+			<!-- "0341 - ALICANTE CARRETERA"-->
+			<!-- "0371 - ALICANTE FERROCARRIL"-->
+			<!-- "0400 - ALMERIA ADMON. PROV."-->
+			<!-- "0401 - ALMERIA AEROPUERTO"-->
+			<!-- "0411 - ALMERIA MARITIMA"-->
+			<!-- "0441 - ALMERIA CARRETERA"-->
+			<!-- "0500 - AVILA ADMON. PROV."-->
+			<!-- "0541 - AVILA"-->
+			<!-- "0600 - BADAJOZ ADMON. PROV."-->
+			<!-- "0641 - BADAJOZ CARRETERA"-->
+			<!-- "0700 - BALEARES ADMON.PROV."-->
+			<!-- "0701 - P.MALLORCA AEROPUERT"-->
+			<!-- "0706 - PALMA DE MALLORCA DEPOSITO FRANCO"-->
+			<!-- "0707 - IBIZA AEROPUERTO"-->
+			<!-- "0708 - MAHON AEROPUERTO"-->
+			<!-- "0711 - P.MALLORCA MARITIMA"-->
+			<!-- "0713 - P. MALLORCA POSTALES"-->
+			<!-- "0717 - ALCUDIA MARITIMA"-->
+			<!-- "0720 - IBIZA ADM.ADUANAS"-->
+			<!-- "0721 - IBIZA MARITIMA"-->
+			<!-- "0730 - MAHON ADM.ADUANAS"-->
+			<!-- "0731 - MAHON MARITIMA"-->
+			<!-- "0800 - BARCELONA ADMON PROV"-->
+			<!-- "0801 - BARCELONA AEROPUERTO"-->
+			<!-- "0803 - BARNA.AEROP.POSTALES"-->
+			<!-- "0811 - BARNA.MARITIMA IMP."-->
+			<!-- "0812 - BARNA.MARITIMA EXP."-->
+			<!-- "0814 - BARNA.MARITINA E.VER"-->
+			<!-- "0821 - BARCELONA DEP.FRANCO"-->
+			<!-- "0841 - BARCELONA CARRETERA"-->
+			<!-- "0851 - BARNA FERIA MUESTRAS"-->
+			<!-- "0860 - BARCELONA DOMICILIACI?N"-->
+			<!-- "0881 - BARNA FF.CC. MORROT"-->
+			<!-- "0900 - BURGOS ADMON. PROV."-->
+			<!-- "0941 - BURGOS CARRETERA"-->
+			<!-- "0951 - BURGOS DEPOSITO FRANCO"-->
+			<!-- "1000 - CACERES ADMON. PROV."-->
+			<!-- "1041 - CACERES CARRETERA"-->
+			<!-- "1100 - CADIZ ADMON. PROV."-->
+			<!-- "1101 - JEREZ DE LA FRONTERA"-->
+			<!-- "1110 - JEREZ ADMON.PROV.ADUANAS E II.EE."-->
+			<!-- "1111 - CADIZ MARITIMA"-->
+			<!-- "1114 - CADIZ ETIQUETA VERDE"-->
+			<!-- "1115 - CADIZ ZONA FRANCA"-->
+			<!-- "1120 - PUERTO SANTA MARIA ADMON ADUANAS"-->
+			<!-- "1121 - PTO.STA.MARIA_MARIT."-->
+			<!-- "1130 - ALGECIRAS FACTORIAS"-->
+			<!-- "1131 - ALGECIRAS MARIT.TRAN"-->
+			<!-- "1132 - ALGECIRAS DES.CEUTA"-->
+			<!-- "1133 - TARIFA MARITIMA"-->
+			<!-- "1141 - CADIZ CARRETERA"-->
+			<!-- "1151 - PTO.STA.MARIA CARRET"-->
+			<!-- "1160 - LA LINEA ADMON ADUANAS_E II.EE."-->
+			<!-- "1161 - LA LINEA MARITIMA"-->
+			<!-- "1165 - LA LINEA, FACTORIAS"-->
+			<!-- "1167 - LA LINEA CONCEPCION"-->
+			<!-- "1171 - CADIZ FF.CC."-->
+			<!-- "1200 - CASTELLON ADMON.PROV"-->
+			<!-- "1211 - CASTELLON MARITIMA"-->
+			<!-- "1241 - CASTELLON CARRETERA"-->
+			<!-- "1247 - CASTELLON CARRETERA FRUTA"-->
+			<!-- "1291 - VILLAREAL FF.CC."-->
+			<!-- "1300 - CIUDAD REAL ADM.PROV"-->
+			<!-- "1341 - CIUDAD REAL"-->
+			<!-- "1400 - CORDOBA ADMON. PROV."-->
+			<!-- "1441 - CORDOBA"-->
+			<!-- "1500 - LA CORUÑA ADM. PROV."-->
+			<!-- "1501 - LA CORUÑA AEROPUERTO"-->
+			<!-- "1507 - SANTIAGO AEROPUERTO"-->
+			<!-- "1511 - LA CORUÑA MARITIMA"-->
+			<!-- "1514 - LA CORUÑA POSTALES"-->
+			<!-- "1517 - LA CORUÑA DEP.FRANCO"-->
+			<!-- "1521 - EL FERROL MARITIMA"-->
+			<!-- "1541 - LA CORUÑA CARRETERA"-->
+			<!-- "1551 - EL FERROL CARRETERA"-->
+			<!-- "1571 - LA CORUÑA FF.CC."-->
+			<!-- "1600 - CUENCA ADMON. PROV."-->
+			<!-- "1641 - CUENCA"-->
+			<!-- "1700 - GERONA ADMON. PROV."-->
+			<!-- "1701 - GERONA AEROPUERTO"-->
+			<!-- "1711 - PALAMOS"-->
+			<!-- "1741 - LA JUNQUERA"-->
+			<!-- "1761 - VILAMALLA CARRETERA"-->
+			<!-- "1771 - PORT-BOU"-->
+			<!-- "1800 - GRANADA ADMON. PROV."-->
+			<!-- "1801 - GRANADA AEROPUERTO"-->
+			<!-- "1810 - MOTRIL ADMON ADUANAS_E II.EE."-->
+			<!-- "1811 - MOTRIL MARITIMA"-->
+			<!-- "1841 - MOTRIL CARRETERA"-->
+			<!-- "1900 - GUADALAJARA ADM.PROV"-->
+			<!-- "1941 - GUADALAJARA"-->
+			<!-- "1950 - GUADALAJAR, DOMICILIACION"-->
+			<!-- "2000 - IRUN ADMON. PROV."-->
+			<!-- "2001 - GUIPUZCOA AEROPUERTO"-->
+			<!-- "2010 - PASAJES, ADMN.ADUANA"-->
+			<!-- "2011 - PASAJES MARITIMA"-->
+			<!-- "2020 - S.SEBASTIAN ADMON ADUANAS_E II.EE."-->
+			<!-- "2021 - PASAJES, DEPOSITO F"-->
+			<!-- "2045 - IRUN ZAISA"-->
+			<!-- "2050 - IRUN DOMICILIACI?N"-->
+			<!-- "2051 - PASAJES CARRETERA"-->
+			<!-- "2061 - IRUN ALMACENES TEMPORALES"-->
+			<!-- "2071 - IRUN FF.CC."-->
+			<!-- "2073 - IRUN FF.CC._POSTALES"-->
+			<!-- "2100 - HUELVA ADMON. PROV."-->
+			<!-- "2111 - HUELVA MARITIMA"-->
+			<!-- "2141 - HUELVA CARRETERA"-->
+			<!-- "2171 - HUELVA FERROCARRIL"-->
+			<!-- "2200 - HUESCA ADMON. PROV."-->
+			<!-- "2300 - JAEN ADMON. PROV."-->
+			<!-- "2341 - JAEN CARRETERA"-->
+			<!-- "2400 - LEON ADMON. PROV."-->
+			<!-- "2441 - LEON"-->
+			<!-- "2500 - LA FARGA ADMON.PROV."-->
+			<!-- "2519 - LERIDA DEP.ADUANERO"-->
+			<!-- "2541 - LA FARGA DE MOLES"-->
+			<!-- "2550 - LERIDA ADMON ADUANAS_E II.EE."-->
+			<!-- "2561 - LERIDA CARRETERA"-->
+			<!-- "2600 - LOGROÑO ADMON. PROV."-->
+			<!-- "2641 - LOGROÑO"-->
+			<!-- "2650 - HARO ADMON ADUANAS"-->
+			<!-- "2651 - HARO"-->
+			<!-- "2700 - LUGO ADMON. PROV."-->
+			<!-- "2711 - RIBADEO MARITIMA"-->
+			<!-- "2800 - MADRID ADMON PROV"-->
+			<!-- "2801 - AERO. MADRID BARAJAS"-->
+			<!-- "2803 - BARAJAS POSTALES"-->
+			<!-- "2811 - MADRID, PUERTO SECO"-->
+			<!-- "2841 - MADRID CARRETERA"-->
+			<!-- "2861 - MADRID FACTORIAS"-->
+			<!-- "2871 - MADRID FF.CC."-->
+			<!-- "2900 - MALAGA ADMON. PROV."-->
+			<!-- "2901 - MALAGA AEROPUERTO"-->
+			<!-- "2911 - MALAGA MARITIMA"-->
+			<!-- "2914 - MALAGA ETIQUETA VERDE"-->
+			<!-- "2915 - MáLAGA DOMICILIACIóN"-->
+			<!-- "2941 - MALAGA CARRETERA"-->
+			<!-- "2971 - MALAGA FERROCARRIL"-->
+			<!-- "3000 - MURCIA ADMON. PROV."-->
+			<!-- "3001 - MURCIA AEROPUERTO"-->
+			<!-- "3010 - CARTAGENA ADMN.ADUA"-->
+			<!-- "3011 - CARTAGENA MARITIMA"-->
+			<!-- "3021 - CARTAGENA DEP.FRANCO"-->
+			<!-- "3041 - CARTAGENA CARRETERA"-->
+			<!-- "3051 - MURCIA NONDUERMAS"-->
+			<!-- "3081 - MURCIA FF.CC."-->
+			<!-- "3100 - PAMPLONA ADMON.PROV."-->
+			<!-- "3161 - IMARCOAIN-PAMPLONA"-->
+			<!-- "3171 - PAMPLONA FF.CC."-->
+			<!-- "3200 - OURENSE ADMON. PROV."-->
+			<!-- "3300 - OVIEDO ADMON. PROV."-->
+			<!-- "3301 - ASTURIAS AEROPUERTO"-->
+			<!-- "3310 - GIJON ADMON ADUANAS_E II.EE."-->
+			<!-- "3311 - GIJON MARITIMA"-->
+			<!-- "3321 - GIJON, DEP.FRANCO"-->
+			<!-- "3331 - AVILES MARITIMA"-->
+			<!-- "3341 - GIJON, CARRETERA"-->
+			<!-- "3351 - AVILES CARRETERA"-->
+			<!-- "3371 - GIJON, FERROCARRIL"-->
+			<!-- "3400 - PALENCIA ADMON.PROV."-->
+			<!-- "3500 - G. CANARIA ADM.PROV."-->
+			<!-- "3520 - ARRECIFE ADMON ADUANAS_E II.EE."-->
+			<!-- "3521 - GRAN CANARIA ZONA FRANCA"-->
+			<!-- "3530 - FUERTEVENTURA ADMON ADUANAS-II.EE."-->
+			<!-- "3533 - FUERTEVENTURA MAR-CE"-->
+			<!-- "3541 - FUERTEVENTURA MAR?TIMA"-->
+			<!-- "3551 - FUERTEVENTURA AEROPUERTO"-->
+			<!-- "3561 - LANZAROTE MARITIMA"-->
+			<!-- "3571 - LANZAROTE AEROPUERTO"-->
+			<!-- "3581 - LAS PALMAS AEROPUERTO"-->
+			<!-- "3591 - LAS PALMAS MARITIMA"-->
+			<!-- "3593 - LAS PALMAS POSTAL"-->
+			<!-- "3600 - PONTEVEDRA ADM.PROV."-->
+			<!-- "3601 - VIGO AEROPUERTO"-->
+			<!-- "3610 - VIGO ADMN.ADUANAS"-->
+			<!-- "3611 - VIGO MARITIMA"-->
+			<!-- "3613 - VIGO POSTALES"-->
+			<!-- "3621 - MARIN MARITIMA"-->
+			<!-- "3631 - VILLAGARCIA MARITIMA"-->
+			<!-- "3639 - PONTEVEDRA ADM.PROV."-->
+			<!-- "3641 - VIGO CARRETERA"-->
+			<!-- "3651 - VILLAGARCIA CARRETER"-->
+			<!-- "3681 - VIGO ZONA FRANCA"-->
+			<!-- "3691 - VIGO DOMICILIACI?N"-->
+			<!-- "3700 - SALAMANCA ADM. PROV."-->
+			<!-- "3741 - FUENTES OÑORO CARRET"-->
+			<!-- "3800 - TENERIFE ADMON.PROV."-->
+			<!-- "3805 - TENERIFE AEROPUERTO SUR CE"-->
+			<!-- "3806 - TENERIFE AEROPUERTO NORTE"-->
+			<!-- "3809 - LA PALMA AEROPUERTO CE"-->
+			<!-- "3817 - TENERIFE MARITIMA-REA N Y CE"-->
+			<!-- "3820 - STA. CRUZ PAL.ADMON ADUANAS-II.EE."-->
+			<!-- "3827 - LA PALMA MARITIMA CE"-->
+			<!-- "3841 - LA GOMERA"-->
+			<!-- "3842 - HIERRO"-->
+			<!-- "3861 - LA PALMA MARITIMA"-->
+			<!-- "3871 - LA PALMA AEROPUERTO"-->
+			<!-- "3881 - TENERIFE AEROPUERTO SUR."-->
+			<!-- "3883 - TENERIFE AEROPUERTO NORTE"-->
+			<!-- "3891 - TENERIFE MARITIMA"-->
+			<!-- "3893 - TENERIFE POSTALES"-->
+			<!-- "3900 - SANTANDER ADMON.PROV"-->
+			<!-- "3901 - SANTANDER AEROPUERTO"-->
+			<!-- "3911 - SANTANDER MARITIMA"-->
+			<!-- "3913 - SANTANDER POSTALES"-->
+			<!-- "3921 - SANTANDER DTO FRANCO"-->
+			<!-- "3941 - SANTANDER CARRETERA"-->
+			<!-- "3971 - SANTANDERFERROCARRIL"-->
+			<!-- "4000 - SEGOVIA ADMON.PROV."-->
+			<!-- "4100 - SEVILLA ADMON. PROV."-->
+			<!-- "4101 - SEVILLA AEROPUERTO"-->
+			<!-- "4111 - SEVILLA MARITIMA"-->
+			<!-- "4114 - SEVILLA POSTALES"-->
+			<!-- "4121 - SEVILLA DEP.FRANCO"-->
+			<!-- "4141 - SEVILLA CARRETERA"-->
+			<!-- "4171 - SEVILLA FF.CC."-->
+			<!-- "4200 - SORIA ADMON. PROV."-->
+			<!-- "4300 - TARRAGONA ADM. PROV."-->
+			<!-- "4301 - TARRAGONA AEROPUERTO"-->
+			<!-- "4311 - TARRAGONA MARITIMA"-->
+			<!-- "4315 - TARRAGONA DEP.FRANCO"-->
+			<!-- "4320 - S.CARLOS.RAPITA ADM."-->
+			<!-- "4321 - S.CARLOS RAPITA_MAR."-->
+			<!-- "4341 - TARRAGONA CARRETERA"-->
+			<!-- "4371 - TARRAGONA FF.CC."-->
+			<!-- "4400 - TERUEL ADMON. PROV."-->
+			<!-- "4500 - TOLEDO ADMON. PROV."-->
+			<!-- "4541 - TOLEDO"-->
+			<!-- "4600 - VALENCIA ADMON.PROV."-->
+			<!-- "4601 - VALENCIA AEROPUERTO"-->
+			<!-- "4604 - VALENCIA AERO.POSTAL"-->
+			<!-- "4610 - OFICINA VALENCIA MARITIMA"-->
+			<!-- "4611 - VALENCIA MARITIMA"-->
+			<!-- "4621 - SAGUNTO MARITIMA"-->
+			<!-- "4631 - GANDIA MARITIMA"-->
+			<!-- "4350 - TARRAGONA DOMICILIACION Y DEP?SITOS"-->
+			<!-- "4641 - VALENCIA CARRETERA"-->
+			<!-- "4647 - SILLA CARRETERA"-->
+			<!-- "4650 - VALENCIA, FACTORIAS"-->
+			<!-- "4651 - SAGUNTO CARRETERA"-->
+			<!-- "4661 - GANDIA CARRETERA"-->
+			<!-- "4667 - JERESA CARRETERA"-->
+			<!-- "4700 - VALLADOLID ADM.PROV."-->
+			<!-- "4701 - VALLADOLID AEROPUERTO"-->
+			<!-- "4741 - VALLADOLID TIR"-->
+			<!-- "4742 - VALLADOLID DEPOSITO ADUANERO"-->
+			<!-- "4800 - BILBAO ADMON. PROV."-->
+			<!-- "4801 - BILBAO AEROPUERTO"-->
+			<!-- "4811 - BILBAO MARITIMA"-->
+			<!-- "4821 - BILBAO DEPOS.FRANCO"-->
+			<!-- "4842 - APARCAVISA"-->
+			<!-- "4850 - BILBAO DOMICILIACI?N"-->
+			<!-- "4874 - BILBAO POSTALES"-->
+			<!-- "4900 - ZAMORA ADMON. PROV."-->
+			<!-- "4942 - ZAMORA"-->
+			<!-- "5000 - ZARAGOZA ADMON.PROV."-->
+			<!-- "5001 - ZARAGOZA AEROPUERTO"-->
+			<!-- "5004 - ZARAGOZA POSTALES"-->
+			<!-- "4825 - BILBAO ZAL"-->
+			<!-- "5041 - ZARAGOZA TIR"-->
+			<!-- "5500 - CEUTA"-->
+			<!-- "5503 - CEUTA HELIPUERTO"-->
+			<!-- "5511 - CEUTA MARITIMA"-->
+			<!-- "5512 - CEUTA, ENVIOS NACIONALES"-->
+			<!-- "5513 - CEUTA POSTALES"-->
+			<!-- "5541 - CEUTA CARRETERA"-->
+			<!-- "5600 - MELILLA"-->
+			<!-- "5601 - MELILLA AEROPUERTO"-->
+			<!-- "5611 - MELILLA MARITIMA"-->
+			<!-- "5612 - MELILLA, MARITIMA MERC.NACIONAL"-->
+			<!-- "5613 - MELILLA POSTALES"-->
+			<!-- "5641 - MELILLA CARRETERA"-->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MEDPA_ENUM">
+		<xs:annotation>
+			<xs:documentation>Medios de pago</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+			<!-- "1 - Efectivo -->
+			<!-- "2 - Cheque bancario" -->
+			<!-- "3 - Medios electrónicos" -->
+			<!-- "4 - Otros" -->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ORIMEDPA_ENUM">
+		<xs:annotation>
+			<xs:documentation>Origen de Medios de pago</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="9"/>
+			<!-- "1 - Rendimientos del trabajo personal -->
+			<!-- "2 - Actividad Comercial" -->
+			<!-- "3 - Venta de inmuebles o valores" -->
+			<!-- "4 - Gestión de fondos de terceros" -->
+			<!-- "9 - Otros" -->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DESMEDPA_ENUM">
+		<xs:annotation>
+			<xs:documentation>Destino de Medios de pago</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="9"/>
+			<!-- "1 - Adquisición de bienes -->
+			<!-- "2 - Pago de servicios" -->
+			<!-- "3 - Inversión" -->
+			<!-- "9 - Otros" -->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ADUANACONTROL_ENUM">
+		<xs:annotation>
+			<xs:documentation>Aduana de presentación/control</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="99991"/>
+			<xs:enumeration value="99992"/>
+			<xs:enumeration value="99999"/>
+			<xs:enumeration value="0100"/>
+			<xs:enumeration value="0101"/>
+			<xs:enumeration value="0141"/>
+			<xs:enumeration value="0150"/>
+			<xs:enumeration value="0200"/>
+			<xs:enumeration value="0241"/>
+			<xs:enumeration value="0300"/>
+			<xs:enumeration value="0301"/>
+			<xs:enumeration value="0304"/>
+			<xs:enumeration value="0311"/>
+			<xs:enumeration value="0315"/>
+			<xs:enumeration value="0321"/>
+			<xs:enumeration value="0341"/>
+			<xs:enumeration value="0371"/>
+			<xs:enumeration value="0400"/>
+			<xs:enumeration value="0401"/>
+			<xs:enumeration value="0411"/>
+			<xs:enumeration value="0441"/>
+			<xs:enumeration value="0500"/>
+			<xs:enumeration value="0541"/>
+			<xs:enumeration value="0600"/>
+			<xs:enumeration value="0641"/>
+			<xs:enumeration value="0700"/>
+			<xs:enumeration value="0701"/>
+			<xs:enumeration value="0706"/>
+			<xs:enumeration value="0707"/>
+			<xs:enumeration value="0708"/>
+			<xs:enumeration value="0711"/>
+			<xs:enumeration value="0713"/>
+			<xs:enumeration value="0717"/>
+			<xs:enumeration value="0720"/>
+			<xs:enumeration value="0721"/>
+			<xs:enumeration value="0730"/>
+			<xs:enumeration value="0731"/>
+			<xs:enumeration value="0800"/>
+			<xs:enumeration value="0801"/>
+			<xs:enumeration value="0803"/>
+			<xs:enumeration value="0811"/>
+			<xs:enumeration value="0812"/>
+			<xs:enumeration value="0814"/>
+			<xs:enumeration value="0821"/>
+			<xs:enumeration value="0841"/>
+			<xs:enumeration value="0851"/>
+			<xs:enumeration value="0860"/>
+			<xs:enumeration value="0881"/>
+			<xs:enumeration value="0900"/>
+			<xs:enumeration value="0941"/>
+			<xs:enumeration value="0951"/>
+			<xs:enumeration value="1000"/>
+			<xs:enumeration value="1041"/>
+			<xs:enumeration value="1100"/>
+			<xs:enumeration value="1101"/>
+			<xs:enumeration value="1110"/>
+			<xs:enumeration value="1111"/>
+			<xs:enumeration value="1114"/>
+			<xs:enumeration value="1115"/>
+			<xs:enumeration value="1120"/>
+			<xs:enumeration value="1121"/>
+			<xs:enumeration value="1130"/>
+			<xs:enumeration value="1131"/>
+			<xs:enumeration value="1132"/>
+			<xs:enumeration value="1133"/>
+			<xs:enumeration value="1141"/>
+			<xs:enumeration value="1151"/>
+			<xs:enumeration value="1160"/>
+			<xs:enumeration value="1161"/>
+			<xs:enumeration value="1165"/>
+			<xs:enumeration value="1167"/>
+			<xs:enumeration value="1171"/>
+			<xs:enumeration value="1200"/>
+			<xs:enumeration value="1211"/>
+			<xs:enumeration value="1241"/>
+			<xs:enumeration value="1247"/>
+			<xs:enumeration value="1291"/>
+			<xs:enumeration value="1300"/>
+			<xs:enumeration value="1341"/>
+			<xs:enumeration value="1400"/>
+			<xs:enumeration value="1441"/>
+			<xs:enumeration value="1500"/>
+			<xs:enumeration value="1501"/>
+			<xs:enumeration value="1507"/>
+			<xs:enumeration value="1511"/>
+			<xs:enumeration value="1514"/>
+			<xs:enumeration value="1517"/>
+			<xs:enumeration value="1521"/>
+			<xs:enumeration value="1541"/>
+			<xs:enumeration value="1551"/>
+			<xs:enumeration value="1571"/>
+			<xs:enumeration value="1600"/>
+			<xs:enumeration value="1641"/>
+			<xs:enumeration value="1700"/>
+			<xs:enumeration value="1701"/>
+			<xs:enumeration value="1711"/>
+			<xs:enumeration value="1741"/>
+			<xs:enumeration value="1761"/>
+			<xs:enumeration value="1771"/>
+			<xs:enumeration value="1800"/>
+			<xs:enumeration value="1801"/>
+			<xs:enumeration value="1810"/>
+			<xs:enumeration value="1811"/>
+			<xs:enumeration value="1841"/>
+			<xs:enumeration value="1900"/>
+			<xs:enumeration value="1941"/>
+			<xs:enumeration value="1950"/>
+			<xs:enumeration value="2000"/>
+			<xs:enumeration value="2001"/>
+			<xs:enumeration value="2010"/>
+			<xs:enumeration value="2011"/>
+			<xs:enumeration value="2020"/>
+			<xs:enumeration value="2021"/>
+			<xs:enumeration value="2045"/>
+			<xs:enumeration value="2050"/>
+			<xs:enumeration value="2051"/>
+			<xs:enumeration value="2061"/>
+			<xs:enumeration value="2071"/>
+			<xs:enumeration value="2073"/>
+			<xs:enumeration value="2100"/>
+			<xs:enumeration value="2111"/>
+			<xs:enumeration value="2141"/>
+			<xs:enumeration value="2171"/>
+			<xs:enumeration value="2200"/>
+			<xs:enumeration value="2300"/>
+			<xs:enumeration value="2341"/>
+			<xs:enumeration value="2400"/>
+			<xs:enumeration value="2441"/>
+			<xs:enumeration value="2500"/>
+			<xs:enumeration value="2519"/>
+			<xs:enumeration value="2541"/>
+			<xs:enumeration value="2550"/>
+			<xs:enumeration value="2561"/>
+			<xs:enumeration value="2600"/>
+			<xs:enumeration value="2641"/>
+			<xs:enumeration value="2650"/>
+			<xs:enumeration value="2651"/>
+			<xs:enumeration value="2700"/>
+			<xs:enumeration value="2711"/>
+			<xs:enumeration value="2800"/>
+			<xs:enumeration value="2801"/>
+			<xs:enumeration value="2803"/>
+			<xs:enumeration value="2811"/>
+			<xs:enumeration value="2841"/>
+			<xs:enumeration value="2861"/>
+			<xs:enumeration value="2871"/>
+			<xs:enumeration value="2900"/>
+			<xs:enumeration value="2901"/>
+			<xs:enumeration value="2911"/>
+			<xs:enumeration value="2914"/>
+			<xs:enumeration value="2915"/>
+			<xs:enumeration value="2941"/>
+			<xs:enumeration value="2971"/>
+			<xs:enumeration value="3000"/>
+			<xs:enumeration value="3001"/>
+			<xs:enumeration value="3010"/>
+			<xs:enumeration value="3011"/>
+			<xs:enumeration value="3021"/>
+			<xs:enumeration value="3041"/>
+			<xs:enumeration value="3051"/>
+			<xs:enumeration value="3081"/>
+			<xs:enumeration value="3100"/>
+			<xs:enumeration value="3161"/>
+			<xs:enumeration value="3171"/>
+			<xs:enumeration value="3200"/>
+			<xs:enumeration value="3300"/>
+			<xs:enumeration value="3301"/>
+			<xs:enumeration value="3310"/>
+			<xs:enumeration value="3311"/>
+			<xs:enumeration value="3321"/>
+			<xs:enumeration value="3331"/>
+			<xs:enumeration value="3341"/>
+			<xs:enumeration value="3351"/>
+			<xs:enumeration value="3371"/>
+			<xs:enumeration value="3400"/>
+			<xs:enumeration value="3500"/>
+			<xs:enumeration value="3520"/>
+			<xs:enumeration value="3521"/>
+			<xs:enumeration value="3530"/>
+			<xs:enumeration value="3533"/>
+			<xs:enumeration value="3541"/>
+			<xs:enumeration value="3551"/>
+			<xs:enumeration value="3561"/>
+			<xs:enumeration value="3571"/>
+			<xs:enumeration value="3581"/>
+			<xs:enumeration value="3591"/>
+			<xs:enumeration value="3593"/>
+			<xs:enumeration value="3600"/>
+			<xs:enumeration value="3601"/>
+			<xs:enumeration value="3610"/>
+			<xs:enumeration value="3611"/>
+			<xs:enumeration value="3613"/>
+			<xs:enumeration value="3621"/>
+			<xs:enumeration value="3631"/>
+			<xs:enumeration value="3639"/>
+			<xs:enumeration value="3641"/>
+			<xs:enumeration value="3651"/>
+			<xs:enumeration value="3681"/>
+			<xs:enumeration value="3691"/>
+			<xs:enumeration value="3700"/>
+			<xs:enumeration value="3741"/>
+			<xs:enumeration value="3800"/>
+			<xs:enumeration value="3805"/>
+			<xs:enumeration value="3806"/>
+			<xs:enumeration value="3809"/>
+			<xs:enumeration value="3817"/>
+			<xs:enumeration value="3820"/>
+			<xs:enumeration value="3827"/>
+			<xs:enumeration value="3841"/>
+			<xs:enumeration value="3842"/>
+			<xs:enumeration value="3861"/>
+			<xs:enumeration value="3871"/>
+			<xs:enumeration value="3881"/>
+			<xs:enumeration value="3883"/>
+			<xs:enumeration value="3891"/>
+			<xs:enumeration value="3893"/>
+			<xs:enumeration value="3900"/>
+			<xs:enumeration value="3901"/>
+			<xs:enumeration value="3911"/>
+			<xs:enumeration value="3913"/>
+			<xs:enumeration value="3921"/>
+			<xs:enumeration value="3941"/>
+			<xs:enumeration value="3971"/>
+			<xs:enumeration value="4000"/>
+			<xs:enumeration value="4100"/>
+			<xs:enumeration value="4101"/>
+			<xs:enumeration value="4111"/>
+			<xs:enumeration value="4114"/>
+			<xs:enumeration value="4121"/>
+			<xs:enumeration value="4141"/>
+			<xs:enumeration value="4171"/>
+			<xs:enumeration value="4200"/>
+			<xs:enumeration value="4300"/>
+			<xs:enumeration value="4301"/>
+			<xs:enumeration value="4311"/>
+			<xs:enumeration value="4315"/>
+			<xs:enumeration value="4320"/>
+			<xs:enumeration value="4321"/>
+			<xs:enumeration value="4341"/>
+			<xs:enumeration value="4371"/>
+			<xs:enumeration value="4400"/>
+			<xs:enumeration value="4500"/>
+			<xs:enumeration value="4541"/>
+			<xs:enumeration value="4600"/>
+			<xs:enumeration value="4601"/>
+			<xs:enumeration value="4604"/>
+			<xs:enumeration value="4610"/>
+			<xs:enumeration value="4611"/>
+			<xs:enumeration value="4621"/>
+			<xs:enumeration value="4631"/>
+			<xs:enumeration value="4350"/>
+			<xs:enumeration value="4641"/>
+			<xs:enumeration value="4647"/>
+			<xs:enumeration value="4650"/>
+			<xs:enumeration value="4651"/>
+			<xs:enumeration value="4661"/>
+			<xs:enumeration value="4667"/>
+			<xs:enumeration value="4700"/>
+			<xs:enumeration value="4701"/>
+			<xs:enumeration value="4741"/>
+			<xs:enumeration value="4742"/>
+			<xs:enumeration value="4800"/>
+			<xs:enumeration value="4801"/>
+			<xs:enumeration value="4811"/>
+			<xs:enumeration value="4821"/>
+			<xs:enumeration value="4842"/>
+			<xs:enumeration value="4850"/>
+			<xs:enumeration value="4874"/>
+			<xs:enumeration value="4900"/>
+			<xs:enumeration value="4942"/>
+			<xs:enumeration value="5000"/>
+			<xs:enumeration value="5001"/>
+			<xs:enumeration value="5004"/>
+			<xs:enumeration value="4825"/>
+			<xs:enumeration value="5041"/>
+			<xs:enumeration value="5500"/>
+			<xs:enumeration value="5503"/>
+			<xs:enumeration value="5511"/>
+			<xs:enumeration value="5512"/>
+			<xs:enumeration value="5513"/>
+			<xs:enumeration value="5541"/>
+			<xs:enumeration value="5600"/>
+			<xs:enumeration value="5601"/>
+			<xs:enumeration value="5611"/>
+			<xs:enumeration value="5612"/>
+			<xs:enumeration value="5613"/>
+			<xs:enumeration value="5641"/>
+			<!-- "99991 - Presentación telemática con certificado -->
+			<!-- "99992 - Presentación telemática sin certificado" -->
+			<!-- "99999 - Otro, especificar" -->
+			<!-- "0100 - ALAVA ADMON.PROV.-->
+			<!-- "0101 - ALAVA AEROPUERTO"-->
+			<!-- "0141 - ALAVA"-->
+			<!-- "0150 - VITORIA DOMICILIACI?N"-->
+			<!-- "0200 - ALBACETE ADMON.PROV."-->
+			<!-- "0241 - ALBACETE"-->
+			<!-- "0300 - ALICANTE ADMON.PROV.ADUANAS II.EE."-->
+			<!-- "0301 - ALICANTE AEROPUERTO"-->
+			<!-- "0304 - ALICANTE ETIQ. VERDE"-->
+			<!-- "0311 - ALICANTE MARITIMA"-->
+			<!-- "0315 - ALICANTE DEP. FRANCO"-->
+			<!-- "0321 - TORREVIEJA MARITIMA"-->
+			<!-- "0341 - ALICANTE CARRETERA"-->
+			<!-- "0371 - ALICANTE FERROCARRIL"-->
+			<!-- "0400 - ALMERIA ADMON. PROV."-->
+			<!-- "0401 - ALMERIA AEROPUERTO"-->
+			<!-- "0411 - ALMERIA MARITIMA"-->
+			<!-- "0441 - ALMERIA CARRETERA"-->
+			<!-- "0500 - AVILA ADMON. PROV."-->
+			<!-- "0541 - AVILA"-->
+			<!-- "0600 - BADAJOZ ADMON. PROV."-->
+			<!-- "0641 - BADAJOZ CARRETERA"-->
+			<!-- "0700 - BALEARES ADMON.PROV."-->
+			<!-- "0701 - P.MALLORCA AEROPUERT"-->
+			<!-- "0706 - PALMA DE MALLORCA DEPOSITO FRANCO"-->
+			<!-- "0707 - IBIZA AEROPUERTO"-->
+			<!-- "0708 - MAHON AEROPUERTO"-->
+			<!-- "0711 - P.MALLORCA MARITIMA"-->
+			<!-- "0713 - P. MALLORCA POSTALES"-->
+			<!-- "0717 - ALCUDIA MARITIMA"-->
+			<!-- "0720 - IBIZA ADM.ADUANAS"-->
+			<!-- "0721 - IBIZA MARITIMA"-->
+			<!-- "0730 - MAHON ADM.ADUANAS"-->
+			<!-- "0731 - MAHON MARITIMA"-->
+			<!-- "0800 - BARCELONA ADMON PROV"-->
+			<!-- "0801 - BARCELONA AEROPUERTO"-->
+			<!-- "0803 - BARNA.AEROP.POSTALES"-->
+			<!-- "0811 - BARNA.MARITIMA IMP."-->
+			<!-- "0812 - BARNA.MARITIMA EXP."-->
+			<!-- "0814 - BARNA.MARITINA E.VER"-->
+			<!-- "0821 - BARCELONA DEP.FRANCO"-->
+			<!-- "0841 - BARCELONA CARRETERA"-->
+			<!-- "0851 - BARNA FERIA MUESTRAS"-->
+			<!-- "0860 - BARCELONA DOMICILIACI?N"-->
+			<!-- "0881 - BARNA FF.CC. MORROT"-->
+			<!-- "0900 - BURGOS ADMON. PROV."-->
+			<!-- "0941 - BURGOS CARRETERA"-->
+			<!-- "0951 - BURGOS DEPOSITO FRANCO"-->
+			<!-- "1000 - CACERES ADMON. PROV."-->
+			<!-- "1041 - CACERES CARRETERA"-->
+			<!-- "1100 - CADIZ ADMON. PROV."-->
+			<!-- "1101 - JEREZ DE LA FRONTERA"-->
+			<!-- "1110 - JEREZ ADMON.PROV.ADUANAS E II.EE."-->
+			<!-- "1111 - CADIZ MARITIMA"-->
+			<!-- "1114 - CADIZ ETIQUETA VERDE"-->
+			<!-- "1115 - CADIZ ZONA FRANCA"-->
+			<!-- "1120 - PUERTO SANTA MARIA ADMON ADUANAS"-->
+			<!-- "1121 - PTO.STA.MARIA_MARIT."-->
+			<!-- "1130 - ALGECIRAS FACTORIAS"-->
+			<!-- "1131 - ALGECIRAS MARIT.TRAN"-->
+			<!-- "1132 - ALGECIRAS DES.CEUTA"-->
+			<!-- "1133 - TARIFA MARITIMA"-->
+			<!-- "1141 - CADIZ CARRETERA"-->
+			<!-- "1151 - PTO.STA.MARIA CARRET"-->
+			<!-- "1160 - LA LINEA ADMON ADUANAS_E II.EE."-->
+			<!-- "1161 - LA LINEA MARITIMA"-->
+			<!-- "1165 - LA LINEA, FACTORIAS"-->
+			<!-- "1167 - LA LINEA CONCEPCION"-->
+			<!-- "1171 - CADIZ FF.CC."-->
+			<!-- "1200 - CASTELLON ADMON.PROV"-->
+			<!-- "1211 - CASTELLON MARITIMA"-->
+			<!-- "1241 - CASTELLON CARRETERA"-->
+			<!-- "1247 - CASTELLON CARRETERA FRUTA"-->
+			<!-- "1291 - VILLAREAL FF.CC."-->
+			<!-- "1300 - CIUDAD REAL ADM.PROV"-->
+			<!-- "1341 - CIUDAD REAL"-->
+			<!-- "1400 - CORDOBA ADMON. PROV."-->
+			<!-- "1441 - CORDOBA"-->
+			<!-- "1500 - LA CORUÑA ADM. PROV."-->
+			<!-- "1501 - LA CORUÑA AEROPUERTO"-->
+			<!-- "1507 - SANTIAGO AEROPUERTO"-->
+			<!-- "1511 - LA CORUÑA MARITIMA"-->
+			<!-- "1514 - LA CORUÑA POSTALES"-->
+			<!-- "1517 - LA CORUÑA DEP.FRANCO"-->
+			<!-- "1521 - EL FERROL MARITIMA"-->
+			<!-- "1541 - LA CORUÑA CARRETERA"-->
+			<!-- "1551 - EL FERROL CARRETERA"-->
+			<!-- "1571 - LA CORUÑA FF.CC."-->
+			<!-- "1600 - CUENCA ADMON. PROV."-->
+			<!-- "1641 - CUENCA"-->
+			<!-- "1700 - GERONA ADMON. PROV."-->
+			<!-- "1701 - GERONA AEROPUERTO"-->
+			<!-- "1711 - PALAMOS"-->
+			<!-- "1741 - LA JUNQUERA"-->
+			<!-- "1761 - VILAMALLA CARRETERA"-->
+			<!-- "1771 - PORT-BOU"-->
+			<!-- "1800 - GRANADA ADMON. PROV."-->
+			<!-- "1801 - GRANADA AEROPUERTO"-->
+			<!-- "1810 - MOTRIL ADMON ADUANAS_E II.EE."-->
+			<!-- "1811 - MOTRIL MARITIMA"-->
+			<!-- "1841 - MOTRIL CARRETERA"-->
+			<!-- "1900 - GUADALAJARA ADM.PROV"-->
+			<!-- "1941 - GUADALAJARA"-->
+			<!-- "1950 - GUADALAJAR, DOMICILIACION"-->
+			<!-- "2000 - IRUN ADMON. PROV."-->
+			<!-- "2001 - GUIPUZCOA AEROPUERTO"-->
+			<!-- "2010 - PASAJES, ADMN.ADUANA"-->
+			<!-- "2011 - PASAJES MARITIMA"-->
+			<!-- "2020 - S.SEBASTIAN ADMON ADUANAS_E II.EE."-->
+			<!-- "2021 - PASAJES, DEPOSITO F"-->
+			<!-- "2045 - IRUN ZAISA"-->
+			<!-- "2050 - IRUN DOMICILIACI?N"-->
+			<!-- "2051 - PASAJES CARRETERA"-->
+			<!-- "2061 - IRUN ALMACENES TEMPORALES"-->
+			<!-- "2071 - IRUN FF.CC."-->
+			<!-- "2073 - IRUN FF.CC._POSTALES"-->
+			<!-- "2100 - HUELVA ADMON. PROV."-->
+			<!-- "2111 - HUELVA MARITIMA"-->
+			<!-- "2141 - HUELVA CARRETERA"-->
+			<!-- "2171 - HUELVA FERROCARRIL"-->
+			<!-- "2200 - HUESCA ADMON. PROV."-->
+			<!-- "2300 - JAEN ADMON. PROV."-->
+			<!-- "2341 - JAEN CARRETERA"-->
+			<!-- "2400 - LEON ADMON. PROV."-->
+			<!-- "2441 - LEON"-->
+			<!-- "2500 - LA FARGA ADMON.PROV."-->
+			<!-- "2519 - LERIDA DEP.ADUANERO"-->
+			<!-- "2541 - LA FARGA DE MOLES"-->
+			<!-- "2550 - LERIDA ADMON ADUANAS_E II.EE."-->
+			<!-- "2561 - LERIDA CARRETERA"-->
+			<!-- "2600 - LOGROÑO ADMON. PROV."-->
+			<!-- "2641 - LOGROÑO"-->
+			<!-- "2650 - HARO ADMON ADUANAS"-->
+			<!-- "2651 - HARO"-->
+			<!-- "2700 - LUGO ADMON. PROV."-->
+			<!-- "2711 - RIBADEO MARITIMA"-->
+			<!-- "2800 - MADRID ADMON PROV"-->
+			<!-- "2801 - AERO. MADRID BARAJAS"-->
+			<!-- "2803 - BARAJAS POSTALES"-->
+			<!-- "2811 - MADRID, PUERTO SECO"-->
+			<!-- "2841 - MADRID CARRETERA"-->
+			<!-- "2861 - MADRID FACTORIAS"-->
+			<!-- "2871 - MADRID FF.CC."-->
+			<!-- "2900 - MALAGA ADMON. PROV."-->
+			<!-- "2901 - MALAGA AEROPUERTO"-->
+			<!-- "2911 - MALAGA MARITIMA"-->
+			<!-- "2914 - MALAGA ETIQUETA VERDE"-->
+			<!-- "2915 - MáLAGA DOMICILIACIóN"-->
+			<!-- "2941 - MALAGA CARRETERA"-->
+			<!-- "2971 - MALAGA FERROCARRIL"-->
+			<!-- "3000 - MURCIA ADMON. PROV."-->
+			<!-- "3001 - MURCIA AEROPUERTO"-->
+			<!-- "3010 - CARTAGENA ADMN.ADUA"-->
+			<!-- "3011 - CARTAGENA MARITIMA"-->
+			<!-- "3021 - CARTAGENA DEP.FRANCO"-->
+			<!-- "3041 - CARTAGENA CARRETERA"-->
+			<!-- "3051 - MURCIA NONDUERMAS"-->
+			<!-- "3081 - MURCIA FF.CC."-->
+			<!-- "3100 - PAMPLONA ADMON.PROV."-->
+			<!-- "3161 - IMARCOAIN-PAMPLONA"-->
+			<!-- "3171 - PAMPLONA FF.CC."-->
+			<!-- "3200 - OURENSE ADMON. PROV."-->
+			<!-- "3300 - OVIEDO ADMON. PROV."-->
+			<!-- "3301 - ASTURIAS AEROPUERTO"-->
+			<!-- "3310 - GIJON ADMON ADUANAS_E II.EE."-->
+			<!-- "3311 - GIJON MARITIMA"-->
+			<!-- "3321 - GIJON, DEP.FRANCO"-->
+			<!-- "3331 - AVILES MARITIMA"-->
+			<!-- "3341 - GIJON, CARRETERA"-->
+			<!-- "3351 - AVILES CARRETERA"-->
+			<!-- "3371 - GIJON, FERROCARRIL"-->
+			<!-- "3400 - PALENCIA ADMON.PROV."-->
+			<!-- "3500 - G. CANARIA ADM.PROV."-->
+			<!-- "3520 - ARRECIFE ADMON ADUANAS_E II.EE."-->
+			<!-- "3521 - GRAN CANARIA ZONA FRANCA"-->
+			<!-- "3530 - FUERTEVENTURA ADMON ADUANAS-II.EE."-->
+			<!-- "3533 - FUERTEVENTURA MAR-CE"-->
+			<!-- "3541 - FUERTEVENTURA MAR?TIMA"-->
+			<!-- "3551 - FUERTEVENTURA AEROPUERTO"-->
+			<!-- "3561 - LANZAROTE MARITIMA"-->
+			<!-- "3571 - LANZAROTE AEROPUERTO"-->
+			<!-- "3581 - LAS PALMAS AEROPUERTO"-->
+			<!-- "3591 - LAS PALMAS MARITIMA"-->
+			<!-- "3593 - LAS PALMAS POSTAL"-->
+			<!-- "3600 - PONTEVEDRA ADM.PROV."-->
+			<!-- "3601 - VIGO AEROPUERTO"-->
+			<!-- "3610 - VIGO ADMN.ADUANAS"-->
+			<!-- "3611 - VIGO MARITIMA"-->
+			<!-- "3613 - VIGO POSTALES"-->
+			<!-- "3621 - MARIN MARITIMA"-->
+			<!-- "3631 - VILLAGARCIA MARITIMA"-->
+			<!-- "3639 - PONTEVEDRA ADM.PROV."-->
+			<!-- "3641 - VIGO CARRETERA"-->
+			<!-- "3651 - VILLAGARCIA CARRETER"-->
+			<!-- "3681 - VIGO ZONA FRANCA"-->
+			<!-- "3691 - VIGO DOMICILIACI?N"-->
+			<!-- "3700 - SALAMANCA ADM. PROV."-->
+			<!-- "3741 - FUENTES OÑORO CARRET"-->
+			<!-- "3800 - TENERIFE ADMON.PROV."-->
+			<!-- "3805 - TENERIFE AEROPUERTO SUR CE"-->
+			<!-- "3806 - TENERIFE AEROPUERTO NORTE"-->
+			<!-- "3809 - LA PALMA AEROPUERTO CE"-->
+			<!-- "3817 - TENERIFE MARITIMA-REA N Y CE"-->
+			<!-- "3820 - STA. CRUZ PAL.ADMON ADUANAS-II.EE."-->
+			<!-- "3827 - LA PALMA MARITIMA CE"-->
+			<!-- "3841 - LA GOMERA"-->
+			<!-- "3842 - HIERRO"-->
+			<!-- "3861 - LA PALMA MARITIMA"-->
+			<!-- "3871 - LA PALMA AEROPUERTO"-->
+			<!-- "3881 - TENERIFE AEROPUERTO SUR."-->
+			<!-- "3883 - TENERIFE AEROPUERTO NORTE"-->
+			<!-- "3891 - TENERIFE MARITIMA"-->
+			<!-- "3893 - TENERIFE POSTALES"-->
+			<!-- "3900 - SANTANDER ADMON.PROV"-->
+			<!-- "3901 - SANTANDER AEROPUERTO"-->
+			<!-- "3911 - SANTANDER MARITIMA"-->
+			<!-- "3913 - SANTANDER POSTALES"-->
+			<!-- "3921 - SANTANDER DTO FRANCO"-->
+			<!-- "3941 - SANTANDER CARRETERA"-->
+			<!-- "3971 - SANTANDERFERROCARRIL"-->
+			<!-- "4000 - SEGOVIA ADMON.PROV."-->
+			<!-- "4100 - SEVILLA ADMON. PROV."-->
+			<!-- "4101 - SEVILLA AEROPUERTO"-->
+			<!-- "4111 - SEVILLA MARITIMA"-->
+			<!-- "4114 - SEVILLA POSTALES"-->
+			<!-- "4121 - SEVILLA DEP.FRANCO"-->
+			<!-- "4141 - SEVILLA CARRETERA"-->
+			<!-- "4171 - SEVILLA FF.CC."-->
+			<!-- "4200 - SORIA ADMON. PROV."-->
+			<!-- "4300 - TARRAGONA ADM. PROV."-->
+			<!-- "4301 - TARRAGONA AEROPUERTO"-->
+			<!-- "4311 - TARRAGONA MARITIMA"-->
+			<!-- "4315 - TARRAGONA DEP.FRANCO"-->
+			<!-- "4320 - S.CARLOS.RAPITA ADM."-->
+			<!-- "4321 - S.CARLOS RAPITA_MAR."-->
+			<!-- "4341 - TARRAGONA CARRETERA"-->
+			<!-- "4371 - TARRAGONA FF.CC."-->
+			<!-- "4400 - TERUEL ADMON. PROV."-->
+			<!-- "4500 - TOLEDO ADMON. PROV."-->
+			<!-- "4541 - TOLEDO"-->
+			<!-- "4600 - VALENCIA ADMON.PROV."-->
+			<!-- "4601 - VALENCIA AEROPUERTO"-->
+			<!-- "4604 - VALENCIA AERO.POSTAL"-->
+			<!-- "4610 - OFICINA VALENCIA MARITIMA"-->
+			<!-- "4611 - VALENCIA MARITIMA"-->
+			<!-- "4621 - SAGUNTO MARITIMA"-->
+			<!-- "4631 - GANDIA MARITIMA"-->
+			<!-- "4350 - TARRAGONA DOMICILIACION Y DEP?SITOS"-->
+			<!-- "4641 - VALENCIA CARRETERA"-->
+			<!-- "4647 - SILLA CARRETERA"-->
+			<!-- "4650 - VALENCIA, FACTORIAS"-->
+			<!-- "4651 - SAGUNTO CARRETERA"-->
+			<!-- "4661 - GANDIA CARRETERA"-->
+			<!-- "4667 - JERESA CARRETERA"-->
+			<!-- "4700 - VALLADOLID ADM.PROV."-->
+			<!-- "4701 - VALLADOLID AEROPUERTO"-->
+			<!-- "4741 - VALLADOLID TIR"-->
+			<!-- "4742 - VALLADOLID DEPOSITO ADUANERO"-->
+			<!-- "4800 - BILBAO ADMON. PROV."-->
+			<!-- "4801 - BILBAO AEROPUERTO"-->
+			<!-- "4811 - BILBAO MARITIMA"-->
+			<!-- "4821 - BILBAO DEPOS.FRANCO"-->
+			<!-- "4842 - APARCAVISA"-->
+			<!-- "4850 - BILBAO DOMICILIACI?N"-->
+			<!-- "4874 - BILBAO POSTALES"-->
+			<!-- "4900 - ZAMORA ADMON. PROV."-->
+			<!-- "4942 - ZAMORA"-->
+			<!-- "5000 - ZARAGOZA ADMON.PROV."-->
+			<!-- "5001 - ZARAGOZA AEROPUERTO"-->
+			<!-- "5004 - ZARAGOZA POSTALES"-->
+			<!-- "4825 - BILBAO ZAL"-->
+			<!-- "5041 - ZARAGOZA TIR"-->
+			<!-- "5500 - CEUTA"-->
+			<!-- "5503 - CEUTA HELIPUERTO"-->
+			<!-- "5511 - CEUTA MARITIMA"-->
+			<!-- "5512 - CEUTA, ENVIOS NACIONALES"-->
+			<!-- "5513 - CEUTA POSTALES"-->
+			<!-- "5541 - CEUTA CARRETERA"-->
+			<!-- "5600 - MELILLA"-->
+			<!-- "5601 - MELILLA AEROPUERTO"-->
+			<!-- "5611 - MELILLA MARITIMA"-->
+			<!-- "5612 - MELILLA, MARITIMA MERC.NACIONAL"-->
+			<!-- "5613 - MELILLA POSTALES"-->
+			<!-- "5641 - MELILLA CARRETERA"-->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TIPFIRMA_ENUM">
+		<xs:annotation>
+			<xs:documentation>Tipos de firma del declarante</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<!-- "1 - Firma Manuscrita -->
+			<!-- "2 - Firma Electrónica Reconocida" -->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TIPDOMPJ_ENUM">
+		<xs:annotation>
+			<xs:documentation>Tipos de domicilio - personas juridicas</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="7"/>
+			<!-- "3 - Domicilio principal" -->
+			<!-- "1 - Domicilio social" -->
+			<!-- "7 - Otro" -->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FORMASOC_ENUM">
+		<xs:annotation>
+			<xs:documentation>Forma societaria</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="99"/>
+			<!-- "1	Sociedad anónima"-->
+			<!-- "2	Sociedad de responsabilidad limitada"-->
+			<!-- "99	Otras"-->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CODBP_ENUM">
+		<xs:annotation>
+			<xs:documentation>Codigos de balanza de pagos</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="000101"/>
+			<xs:enumeration value="000201"/>
+			<xs:enumeration value="000301"/>
+			<xs:enumeration value="000401"/>
+			<xs:enumeration value="000501"/>
+			<xs:enumeration value="000601"/>
+			<xs:enumeration value="000701"/>
+			<xs:enumeration value="010000"/>
+			<xs:enumeration value="010101"/>
+			<xs:enumeration value="010102"/>
+			<xs:enumeration value="010104"/>
+			<xs:enumeration value="010201"/>
+			<xs:enumeration value="010202"/>
+			<xs:enumeration value="010204"/>
+			<xs:enumeration value="010205"/>
+			<xs:enumeration value="010301"/>
+			<xs:enumeration value="010302"/>
+			<xs:enumeration value="010304"/>
+			<xs:enumeration value="010305"/>
+			<xs:enumeration value="010306"/>
+			<xs:enumeration value="020000"/>
+			<xs:enumeration value="020101"/>
+			<xs:enumeration value="030000"/>
+			<xs:enumeration value="030101"/>
+			<xs:enumeration value="030201"/>
+			<xs:enumeration value="040000"/>
+			<xs:enumeration value="040201"/>
+			<xs:enumeration value="040301"/>
+			<xs:enumeration value="050000"/>
+			<xs:enumeration value="050101"/>
+			<xs:enumeration value="050102"/>
+			<xs:enumeration value="050201"/>
+			<xs:enumeration value="050202"/>
+			<xs:enumeration value="050301"/>
+			<xs:enumeration value="050302"/>
+			<xs:enumeration value="050401"/>
+			<xs:enumeration value="050402"/>
+			<xs:enumeration value="050502"/>
+			<xs:enumeration value="050503"/>
+			<xs:enumeration value="050601"/>
+			<xs:enumeration value="060000"/>
+			<xs:enumeration value="060101"/>
+			<xs:enumeration value="060201"/>
+			<xs:enumeration value="070000"/>
+			<xs:enumeration value="070101"/>
+			<xs:enumeration value="070201"/>
+			<xs:enumeration value="070301"/>
+			<xs:enumeration value="080000"/>
+			<xs:enumeration value="080101"/>
+			<xs:enumeration value="080201"/>
+			<xs:enumeration value="080301"/>
+			<xs:enumeration value="090000"/>
+			<xs:enumeration value="090101"/>
+			<xs:enumeration value="090201"/>
+			<xs:enumeration value="090301"/>
+			<xs:enumeration value="090401"/>
+			<xs:enumeration value="090501"/>
+			<xs:enumeration value="090601"/>
+			<xs:enumeration value="090701"/>
+			<xs:enumeration value="090801"/>
+			<xs:enumeration value="090901"/>
+			<xs:enumeration value="091001"/>
+			<xs:enumeration value="100000"/>
+			<xs:enumeration value="100101"/>
+			<xs:enumeration value="100201"/>
+			<xs:enumeration value="110000"/>
+			<xs:enumeration value="110201"/>
+			<xs:enumeration value="120000"/>
+			<xs:enumeration value="130000"/>
+			<xs:enumeration value="130101"/>
+			<xs:enumeration value="130201"/>
+			<xs:enumeration value="130301"/>
+			<xs:enumeration value="130401"/>
+			<xs:enumeration value="130501"/>
+			<xs:enumeration value="130601"/>
+			<xs:enumeration value="130701"/>
+			<xs:enumeration value="130801"/>
+			<xs:enumeration value="130901"/>
+			<xs:enumeration value="140000"/>
+			<xs:enumeration value="150000"/>
+			<xs:enumeration value="160000"/>
+			<xs:enumeration value="170000"/>
+			<xs:enumeration value="180000"/>
+			<xs:enumeration value="190000"/>
+			<xs:enumeration value="200000"/>
+			<xs:enumeration value="200101"/>
+			<xs:enumeration value="200102"/>
+			<xs:enumeration value="200103"/>
+			<xs:enumeration value="200201"/>
+			<xs:enumeration value="200202"/>
+			<xs:enumeration value="200203"/>
+			<xs:enumeration value="200301"/>
+			<xs:enumeration value="200302"/>
+			<xs:enumeration value="200303"/>
+			<xs:enumeration value="210000"/>
+			<xs:enumeration value="210201"/>
+			<xs:enumeration value="210202"/>
+			<xs:enumeration value="210203"/>
+			<xs:enumeration value="210301"/>
+			<xs:enumeration value="210302"/>
+			<xs:enumeration value="210303"/>
+			<xs:enumeration value="220000"/>
+			<xs:enumeration value="220101"/>
+			<xs:enumeration value="220102"/>
+			<xs:enumeration value="220103"/>
+			<xs:enumeration value="230000"/>
+			<xs:enumeration value="230101"/>
+			<xs:enumeration value="230102"/>
+			<xs:enumeration value="230103"/>
+			<xs:enumeration value="230201"/>
+			<xs:enumeration value="230202"/>
+			<xs:enumeration value="230203"/>
+			<xs:enumeration value="230301"/>
+			<xs:enumeration value="230302"/>
+			<xs:enumeration value="230303"/>
+			<xs:enumeration value="240000"/>
+			<xs:enumeration value="240101"/>
+			<xs:enumeration value="240102"/>
+			<xs:enumeration value="240201"/>
+			<xs:enumeration value="240202"/>
+			<xs:enumeration value="240301"/>
+			<xs:enumeration value="240302"/>
+			<xs:enumeration value="240401"/>
+			<xs:enumeration value="240402"/>
+			<xs:enumeration value="240501"/>
+			<xs:enumeration value="240502"/>
+			<xs:enumeration value="250000"/>
+			<xs:enumeration value="250101"/>
+			<xs:enumeration value="250102"/>
+			<xs:enumeration value="250103"/>
+			<xs:enumeration value="250201"/>
+			<xs:enumeration value="250202"/>
+			<xs:enumeration value="250203"/>
+			<xs:enumeration value="250301"/>
+			<xs:enumeration value="250302"/>
+			<xs:enumeration value="250303"/>
+			<xs:enumeration value="250402"/>
+			<xs:enumeration value="250403"/>
+			<xs:enumeration value="250501"/>
+			<xs:enumeration value="250502"/>
+			<xs:enumeration value="250503"/>
+			<xs:enumeration value="260000"/>
+			<xs:enumeration value="270000"/>
+			<xs:enumeration value="270100"/>
+			<xs:enumeration value="270200"/>
+			<xs:enumeration value="270300"/>
+			<xs:enumeration value="270400"/>
+			<xs:enumeration value="270500"/>
+			<xs:enumeration value="270600"/>
+			<xs:enumeration value="270700"/>
+			<xs:enumeration value="270800"/>
+			<xs:enumeration value="270900"/>
+			<xs:enumeration value="271000"/>
+			<xs:enumeration value="271100"/>
+			<xs:enumeration value="271200"/>
+			<xs:enumeration value="271300"/>
+			<xs:enumeration value="271400"/>
+			<xs:enumeration value="271500"/>
+			<xs:enumeration value="271600"/>
+			<xs:enumeration value="280000"/>
+			<xs:enumeration value="290000"/>
+			<xs:enumeration value="300000"/>
+			<xs:enumeration value="300101"/>
+			<xs:enumeration value="300102"/>
+			<xs:enumeration value="300103"/>
+			<xs:enumeration value="300201"/>
+			<xs:enumeration value="300202"/>
+			<xs:enumeration value="300203"/>
+			<xs:enumeration value="300301"/>
+			<xs:enumeration value="300302"/>
+			<xs:enumeration value="300303"/>
+			<xs:enumeration value="310000"/>
+			<xs:enumeration value="310201"/>
+			<xs:enumeration value="310202"/>
+			<xs:enumeration value="310203"/>
+			<xs:enumeration value="310301"/>
+			<xs:enumeration value="310302"/>
+			<xs:enumeration value="310303"/>
+			<xs:enumeration value="320000"/>
+			<xs:enumeration value="320101"/>
+			<xs:enumeration value="320102"/>
+			<xs:enumeration value="320103"/>
+			<xs:enumeration value="330000"/>
+			<xs:enumeration value="330101"/>
+			<xs:enumeration value="330102"/>
+			<xs:enumeration value="330103"/>
+			<xs:enumeration value="330201"/>
+			<xs:enumeration value="330202"/>
+			<xs:enumeration value="330203"/>
+			<xs:enumeration value="330301"/>
+			<xs:enumeration value="330302"/>
+			<xs:enumeration value="330303"/>
+			<xs:enumeration value="340000"/>
+			<xs:enumeration value="340101"/>
+			<xs:enumeration value="340102"/>
+			<xs:enumeration value="340201"/>
+			<xs:enumeration value="340202"/>
+			<xs:enumeration value="340301"/>
+			<xs:enumeration value="340302"/>
+			<xs:enumeration value="340401"/>
+			<xs:enumeration value="340402"/>
+			<xs:enumeration value="340501"/>
+			<xs:enumeration value="340502"/>
+			<xs:enumeration value="350000"/>
+			<xs:enumeration value="350101"/>
+			<xs:enumeration value="350102"/>
+			<xs:enumeration value="350103"/>
+			<xs:enumeration value="350201"/>
+			<xs:enumeration value="350202"/>
+			<xs:enumeration value="350203"/>
+			<xs:enumeration value="350301"/>
+			<xs:enumeration value="350302"/>
+			<xs:enumeration value="350303"/>
+			<xs:enumeration value="350402"/>
+			<xs:enumeration value="350403"/>
+			<xs:enumeration value="350501"/>
+			<xs:enumeration value="350502"/>
+			<xs:enumeration value="350503"/>
+			<xs:enumeration value="350601"/>
+			<xs:enumeration value="350602"/>
+			<xs:enumeration value="350603"/>
+			<xs:enumeration value="350701"/>
+			<xs:enumeration value="350702"/>
+			<xs:enumeration value="360000"/>
+			<xs:enumeration value="360101"/>
+			<xs:enumeration value="360102"/>
+			<xs:enumeration value="360103"/>
+			<xs:enumeration value="370000"/>
+			<xs:enumeration value="380000"/>
+			<xs:enumeration value="390000"/>
+			<xs:enumeration value="400000"/>
+			<xs:enumeration value="410000"/>
+			<xs:enumeration value="410101"/>
+			<xs:enumeration value="410201"/>
+			<xs:enumeration value="410301"/>
+			<xs:enumeration value="410401"/>
+			<xs:enumeration value="410501"/>
+			<xs:enumeration value="420000"/>
+			<xs:enumeration value="420101"/>
+			<xs:enumeration value="420201"/>
+			<xs:enumeration value="420301"/>
+			<xs:enumeration value="420303"/>
+			<xs:enumeration value="420401"/>
+			<xs:enumeration value="420501"/>
+			<xs:enumeration value="430000"/>
+			<xs:enumeration value="430101"/>
+			<xs:enumeration value="430103"/>
+			<xs:enumeration value="430201"/>
+			<xs:enumeration value="430301"/>
+			<xs:enumeration value="430401"/>
+			<xs:enumeration value="430503"/>
+			<xs:enumeration value="430601"/>
+			<xs:enumeration value="430701"/>
+			<xs:enumeration value="430801"/>
+			<xs:enumeration value="440000"/>
+			<xs:enumeration value="440101"/>
+			<xs:enumeration value="440201"/>
+			<xs:enumeration value="440401"/>
+			<xs:enumeration value="440501"/>
+			<xs:enumeration value="450000"/>
+			<xs:enumeration value="450101"/>
+			<xs:enumeration value="450201"/>
+			<xs:enumeration value="450301"/>
+			<xs:enumeration value="460000"/>
+			<xs:enumeration value="470000"/>
+			<xs:enumeration value="480000"/>
+			<xs:enumeration value="490000"/>
+			<xs:enumeration value="500000"/>
+			<xs:enumeration value="510000"/>
+			<xs:enumeration value="520000"/>
+			<xs:enumeration value="530000"/>
+			<xs:enumeration value="540000"/>
+			<xs:enumeration value="550000"/>
+			<xs:enumeration value="560000"/>
+			<xs:enumeration value="570000"/>
+			<xs:enumeration value="580000"/>
+			<xs:enumeration value="590000"/>
+			<xs:enumeration value="600000"/>
+			<xs:enumeration value="610000"/>
+			<xs:enumeration value="620000"/>
+			<xs:enumeration value="630000"/>
+			<xs:enumeration value="640000"/>
+			<xs:enumeration value="650000"/>
+			<xs:enumeration value="660000"/>
+			<xs:enumeration value="670000"/>
+			<xs:enumeration value="680000"/>
+			<xs:enumeration value="690000"/>
+			<xs:enumeration value="700000"/>
+			<xs:enumeration value="710000"/>
+			<xs:enumeration value="720000"/>
+			<xs:enumeration value="730000"/>
+			<xs:enumeration value="740000"/>
+			<xs:enumeration value="750000"/>
+			<xs:enumeration value="760000"/>
+			<xs:enumeration value="780000"/>
+			<xs:enumeration value="790000"/>
+			<xs:enumeration value="800000"/>
+			<xs:enumeration value="810000"/>
+			<xs:enumeration value="820000"/>
+			<xs:enumeration value="830000"/>
+			<xs:enumeration value="840000"/>
+			<xs:enumeration value="850000"/>
+			<xs:enumeration value="860000"/>
+			<xs:enumeration value="870000"/>
+			<xs:enumeration value="880000"/>
+			<xs:enumeration value="890000"/>
+			<xs:enumeration value="900000"/>
+			<xs:enumeration value="910000"/>
+			<xs:enumeration value="920000"/>
+			<xs:enumeration value="930000"/>
+			<xs:enumeration value="940000"/>
+			<xs:enumeration value="950000"/>
+			<xs:enumeration value="960000"/>
+			<xs:enumeration value="970000"/>
+			<xs:enumeration value="980000"/>
+			<xs:enumeration value="990000"/>
+			<!-- "000101 - TRANSFORMACION DE MERCANCIAS"-->
+			<!-- "000201 - REPARACIONES"-->
+			<!-- "000301 - SUMINISTRO DE COMBUSTIBLE A MEDIOS DE TRANSPORTE"-->
+			<!-- "000401 - OTROS SUMINISTROS A MEDIOS DE TRANSPORTE"-->
+			<!-- "000501 - NEGOCIACION INTERNACIONAL DE MERCANCIAS (OPERACIONES TRIANGULARES Y ARBITRAJE INTERNACIONAL DE MERCANCIAS)"-->
+			<!-- "000601 - OTRAS MERCANCIAS QUE NO TRASPASAN LA FRONTERA DELPAIS"-->
+			<!-- "000701 - BONIFICACIONES Y DESCUENTOS SOBRE MERCANCIAS"-->
+			<!-- "010000 - ANIMALES VIVOS"-->
+			<!-- "010101 - TRANSPORTE MARITIMO DE MERCANCIAS (FLETES MARITIMOS)"-->
+			<!-- "010102 - TRANSPORTE MARITIMO DE PASAJEROS"-->
+			<!-- "010104 - SERVICIOS AUXILIARES AL TRANSPORTE MARITIMO ALTA 1/1/95"-->
+			<!-- "010201 - TRANSPORTE AÉREO DE MERCANCIAS (FLETES)"-->
+			<!-- "010202 - TRANSPORTE AÉREO DE PASAJEROS"-->
+			<!-- "010204 - SERVICIOS AUXILIARES AL TRANSPORTE AÉREO ALTA 1/1/95"-->
+			<!-- "010205 - TRANSPORTE ESPACIAL ALTA 1/1/95"-->
+			<!-- "010301 - TRANSPORTE TERRESTRE POR CARRETERA DE MERCANCIAS"-->
+			<!-- "010302 - TRANSPORTE TERRESTRE POR CARRETERA DE PASAJEROS"-->
+			<!-- "010304 - SERVICIOS AUXILIARES AL TRANSPORTE TERRESTRE POR CARRETERA ALTA 1/1/95"-->
+			<!-- "010305 - TRANSPORTE POR FERROCARRIL Y SUS SERVICIOS AUXILIARES ALTA 1/1/95"-->
+			<!-- "010306 - TRANSPORTE POR TUBERIA ALTA 1/1/95"-->
+			<!-- "020000 - CARNES Y DESPOJOS COMESTIBLES"-->
+			<!-- "020101 - TURISMO Y VIAJES"-->
+			<!-- "030000 - PESCADOS, CRUSTACEOS, MOLUSCOS Y OTROS INVERTEBRADOS ACUATICOS"-->
+			<!-- "030101 - SERVICIOS POSTALES Y DE CORREOS"-->
+			<!-- "030201 - SERVICIOS DE TELECOMUNICACIONES"-->
+			<!-- "040000 - LECHE Y OTROSPRODUCTOS LACTEOS, HUEVOS DE AVE, MIEL NATURAL Y OTROS PRODUCTOS COMESTIBLES DE ORIGEN ANIMAL"-->
+			<!-- "040201 - SERVICIOS DE CONSTRUCCION PRESTADOS POR EMPRESAS RESIDENTES A NO RESIDENTES, REALIZADOS EN EL EXTRANJERO ALTA 1/1/99"-->
+			<!-- "040301 - SERVICIOS DE CONSTRUCCION PRESTADOS POR EMPRESAS NO RESIDENTES A RESIDENTES, REALIZADOS EN ESPAÑA ALTA 1/1/99"-->
+			<!-- "050000 - PRODUCTOS DEL REINTO ANIMAL NO EXPRESADOS EN OTRA PARTE DEL ARANCEL"-->
+			<!-- "050101 - PRIMAS DE SEGUROS SOBRE TRANSPORTE INTERNACIONAL DE MERCANCIAS"-->
+			<!-- "050102 - INDEMNIZACIONES DE SEGUROS SOBRE TRANSPORTE INTERNACIONAL DE MERCANCIAS"-->
+			<!-- "050201 - PRIMAS SOBRE SEGUROS DE VIDA"-->
+			<!-- "050202 - INDEMNIZACIONES SOBRE SEGUROS DE VIDA"-->
+			<!-- "050301 - APORTACIONES A FONDOS DE PENSIONES"-->
+			<!-- "050302 - PRESTACIONES Y RECUPERACIONES DE FONDOS DE PENSIONES"-->
+			<!-- "050401 - PRIMAS SOBRE OTROS SEGUROS (EXCLUIDA LA SEGURIDAD SOCIAL)"-->
+			<!-- "050402 - INDEMNIZACIONES DE OTROS SEGUROS (EXCLUIDA LA SEGURIDAD SOCIAL)"-->
+			<!-- "050502 - REASEGUROS ACEPTADOS POR EMPRESAS DE SEGUROS RESIDENTES (LA EMPRESA RESIDENTE ES REASEGURADORA) ALTA 1/5/97"-->
+			<!-- "050503 - REASEGURO CEDIDO POR EMPRESAS DE SEGUROS RESIDENTES (LA EMPRESA RESIDENTE SE REASEGURA) ALTA 1/5/97"-->
+			<!-- "050601 - SERVICIOS AUXILIARES AL SEGURO ALTA 1/1/95"-->
+			<!-- "060000 - PLANTAS VIVAS Y PRODUCTOS DE FLORICULTURA"-->
+			<!-- "060101 - COMISIONES RELACIONADAS CON INVERSIONES EXTERIORES"-->
+			<!-- "060201 - OTROS SERVICIOS DE INTERMEDIACION FINANCIERA"-->
+			<!-- "070000 - LEGUMBRES Y HORTALIZAS, PLANTAS, RAICES Y TUBÉRCULOS ALIMENTICIOS"-->
+			<!-- "070101 - SERVICIOS DE HARDWARE"-->
+			<!-- "070201 - SERVICIOS DE SOFTWARE"-->
+			<!-- "070301 - SERVICIOS DE INFORMACION Y DE PROCESAMIENTO Y BASES DE DATOS"-->
+			<!-- "080000 - FRUTOS COMESTIBLES, CORTEZA DE AGRIOS Y MELONES"-->
+			<!-- "080101 - DERECHOS DE EXPLOTACION DE PATENTES, MARCAS, MODELOS E INVENTOS"-->
+			<!-- "080201 - DERECHOS DE AUTOR"-->
+			<!-- "080301 - COMPRAVENTA DE PATENTES, MARCAS, MODELOS E INVENTOS"-->
+			<!-- "090000 - CAFÉ, TÉ, YERBA MATE Y ESPECIAS"-->
+			<!-- "090101 - COMISIONES Y CORRETAJES SOBRE IMPORTACIONES"-->
+			<!-- "090201 - COMISIONES Y CORRETAJES SOBRE EXPORTACIONES"-->
+			<!-- "090301 - ALQUILER DE BIENES DE EQUIPO Y MEDIOS DE TRANSPORTE SIN TRIPULACION"-->
+			<!-- "090401 - SERVICIOS DE INVESTIGACION Y DESARROLLO"-->
+			<!-- "090501 - SERVICIOS JURIDICOS, CONTABLES Y DE ASESORIA"-->
+			<!-- "090601 - PUBLICIDAD, ESTUDIOS DE MERCADO Y SONDEOS DE OPINION"-->
+			<!-- "090701 - SERVICIOS DE ARQUITECTURA INGENIERIA Y OTROS SERVICIOS TÉCNICOS"-->
+			<!-- "090801 - SERVICIOS PRESTADOS A LAS INDUSTRIAS AGRICOLAS, GANADERAS Y MINERAS Y SERVICIOS DE TRANSFORMACION IN SITU"-->
+			<!-- "090901 - OTROS SERVICIOS PRESTADOS A LAS EMPRESAS."-->
+			<!-- "091001 - SERVICIOS ENTRE EMPRESAS RELACIONADAS NO INCLUIDOS EN OTROS CONCEPTOS ALTA 1/1/95"-->
+			<!-- "100000 - CEREALES"-->
+			<!-- "100101 - CINE, RADIO Y TELEVISION"-->
+			<!-- "100201 - OTROS SERVICIOS CULTURALES, RECREATIVOS, DEPORTIVOS, ETC."-->
+			<!-- "110000 - PRODUCTOS DE MOLINERIA, MALTA ALMIDON Y FÉCULA, INULINA, GLUTEN DE TRIGO"-->
+			<!-- "110201 - OTROS SERVICIOS GUBERNAMENTALES"-->
+			<!-- "120000 - SEMILLAS Y FRUTOS OLEAGINOSOS, SEMILLAS Y FRUTOS DIVERSOS, PLANTAS INDUSTRIALES O MEDICINALES, PAJA Y FORRAJE"-->
+			<!-- "130000 - GOMAS, RESINAS Y DEMAS JUGOS Y EXTRACTOS VEGETALES"-->
+			<!-- "130101 - CONDONACION DE DEUDAS DE NO RESIDENTES FRENTE A LAS ENTIDADES REGISTRADAS"-->
+			<!-- "130201 - DONACIONES CORRIENTES"-->
+			<!-- "130301 - DONACIONES PARA INVERSION"-->
+			<!-- "130401 - REMESAS DE EMIGRANTES E INMIGRANTES"-->
+			<!-- "130501 - LIQUIDACION DEL PATRIMONIO DE EMIGRANTES E INMIGRANTES"-->
+			<!-- "130601 - IMPUESTOS"-->
+			<!-- "130701 - SEGURIDAD SOCIAL"-->
+			<!-- "130801 - OTROS COBROS Y PAGOS SIN CONTRAPARTIDA"-->
+			<!-- "130901 - MOVIMIENTO DE FONDOS ENTRE LA ADMINISTRACION PUBLICA ESPAÑOLA Y LA UNION EUROPEA (UE)"-->
+			<!-- "140000 - MATERIAS TRENZABLES Y DEMAS PRODUCTOS VEGETALES NO EXPRESADOS NI COMPRENDIDOS EN OTROS CAPITULOS"-->
+			<!-- "150000 - GRASAS Y ACEITES ANIMALES O VEGETALES; PRODUCTOS DE SU DESDOBLAMIENTO; GRASAS ALIMENTICIAS ELABORADAS; CERAS DE ORIGEN ANIMAL O VEGETAL "-->
+			<!-- "160000 - PREPARACIONES DE CARNE, PESCADO O DE CRUSTACEOS, MOLUSCOS O DEMAS INVERTEBRADOS ACUATICOS "-->
+			<!-- "170000 - AZUCARES Y ARTICULOS DE CONFITERIA "-->
+			<!-- "180000 - CACAO Y SUS PREPARACIONES "-->
+			<!-- "190000 - PREPARACIONES A BASE DE CEREALES, HARINA, ALMIDON, FÉCULA O LECHE; PRODUCTOS DE PASTELERIA "-->
+			<!-- "200000 - PREPARACIONES DE HORTALIZAS, DE FRUTOS O DE OTRAS PARTES DE PLANTAS"-->
+			<!-- "200101 - INVERSIONES EFECTUADAS EN ACCIONES NO ADMITIDAS A COTIZACION EN BOLSA, EMITIDAS POR SOCIEDADES RESIDENTES, INCLUIDOS DERECHOS DE SUSCRIPCION"-->
+			<!-- "200102 - INVERSIONES EFECTUADAS EN ACCIONES NO ADMITIDAS A COTIZACION EN BOLSA, EMITIDAS POR SOCIEDADES RESIDENTES, INCLUIDOS DERECHOS DE SUSCRIPCION"-->
+			<!-- "200103 - INVERSIONES EFECTUADAS EN ACCIONES NO ADMITIDAS A COTIZACION EN BOLSA, EMITIDAS POR SOCIEDADES RESIDENTES, INCLUIDOS DERECHOS DE SUSCRIPCION"-->
+			<!-- "200201 - INVERSIONES EFECTUADAS EN ACCIONES ADMITIDAS A COTIZACION EN BOLSA EMITIDAS POR SOCIEDADES RESIDENTES, INCLUIDOS DERECHOS DE SUSCRIPCION"-->
+			<!-- "200202 - INVERSIONES EFECTUADAS EN ACCIONES ADMITIDAS A COTIZACION EN BOLSA EMITIDAS POR SOCIEDADES RESIDENTES, INCLUIDOS DERECHOS DE SUSCRIPCION"-->
+			<!-- "200203 - INVERSIONES EFECTUADAS EN ACCIONES ADMITIDAS A COTIZACION EN BOLSA EMITIDAS POR SOCIEDADES RESIDENTES, INCLUIDOS DERECHOS DE SUSCRIPCION"-->
+			<!-- "200301 - PARTICIPACIONES DE NO RESIDENTES EN LA PROPIEDAD DE EMPRESAS Y ENTIDADES RESIDENTES, DISTINTAS DE LAS MATERIALIZADAS EN ACCIONES"-->
+			<!-- "200302 - PARTICIPACIONES DE NO RESIDENTES EN LA PROPIEDAD DE EMPRESAS Y ENTIDADES RESIDENTES, DISTINTAS DE LAS MATERIALIZADAS EN ACCIONES"-->
+			<!-- "200303 - PARTICIPACIONES DE NO RESIDENTES EN LA PROPIEDAD DE EMPRESAS Y ENTIDADES RESIDENTES, DISTINTAS DE LAS MATERIALIZADAS EN ACCIONES"-->
+			<!-- "210000 - PREPARACIONES ALIMENTICIAS DIVERSAS "-->
+			<!-- "210201 - OPERACIONES DE FINANCIACION CONCEDIDA POR NO RESIDENTES TITULARES DE INVERSION DIRECTA A SUS FILIALES Y SOCIEDADES PARTICIPADAS RESIDENTES"-->
+			<!-- "210202 - OPERACIONES DE FINANCIACION CONCEDIDA POR NO RESIDENTES TITULARES DE INVERSION DIRECTA A SUS FILIALES Y SOCIEDADES PARTICIPADAS RESIDENTES"-->
+			<!-- "210203 - OPERACIONES DE FINANCIACION CONCEDIDA POR NO RESIDENTES TITULARES DE INVERSION DIRECTA A SUS FILIALES Y SOCIEDADES PARTICIPADAS RESIDENTES"-->
+			<!-- "210301 - OPERACIONES DE FINANCIACION CONCEDIDA A NO RESIDENTES TITULARES DE INVERSION DIRECTA POR SUS FILIALES, SOCIEDADES PARTICIPADAS, SUCURSALES O ESTABLECIMIENTOS RESIDENTES"-->
+			<!-- "210302 - OPERACIONES DE FINANCIACION CONCEDIDA A NO RESIDENTES TITULARES DE INVERSION DIRECTA POR SUS FILIALES, SOCIEDADES PARTICIPADAS, SUCURSALES O ESTABLECIMIENTOS RESIDENTES"-->
+			<!-- "210303 - OPERACIONES DE FINANCIACION CONCEDIDA A NO RESIDENTES TITULARES DE INVERSION DIRECTA POR SUS FILIALES, SOCIEDADES PARTICIPADAS, SUCURSALES O ESTABLECIMIENTOS RESIDENTES"-->
+			<!-- "220000 - BEBIDAS, LIQUIDOS ALCOHOLICOS Y VINAGRE"-->
+			<!-- "220101 - INVERSIONES EFECTUADAS POR NO RESIDENTES EN BIENES INMUEBLES SITUADOS EN EL TERRITORIO ESPAÑOL"-->
+			<!-- "220102 - INVERSIONES EFECTUADAS POR NO RESIDENTES EN BIENES INMUEBLES SITUADOS EN EL TERRITORIO ESPAÑOL"-->
+			<!-- "220103 - INVERSIONES EFECTUADAS POR NO RESIDENTES EN BIENES INMUEBLES SITUADOS EN EL TERRITORIO ESPAÑOL"-->
+			<!-- "230000 - RESIDUOS Y DESPERDICIOS DE LAS INDUSTRIAS ALIMENTARIAS; ALIMENTOS PREPARADOS PARA ANIMALES "-->
+			<!-- "230101 - OPERACIONES EN VALORES REPRESENTATIVOS DE EMPRÉSTITOS, EMITIDOS POR RESIDENTES A PLAZO SUPERIOR A UN AÑO Y QUE SEAN NEGOCIABLES EN BOLSA O MERCADOS ORGANIZADOS"-->
+			<!-- "230102 - OPERACIONES EN VALORES REPRESENTATIVOS DE EMPRÉSTITOS, EMITIDOS POR RESIDENTES A PLAZO SUPERIOR A UN AÑO Y QUE SEAN NEGOCIABLES EN BOLSA O MERCADOS ORGANIZADOS"-->
+			<!-- "230103 - OPERACIONES EN VALORES REPRESENTATIVOS DE EMPRÉSTITOS, EMITIDOS POR RESIDENTES A PLAZO SUPERIOR A UN AÑO Y QUE SEAN NEGOCIABLES EN BOLSA O MERCADOS ORGANIZADOS"-->
+			<!-- "230201 - OPERACIONES EN VALORES REPRESENTATIVOS DE EMPRÉSTITOS, EMITIDOS POR RESIDENTES A PLAZO DE UN AÑO O INFERIOR Y QUE SEAN NEGOCIABLES EN BOLSA O MERCADOS ORGANIZADOS"-->
+			<!-- "230202 - OPERACIONES EN VALORES REPRESENTATIVOS DE EMPRÉSTITOS, EMITIDOS POR RESIDENTES A PLAZO DE UN AÑO O INFERIOR Y QUE SEAN NEGOCIABLES EN BOLSA O MERCADOS ORGANIZADOS"-->
+			<!-- "230203 - OPERACIONES EN VALORES REPRESENTATIVOS DE EMPRÉSTITOS, EMITIDOS POR RESIDENTES A PLAZO DE UN AÑO O INFERIOR Y QUE SEAN NEGOCIABLES EN BOLSA O MERCADOS ORGANIZADOS"-->
+			<!-- "230301 - INVERSIONES EFECTUADAS POR NO RESIDENTES EN PARTICIPACIONES EN FONDOS DE INVERSION RESIDENTES SIN PERSONALIDAD JURIDICA PROPIA"-->
+			<!-- "230302 - INVERSIONES EFECTUADAS POR NO RESIDENTES EN PARTICIPACIONES EN FONDOS DE INVERSION RESIDENTES SIN PERSONALIDAD JURIDICA PROPIA"-->
+			<!-- "230303 - INVERSIONES EFECTUADAS POR NO RESIDENTES EN PARTICIPACIONES EN FONDOS DE INVERSION RESIDENTES SIN PERSONALIDAD JURIDICA PROPIA"-->
+			<!-- "240000 - TABACO Y SUCEDANEOS DEL TABACO ELABORADOS "-->
+			<!-- "240101 - PRIMAS Y LIQUIDACIONES DERIVADAS DE INVERSIONES DE NO RESIDENTES EN MERCADOS ORGANIZADOS ESPAÑOLES DE OPCIONES"-->
+			<!-- "240102 - PRIMAS Y LIQUIDACIONES DERIVADAS DE INVERSIONES DE NO RESIDENTES EN MERCADOS ORGANIZADOS ESPAÑOLES DE OPCIONES"-->
+			<!-- "240201 - PRIMAS Y LIQUIDACIONES DERIVADAS DE INVERSIONES DE NO RESIDENTES EN OPCIONES "A LA MEDIDA" EMITIDAS POR RESIDENTES FUERA DE MERCADOS ORGANIZADOS"-->
+			<!-- "240202 - PRIMAS Y LIQUIDACIONES DERIVADAS DE INVERSIONES DE NO RESIDENTES EN OPCIONES "A LA MEDIDA" EMITIDAS POR RESIDENTES FUERA DE MERCADOS ORGANIZADOS"-->
+			<!-- "240301 - PRIMAS Y LIQUIDACIONES DERIVADAS DE INVERSIONES DE NO RESIDENTES EN MERCADOS ORGANIZADOS ESPAÑOLES DE FUTUROS FINANCIEROS"-->
+			<!-- "240302 - PRIMAS Y LIQUIDACIONES DERIVADAS DE INVERSIONES DE NO RESIDENTES EN MERCADOS ORGANIZADOS ESPAÑOLES DE FUTUROS FINANCIEROS"-->
+			<!-- "240401 - INVERSIONES DE NO RESIDENTES EN WARRANTS SOBRE ACCIONES, VALORES REPRESENTATIVOS DE EMPRÉSTITOS, TIPOS DE INTERÉS, ETC., EMITIDOS POR RESIDENTES"-->
+			<!-- "240402 - INVERSIONES DE NO RESIDENTES EN WARRANTS SOBRE ACCIONES, VALORES REPRESENTATIVOS DE EMPRÉSTITOS, TIPOS DE INTERÉS, ETC., EMITIDOS POR RESIDENTES"-->
+			<!-- "240501 - DEPOSITOS CONSTITUIDOS POR NO RESIDENTES A FAVOR DE RESIDENTES EN GARANTIA DE OPERACIONES DE OPCIONES Y FUTUROS EN MERCADOS ORGANIZADOS ESPAÑOLES ALTA 1/1/99"-->
+			<!-- "240502 - DEPOSITOS CONSTITUIDOS POR NO RESIDENTES A FAVOR DE RESIDENTES EN GARANTIA DE OPERACIONES DE OPCIONES Y FUTUROS EN MERCADOS ORGANIZADOS ESPAÑOLES ALTA 1/1/99"-->
+			<!-- "250000 - SAL; AZUFRE; TIERRAS Y PIEDRAS; YESOS, CALES Y CEMENTOS "-->
+			<!-- "250101 - PRÉSTAMOS CONCEDIDOS POR NO RESIDENTES A RESIDENTES Y DEPOSITOS CONSTITUIDOS POR NO RESIDENTES EN ENTIDADES REGISTRADAS CON PLAZO DE AMORTIZACION SUPERIOR A UN AÑO"-->
+			<!-- "250102 - PRÉSTAMOS CONCEDIDOS POR NO RESIDENTES A RESIDENTES Y DEPOSITOS CONSTITUIDOS POR NO RESIDENTES EN ENTIDADES REGISTRADAS CON PLAZO DE AMORTIZACION SUPERIOR A UN AÑO"-->
+			<!-- "250103 - PRÉSTAMOS CONCEDIDOS POR NO RESIDENTES A RESIDENTES Y DEPOSITOS CONSTITUIDOS POR NO RESIDENTES EN ENTIDADES REGISTRADAS CON PLAZO DE AMORTIZACION SUPERIOR A UN AÑO"-->
+			<!-- "250201 - PRÉSTAMOS CONCEDIDOS POR NO RESIDENTES A RESIDENTES Y DEPOSITOS CONSTITUIDOS POR NO RESIDENTES EN ENTIDADES REGISTRADAS CON PLAZO DE AMORTIZACION DE UN AÑO O INFERIOR"-->
+			<!-- "250202 - PRÉSTAMOS CONCEDIDOS POR NO RESIDENTES A RESIDENTES Y DEPOSITOS CONSTITUIDOS POR NO RESIDENTES EN ENTIDADES REGISTRADAS CON PLAZO DE AMORTIZACION DE UN AÑO O INFERIOR"-->
+			<!-- "250203 - PRÉSTAMOS CONCEDIDOS POR NO RESIDENTES A RESIDENTES Y DEPOSITOS CONSTITUIDOS POR NO RESIDENTES EN ENTIDADES REGISTRADAS CON PLAZO DE AMORTIZACION DE UN AÑO O INFERIOR"-->
+			<!-- "250301 - COMPRA DE VALORES POR NO RESIDENTES A RESIDENTES, CON PACTO DE RECOMPRA (OPERACIONES REPOS Y DOBLES SIMULTANEAS)"-->
+			<!-- "250302 - COMPRA DE VALORES POR NO RESIDENTES A RESIDENTES, CON PACTO DE RECOMPRA (OPERACIONES REPOS Y DOBLES SIMULTANEAS)"-->
+			<!-- "250303 - COMPRA DE VALORES POR NO RESIDENTES A RESIDENTES, CON PACTO DE RECOMPRA (OPERACIONES REPOS Y DOBLES SIMULTANEAS) ALTA 1/1/95"-->
+			<!-- "250402 - AMORTIZACION Y RENDIMIENTOS DE CRÉDITOS A PLAZO SUPERIOR A UN AÑO CONCEDIDOS A IMPORTADORES RESIDENTES POR LOS PROVEEDORES O TERCEROS FINANCIEROS NO RESIDENTES"-->
+			<!-- "250403 - AMORTIZACION Y RENDIMIENTOS DE CRÉDITOS A PLAZO SUPERIOR A UN AÑO CONCEDIDOS A IMPORTADORES RESIDENTES POR LOS PROVEEDORES O TERCEROS FINANCIEROS NO RESIDENTES"-->
+			<!-- "250501 - PARTICIPACIONES DE ENTIDADES REGISTRADAS EN PRÉSTAMOS SINDICADOS A RESIDENTES"-->
+			<!-- "250502 - PARTICIPACIONES DE ENTIDADES REGISTRADAS EN PRÉSTAMOS SINDICADOS A RESIDENTES"-->
+			<!-- "250503 - PARTICIPACIONES DE ENTIDADES REGISTRADAS EN PRÉSTAMOS SINDICADOS A RESIDENTES"-->
+			<!-- "260000 - MINERALES METALIFEROS, ESCORIAS Y CENIZAS "-->
+			<!-- "270000 - COMBUSTIBLES MINERALES, ACEITES MINERALES Y PRODUCTOS DE SU DESTILACION; MATERIAS BITUMINOSAS; CERAS MINERALES "-->
+			<!-- "270100 - HULLAS; BRIQUETAS, OVOIDES Y COMBUSTIBLES SOLIDOS SIMILARES, OBTENIDOS DE LA HULLA"-->
+			<!-- "270200 - LIGNITOS, INCLUSO AGLOMERADOS (EXCEPTO EL AZABACHE)"-->
+			<!-- "270300 - TURBA (COMPRENDIDA LA UTILIZADA PARA CAMA DE ANIMALES), INCLUSO AGLOMERADA"-->
+			<!-- "270400 - COQUES Y SEMICOQUES DE HULLA, LIGNITO O TURBA, INCLUSO AGLOMERADOS; CARBON DE RETORTA"-->
+			<!-- "270500 - GAS DE HULLA, GAS DE AGUA, GAS POBRE Y GASES SIMILARES (EXCEPTO EL GAS DE PETROLEO Y DEMAS HIDROCARBUROS GASEOSOS)"-->
+			<!-- "270600 - ALQUITRANES DE HULLA, LIGNITO O TURBA Y DEMAS ALQUITRANES MINERALES, AUNQUE ESTÉN DESHIDRATADOS O DESCABEZADOS, INCLUIDOS LOS ALQUITRANES RECONSTITUIDOS"-->
+			<!-- "270700 - ACEITES Y DEMAS PRODUCTOS DE LA DESTILACION DE LOS ALQUITRANES DE HULLA DE ALTA TEMPERATURA; PRODUCTOS ANALOGOS EN LOS QUE LOS CONSTITUYENTES AROMATICOS PREDOMINEN EN PESO SOBRE LOS NO AROMATICOS"-->
+			<!-- "270800 - BREA Y COQUE DE BREA DE ALQUITRAN DE HULLA O DE OTROS ALQUITRANES MINERALES"-->
+			<!-- "270900 - ACEITES CRUDOS DE PETROLEO O DE MINERAL BITUMINOSO"-->
+			<!-- "271000 - ACEITES DE PETROLEO O DE MINERAL BITUMINOSO, EXCEPTO LOS ACEITES CRUDOS; PREPARACIONES NO EXPRESADAS NI COMPRENDIDAS EN OTRA PARTE, CON UN CONTENIDO DE ACEITES DE PETROLEO O DE MINERAL BITUMINOSO SUPERIOR O IGUAL AL 70 % EN PESO"-->
+			<!-- "271100 - GAS DE PETROLEO Y DEMAS HIDROCARBUROS GASEOSOS"-->
+			<!-- "271200 - VASELINA; PARAFINA, CERA DE PETROLEO"-->
+			<!-- "271300 - COQUE DE PETROLEO, BETUN DE PETROLEO Y DEMAS RESIDUOS DE LOS ACEITES DE PETROLEO O DE MINERAL BITUMINOSO"-->
+			<!-- "271400 - BETUNES Y ASFALTOS NATURALES; PIZARRAS Y ARENAS BITUMINOSAS; ASFALTITAS Y ROCAS ASFALTICAS"-->
+			<!-- "271500 - MEZCLAS BITUMINOSAS A BASE DE ASFALTO O DE BETUN NATURALES, DE BETUN DE PETROLEO, DE ALQUITRAN MINERAL O DE BREA DE ALQUITRAN MINERAL"-->
+			<!-- "271600 - ENERGIA ELÉCTRICA"-->
+			<!-- "280000 - PRODUCTOS QUIMICOS INORGANICOS; COMPUESTOS INORGANICOS U ORGANICOS DE METAL PRECIOSO, DE ELEMENTOS RADIACTIVOS, DE METALES DE LAS TIERRAS RARAS O DE ISOTOPOS "-->
+			<!-- "290000 - PRODUCTOS QUIMICOS ORGANICOS "-->
+			<!-- "300000 - PRODUCTOS FARMACÉUTICOS "-->
+			<!-- "300101 - INVERSIONES DIRECTAS EFECTUADAS POR RESIDENTES, EN ACCIONES EMITIDAS POR SOCIEDADES NO RESIDENTES"-->
+			<!-- "300102 - INVERSIONES DIRECTAS EFECTUADAS POR RESIDENTES, EN ACCIONES EMITIDAS POR SOCIEDADES NO RESIDENTES"-->
+			<!-- "300103 - INVERSIONES DIRECTAS EFECTUADAS POR RESIDENTES, EN ACCIONES EMITIDAS POR SOCIEDADES NO RESIDENTES"-->
+			<!-- "300201 - INVERSIONES DE CARTERA EFECTUADAS POR RESIDENTES, EN ACCIONES EMITIDAS POR SOCIEDADES NO RESIDENTES"-->
+			<!-- "300202 - INVERSIONES DE CARTERA EFECTUADAS POR RESIDENTES, EN ACCIONES EMITIDAS POR SOCIEDADES NO RESIDENTES"-->
+			<!-- "300203 - INVERSIONES DE CARTERA EFECTUADAS POR RESIDENTES, EN ACCIONES EMITIDAS POR SOCIEDADES NO RESIDENTES"-->
+			<!-- "300301 - PARTICIPACIONES DE RESIDENTES EN LA PROPIEDAD DE EMPRESAS Y ENTIDADES NO RESIDENTES DISTINTAS DE LAS MATERIALIZADAS EN ACCIONES"-->
+			<!-- "300302 - PARTICIPACIONES DE RESIDENTES EN LA PROPIEDAD DE EMPRESAS Y ENTIDADES NO RESIDENTES DISTINTAS DE LAS MATERIALIZADAS EN ACCIONES"-->
+			<!-- "300303 - PARTICIPACIONES DE RESIDENTES EN LA PROPIEDAD DE EMPRESAS Y ENTIDADES NO RESIDENTES DISTINTAS DE LAS MATERIALIZADAS EN ACCIONES"-->
+			<!-- "310000 - ABONOS"-->
+			<!-- "310201 - OPERACIONES DE FINANCIACION CONCEDIDA POR RESIDENTES TITULARES DE INVERSION DIRECTA A SUS FILIALES Y SOCIEDADES PARTICIPADAS NO RESIDENTES"-->
+			<!-- "310202 - OPERACIONES DE FINANCIACION CONCEDIDA POR RESIDENTES TITULARES DE INVERSION DIRECTA A SUS FILIALES Y SOCIEDADES PARTICIPADAS NO RESIDENTES"-->
+			<!-- "310203 - OPERACIONES DE FINANCIACION CONCEDIDA POR RESIDENTES TITULARES DE INVERSION DIRECTA A SUS FILIALES Y SOCIEDADES PARTICIPADAS NO RESIDENTES"-->
+			<!-- "310301 - OPERACIONES DE FINANCIACION CONCEDIDA A RESIDENTES TITULARES DE INVERSION DIRECTA POR SUS FILIALES, SOCIEDADES PARTICIPADAS, SUCURSALES O ESTABLECIMIENTOS NO RESIDENTES"-->
+			<!-- "310302 - OPERACIONES DE FINANCIACION CONCEDIDA A RESIDENTES TITULARES DE INVERSION DIRECTA POR SUS FILIALES, SOCIEDADES PARTICIPADAS, SUCURSALES O ESTABLECIMIENTOS NO RESIDENTES"-->
+			<!-- "310303 - OPERACIONES DE FINANCIACION CONCEDIDA A RESIDENTES TITULARES DE INVERSION DIRECTA POR SUS FILIALES, SOCIEDADES PARTICIPADAS, SUCURSALES O ESTABLECIMIENTOS NO RESIDENTES"-->
+			<!-- "320000 - EXTRACTOS CURTIENTES O TINTOREOS; TANINOS Y SUS DERIVADOS; PIGMENTOS Y DEMAS MATERIAS COLORANTES; PINTURAS Y BARNICES; MASTIQUES; TINTAS"-->
+			<!-- "320101 - INVERSIONES EFECTUADAS POR RESIDENTES EN BIENES INMUEBLES SITUADOS EN EL EXTERIOR"-->
+			<!-- "320102 - INVERSIONES EFECTUADAS POR RESIDENTES EN BIENES INMUEBLES SITUADOS EN EL EXTERIOR"-->
+			<!-- "320103 - INVERSIONES EFECTUADAS POR RESIDENTES EN BIENES INMUEBLES SITUADOS EN EL EXTERIOR"-->
+			<!-- "330000 - ACEITES ESENCIALES Y RESINOIDES; PREPARACIONES DE PERFUMERIA, DE TOCADOR O DE COSMÉTICA "-->
+			<!-- "330101 - OPERACIONES EN VALORES REPRESENTATIVOS DE EMPRÉSTITOS EMITIDOS POR NO RESIDENTES A PLAZO SUPERIOR A UN AÑO Y QUE SEAN NEGOCIABLES EN BOLSA O MERCADOS ORGANIZADOS"-->
+			<!-- "330102 - OPERACIONES EN VALORES REPRESENTATIVOS DE EMPRÉSTITOS EMITIDOS POR NO RESIDENTES A PLAZO SUPERIOR A UN AÑO Y QUE SEAN NEGOCIABLES EN BOLSA O MERCADOS ORGANIZADOS"-->
+			<!-- "330103 - OPERACIONES EN VALORES REPRESENTATIVOS DE EMPRÉSTITOS EMITIDOS POR NO RESIDENTES A PLAZO SUPERIOR A UN AÑO Y QUE SEAN NEGOCIABLES EN BOLSA O MERCADOS ORGANIZADOS"-->
+			<!-- "330201 - OPERACIONES EN VALORES REPRESENTATIVOS DE EMPRÉSTITOS EMITIDOS POR NO RESIDENTES A PLAZO DE UN AÑO O INFERIOR Y QUE SEAN NEGOCIABLES EN BOLSA O MERCADOS ORGANIZADOS"-->
+			<!-- "330202 - OPERACIONES EN VALORES REPRESENTATIVOS DE EMPRÉSTITOS EMITIDOS POR NO RESIDENTES A PLAZO DE UN AÑO O INFERIOR Y QUE SEAN NEGOCIABLES EN BOLSA O MERCADOS ORGANIZADOS"-->
+			<!-- "330203 - OPERACIONES EN VALORES REPRESENTATIVOS DE EMPRÉSTITOS EMITIDOS POR NO RESIDENTES A PLAZO DE UN AÑO O INFERIOR Y QUE SEAN NEGOCIABLES EN BOLSA O MERCADOS ORGANIZADOS"-->
+			<!-- "330301 - INVERSIONES EFECTUADAS POR RESIDENTES EN PARTICIPACIONES EN FONDOS DE INVERSION NO RESIDENTES SIN PERSONALIDAD JURIDICA PROPIA"-->
+			<!-- "330302 - INVERSIONES EFECTUADAS POR RESIDENTES EN PARTICIPACIONES EN FONDOS DE INVERSION NO RESIDENTES SIN PERSONALIDAD JURIDICA PROPIA"-->
+			<!-- "330303 - INVERSIONES EFECTUADAS POR RESIDENTES EN PARTICIPACIONES EN FONDOS DE INVERSION NO RESIDENTES SIN PERSONALIDAD JURIDICA PROPIA"-->
+			<!-- "340000 - JABONES, AGENTES DE SUPERFICIE ORGANICOS, PREPARACIONES PARA LAVAR, PREPARACIONES LUBRICANTES, CERAS ARTIFICIALES, CERAS PREPARADAS, PRODUCTOS DE LIMPIEZA, VELAS Y ARTICULOS SIMILARES, PASTAS PARA MODELAR, «CERAS PARA ODONTOLOGIA» Y PREPARACIONES PARA ODO"-->
+			<!-- "340101 - PRIMAS Y LIQUIDACIONES DERIVADAS DE INVERSIONES DE RESIDENTES EN MERCADOS ORGANIZADOS EXTRANJEROS DE OPCIONES"-->
+			<!-- "340102 - PRIMAS Y LIQUIDACIONES DERIVADAS DE INVERSIONES DE RESIDENTES EN MERCADOS ORGANIZADOS EXTRANJEROS DE OPCIONES"-->
+			<!-- "340201 - PRIMAS Y LIQUIDACIONES DERIVADAS DE INVERSIONES DE RESIDENTES, EN OPCIONES "A LA MEDIDA" EMITIDAS POR NO RESIDENTES FUERA DE MERCADOS ORGANIZADOS"-->
+			<!-- "340202 - PRIMAS Y LIQUIDACIONES DERIVADAS DE INVERSIONES DE RESIDENTES, EN OPCIONES "A LA MEDIDA" EMITIDAS POR NO RESIDENTES FUERA DE MERCADOS ORGANIZADOS"-->
+			<!-- "340301 - PRIMAS Y LIQUIDACIONES DERIVADAS DE INVERSIONES DE RESIDENTES EN MERCADOS ORGANIZADOS EXTRANJEROS DE FUTUROS FINANCIEROS"-->
+			<!-- "340302 - PRIMAS Y LIQUIDACIONES DERIVADAS DE INVERSIONES DE RESIDENTES EN MERCADOS ORGANIZADOS EXTRANJEROS DE FUTUROS FINANCIEROS"-->
+			<!-- "340401 - INVERSIONES DE RESIDENTES EN WARRANTS SOBRE ACCIONES, VALORES REPRESENTATIVOS DE EMPRÉSTITOS, TIPOS DE INTERÉS, ETC., EMITIDOS POR NO RESIDENTES"-->
+			<!-- "340402 - INVERSIONES DE RESIDENTES EN WARRANTS SOBRE ACCIONES, VALORES REPRESENTATIVOS DE EMPRÉSTITOS, TIPOS DE INTERÉS, ETC., EMITIDOS POR NO RESIDENTES"-->
+			<!-- "340501 - DEPOSITOS CONSTITUIDOS POR RESIDENTES A FAVOR DE NO RESIDENTES DE GARANTIA DE OPERACIONES DE OPCIONES Y FUTUROS EN MERCADOS ORGANIZADOS EXTRANJEROS ALTA 1/1/99"-->
+			<!-- "340502 - DEPOSITOS CONSTITUIDOS POR RESIDENTES A FAVOR DE NO RESIDENTES DE GARANTIA DE OPERACIONES DE OPCIONES Y FUTUROS EN MERCADOS ORGANIZADOS EXTRANJEROS ALTA 1/1/99"-->
+			<!-- "350000 - MATERIAS ALBUMINOIDEAS; PRODUCTOS A BASE DE ALMIDON O DE FÉCULA MODIFICADOS; COLAS; ENZIMAS"-->
+			<!-- "350101 - PRÉSTAMOS CONCEDIDOS POR RESIDENTES A NO RESIDENTES CON PLAZO DE AMORTIZACION SUPERIOR A UN AÑO"-->
+			<!-- "350102 - PRÉSTAMOS CONCEDIDOS POR RESIDENTES A NO RESIDENTES CON PLAZO DE AMORTIZACION SUPERIOR A UN AÑO"-->
+			<!-- "350103 - PRÉSTAMOS CONCEDIDOS POR RESIDENTES A NO RESIDENTES CON PLAZO DE AMORTIZACION SUPERIOR A UN AÑO"-->
+			<!-- "350201 - PRÉSTAMOS CONCEDIDOS POR RESIDENTES A NO RESIDENTES CON PLAZO DE AMORTIZACION DE UN AÑO O INFERIOR"-->
+			<!-- "350202 - PRÉSTAMOS CONCEDIDOS POR RESIDENTES A NO RESIDENTES CON PLAZO DE AMORTIZACION DE UN AÑO O INFERIOR"-->
+			<!-- "350203 - PRÉSTAMOS CONCEDIDOS POR RESIDENTES A NO RESIDENTES CON PLAZO DE AMORTIZACION DE UN AÑO O INFERIOR"-->
+			<!-- "350301 - COMPRA DE VALORES POR RESIDENTES A NO RESIDENTES, CON PACTO DE RECOMPRA (OPERACIONES REPOS Y DOBLES SIMULTANEAS)"-->
+			<!-- "350302 - COMPRA DE VALORES POR RESIDENTES A NO RESIDENTES, CON PACTO DE RECOMPRA (OPERACIONES REPOS Y DOBLES SIMULTANEAS)"-->
+			<!-- "350303 - COMPRA DE VALORES POR RESIDENTES A NO RESIDENTES, CON PACTO DE RECOMPRA (OPERACIONES REPOS Y DOBLES SIMULTANEAS) ALTA 1/1/95"-->
+			<!-- "350402 - AMORTIZACION Y RENDIMIENTOS DE CRÉDITOS A PLAZO SUPERIOR A UN AÑO CONCEDIDOS POR LOS PROVEEDORES RESIDENTES A IMPORTADORES NO RESIDENTES (INCLUIDO EL LEASING FINANCIERO SOBRE BIENES EXPORTADOS)"-->
+			<!-- "350403 - AMORTIZACION Y RENDIMIENTOS DE CRÉDITOS A PLAZO SUPERIOR A UN AÑO CONCEDIDOS POR LOS PROVEEDORES RESIDENTES A IMPORTADORES NO RESIDENTES (INCLUIDO EL LEASING FINANCIERO SOBRE BIENES EXPORTADOS)"-->
+			<!-- "350501 - DEPOSITOS CONSTITUIDOS POR RESIDENTES EN ENTIDADES DE CRÉDITO NO RESIDENTES CON PLAZO DE CANCELACION SUPERIOR A UN AÑO"-->
+			<!-- "350502 - DEPOSITOS CONSTITUIDOS POR RESIDENTES EN ENTIDADES DE CRÉDITO NO RESIDENTES CON PLAZO DE CANCELACION SUPERIOR A UN AÑO"-->
+			<!-- "350503 - DEPOSITOS CONSTITUIDOS POR RESIDENTES EN ENTIDADES DE CRÉDITO NO RESIDENTES CON PLAZO DE CANCELACION SUPERIOR A UN AÑO"-->
+			<!-- "350601 - DEPOSITOS CONSTITUIDOS POR RESIDENTES EN ENTIDADES DE CRÉDITO NO RESIDENTES CON PLAZO DE CANCELACION DE UN AÑO O INFERIOR"-->
+			<!-- "350602 - DEPOSITOS CONSTITUIDOS POR RESIDENTES EN ENTIDADES DE CRÉDITO NO RESIDENTES CON PLAZO DE CANCELACION DE UN AÑO O INFERIOR"-->
+			<!-- "350603 - DEPOSITOS CONSTITUIDOS POR RESIDENTES EN ENTIDADES DE CRÉDITO NO RESIDENTES CON PLAZO DE CANCELACION DE UN AÑO O INFERIOR"-->
+			<!-- "350701 - OPERACIONES DEL SEGURO DE CRÉDITO A LA EXPORTACION"-->
+			<!-- "350702 - OPERACIONES DEL SEGURO DE CRÉDITO A LA EXPORTACION"-->
+			<!-- "360000 - POLVORA Y EXPLOSIVOS; ARTICULOS DE PIROTECNIA; FOSFOROS (CERILLAS); ALEACIONES PIROFORICAS; MATERIAS INFLAMABLES "-->
+			<!-- "360101 - CUOTAS CON CARACTER DE PARTICIPACION EN ORGANISMOS INTERNACIONALES"-->
+			<!-- "360102 - CUOTAS CON CARACTER DE PARTICIPACION EN ORGANISMOS INTERNACIONALES"-->
+			<!-- "360103 - CUOTAS CON CARACTER DE PARTICIPACION EN ORGANISMOS INTERNACIONALES"-->
+			<!-- "370000 - PRODUCTOS FOTOGRAFICOS O CINEMATOGRAFICOS "-->
+			<!-- "380000 - PRODUCTOS DIVERSOS DE LAS INDUSTRIAS QUIMICAS "-->
+			<!-- "390000 - PLASTICO Y SUS MANUFACTURAS "-->
+			<!-- "400000 - CAUCHO Y SUS MANUFACTURAS "-->
+			<!-- "410000 - PIELES (EXCEPTO LA PELETERIA) Y CUEROS "-->
+			<!-- "410101 - COBROS Y PAGOS ENTRE RESIDENTES QUE NO SEAN ENTIDADES REGISTRADAS Y NO RESIDENTES POR IMPORTE INFERIOR AL MINIMO EXENTO DE DECLARACION"-->
+			<!-- "410201 - PAGOS DE RESIDENTES A NO RESIDENTES, PENDIENTES DE JUSTIFICACION"-->
+			<!-- "410301 - COMPRAVENTA DE MONEDA METALICA Y BILLETES EXTRANJEROS A RESIDENTES SIN APLICACION A COBRO O PAGO EXTERIOR"-->
+			<!-- "410401 - COBROS DE RESIDENTES RECIBIDOS DE NO RESIDENTES PENDIENTES DE JUSTIFICACION, POR APLICACION DE LA LEY 9/1999 DE 12 DE ABRIL ALTA 22/1/01"-->
+			<!-- "410501 - COBROS DE RESIDENTES RECIBIDOS DE NO RESIDENTES PENDIENTES DE JUSTIFICACION, POR INTERCAMBIO DE EFECTOS DE COMERCIO EN EL SISTEMA NACIONAL DE COMPENSACION ELECTRONICA"-->
+			<!-- "420000 - MANUFACTURAS DE CUERO; ARTICULOS DE TALABARTERIA O.235 GUARNICIONERIA; ARTICULOS DE VIAJE, BOLSOS DE MANO (CARTERAS) Y CONTINENTES SIMILARES; MANUFACTURAS DE TRIPA "-->
+			<!-- "420101 - TRASPASOS ENTRE CUENTAS A NOMBRE DE RESIDENTES ABIERTAS EN ENTIDADES DE CRÉDITO EN EL EXTRANJERO Y SUS CUENTAS ABIERTAS EN OFICINAS OPERANTES EN ESPAÑA DE BANCOS, CAJAS DE AHORRO Y COOPERATIVAS DE CRÉDITO"-->
+			<!-- "420201 - COBROS Y PAGOS EXTERIORES CON ADEUDO O PARA ABONO EN CUENTAS A NOMBRE DE RESIDENTES ABIERTAS EN ENTIDADES NO RESIDENTES, QUE NO SEAN ENTIDADES DE CRÉDITO"-->
+			<!-- "420301 - COMPRAVENTAS DE DIVISAS Y PERMUTAS FINANCIERAS ENTRE RESIDENTES, QUE NO SEAN ENTIDADES REGISTRADAS, Y NO RESIDENTES"-->
+			<!-- "420303 - PERMUTAS FINANCIERAS DE INTERESES Y OPERACIONES F.R.A. ENTRE RESIDENTES, QUE NO SEAN ENTIDADES REGISTRADAS, Y NO RESIDENTES"-->
+			<!-- "420401 - OTRAS OPERACIONES DE PERMUTA FINANCIERA (SWAPS) ENTRE RESIDENTES, QUE NO SEAN ENTIDADES REGISTRADAS, Y NO RESIDENTES"-->
+			<!-- "420501 - COBROS Y PAGOS EXTERIORES DE RESIDENTES EN CONCEPTO DE CENTRALIZACION DE TESORERIA CON NO RESIDENTES"-->
+			<!-- "430000 - PELETERIA Y CONFECCIONES DE PELETERIA; PELETERIA FACTICIA O ARTIFICIAL "-->
+			<!-- "430101 - CONVERSIONES DE DIVISAS CONTRA DIVISAS O EUROS DE NORESIDENTES DE LAS ENTIDADES REGISTRADAS"-->
+			<!-- "430103 - PERMUTAS FINANCIERAS DE INTERESES Y OPERACIONES F.R.A. ENTRE ENTIDADES REGISTRADAS Y NO RESIDENTES"-->
+			<!-- "430201 - OPERACIONES DE CAMBIO DE MONEDA Y BILLETES A NO RESIDENTES"-->
+			<!-- "430301 - REMESAS DE MONEDAS Y BILLETES ENTRE LAS ENTIDADES REGISTRADAS Y SUS CORRESPONSALES BANCARIOS EXTRANJEROS"-->
+			<!-- "430401 - MONEDAS Y BILLETES ABONADOS O ADEUDADOS EN CUENTAS DE NO RESIDENTES POR NO RESIDENTES Y COMPRAVENTA DE MONEDA Y BILLETES A NO RESIDENTES CONTRA CHEQUES BANCARIOS"-->
+			<!-- "430503 - RENDIMIENTOS DE LAS CUENTAS CON NO RESIDENTES APTAS PARA REALIZAR COBROS, PAGOS Y TRANSFERENCIAS EXTERIORES"-->
+			<!-- "430601 - COBROS Y PAGOS POR OPERACIONES POR CUENTA PROPIA DE ENTIDADES REGISTRADAS CON NO RESIDENTES POR IMPORTE INFERIOR AL MINIMO EXENTO DE DECLARACION"-->
+			<!-- "430701 - CONVERSIONES ENTRE MONEDAS DE PAISES INTEGRADOS EN LA UNION MONETARIA EUROPEA Y ENTRE DICHAS MONEDAS Y PESETAS O EUROS DE NO RESIDENTES DE LAS ENTIDADES REGISTRADAS"-->
+			<!-- "430801 - OTRAS OPERACIONES DE PERMUTA FINANCIERA (SWAPS) ENTRE ENTIDADES REGISTRADAS Y NO RESIDENTES ALTA 1/1/99"-->
+			<!-- "440000 - MADERA, CARBON VEGETAL Y MANUFACTURAS DE MADERA "-->
+			<!-- "440101 - OPERACIONES ENTRE "OTRAS ENTIDADES" Y BANCOS, CAJAS DE AHORRO Y COOPERATIVAS DE CRÉDITO"-->
+			<!-- "440201 - TRANSFERENCIAS ENTRE ENTIDADES POR OPERACIONES DE OBTENCION Y COLOCACION DE RECURSOS EN DIVISAS CON RESIDENTES"-->
+			<!-- "440401 - TRANSFERENCIAS DE EUROS DE NO RESIDENTES (HASTA 31/12/2001 TAMBIÉN PESETAS) ENTRE CUENTAS ABIERTAS EN DISTINTAS ENTIDADES REGISTRADAS, DE IMPORTE SUPERIOR AL MINIMO EXENTO DE DECLARACION E INFERIOR A 30.050,61 EUROS ALTA 1/1/95"-->
+			<!-- "440501 - OPERACIONES ENTRE RESIDENTES LIQUIDADAS A TRAVÉS DE SISTEMAS DE COMPENSACION INTERNACIONALES"-->
+			<!-- "450000 - CORCHO Y SUS MANUFACTURAS "-->
+			<!-- "450101 - OPERACIONES DE COBROS EXTERIORES RECIBIDOS POR LAS ENTIDADES, PENDIENTES DE LIQUIDACION"-->
+			<!-- "450201 - DIFERENCIAS POR INCLUSION EN FECHAS DISTINTAS DE SU CONTABILIZACION DE LAS OPERACIONES EN EUROS (HASTA 31/12/2001 TAMBIÉN PESETAS) EFECTUADAS A TRAVÉS DE SISTEMAS DE COMPENSACION"-->
+			<!-- "450301 - OTRAS DIFERENCIAS CON LOS SALDOS CONTABLES"-->
+			<!-- "460000 - MANUFACTURAS DE ESPARTERIA O CESTERIA "-->
+			<!-- "470000 - PASTA DE MADERA O DE LAS DEMAS MATERIAS FIBROSAS CELULOSICAS; PAPEL O CARTON PARA RECICLAR (DESPERDICIOS Y DESECHOS) "-->
+			<!-- "480000 - PAPEL Y CARTON; MANUFACTURAS DE PASTA DE CELULOSA, DE PAPEL O CARTON "-->
+			<!-- "490000 - PRODUCTOS EDITORIALES, DE LA PRENSA Y DE LAS DEMAS INDUSTRIAS GRAFICAS; TEXTOS MANUSCRITOS O MECANOGRAFIADOS Y PLANOS "-->
+			<!-- "500000 - SEDA "-->
+			<!-- "510000 - LANA Y PELO FINO U ORDINARIO; HILADOS Y TEJIDOS DE CRIN "-->
+			<!-- "520000 - ALGODON "-->
+			<!-- "530000 - LAS DEMAS FIBRAS TEXTILES VEGETALES; HILADOS DE PAPEL Y TEJIDOS DE HILADOS DE PAPEL "-->
+			<!-- "540000 - FILAMENTOS SINTÉTICOS O ARTIFICIALES"-->
+			<!-- "550000 - FIBRAS SINTÉTICAS O ARTIFICIALES DISCONTINUAS "-->
+			<!-- "560000 - GUATA, FIELTRO Y TELA SIN TEJER; HILADOS ESPECIALES; CORDELES, CUERDAS Y CORDAJES; ARTICULOS DE CORDELERIA "-->
+			<!-- "570000 - ALFOMBRAS Y DEMAS REVESTIMIENTOS PARA EL SUELO, DE MATERIA TEXTIL "-->
+			<!-- "580000 - TEJIDOS ESPECIALES; SUPERFICIES TEXTILES CON MECHON INSERTADO; ENCAJES; TAPICERIA; PASAMANERIA; BORDADOS "-->
+			<!-- "590000 - TELAS IMPREGNADAS, RECUBIERTAS, REVESTIDAS O ESTRATIFICADAS; ARTICULOS TÉCNICOS DE MATERIA TEXTIL "-->
+			<!-- "600000 - TEJIDOS DE PUNTO "-->
+			<!-- "610000 - PRENDAS Y COMPLEMENTOS (ACCESORIOS), DE VESTIR, DE PUNTO "-->
+			<!-- "620000 - PRENDAS Y COMPLEMENTOS (ACCESORIOS), DE VESTIR, EXCEPTO LOS DE PUNTO "-->
+			<!-- "630000 - LOS DEMAS ARTICULOS TEXTILES CONFECCIONADOS; JUEGOS; PRENDERIA Y TRAPOS "-->
+			<!-- "640000 - CALZADO, POLAINAS Y ARTICULOS ANALOGOS; PARTES DE ESTOS ARTICULOS "-->
+			<!-- "650000 - SOMBREROS, DEMAS TOCADOS, Y SUS PARTES "-->
+			<!-- "660000 - PARAGUAS, SOMBRILLAS, QUITASOLES, BASTONES, BASTONES ASIENTO, LATIGOS, FUSTAS, Y SUS PARTES "-->
+			<!-- "670000 - PLUMAS Y PLUMON PREPARADOS Y ARTICULOS DE PLUMAS O PLUMON; FLORES ARTIFICIALES; MANUFACTURAS DE CABELLO "-->
+			<!-- "680000 - MANUFACTURAS DE PIEDRA, YESO FRAGUABLE, CEMENTO, AMIANTO (ASBESTO), MICA O MATERIAS ANALOGAS "-->
+			<!-- "690000 - PRODUCTOS CERAMICOS "-->
+			<!-- "700000 - VIDRIO Y SUS MANUFACTURAS "-->
+			<!-- "710000 - PERLAS FINAS (NATURALES) O CULTIVADAS, PIEDRAS PRECIOSAS O SEMIPRECIOSAS, METALES PRECIOSOS, CHAPADOS DE METAL PRECIOSO (PLAQUÉ) Y MANUFACTURAS DE ESTAS MATERIAS; BISUTERIA; MONEDAS "-->
+			<!-- "720000 - FUNDICION, HIERRO Y ACERO "-->
+			<!-- "730000 - MANUFACTURAS DE FUNDICION, DE HIERRO O ACERO "-->
+			<!-- "740000 - COBRE Y SUS MANUFACTURAS "-->
+			<!-- "750000 - NIQUEL Y SUS MANUFACTURAS "-->
+			<!-- "760000 - ALUMINIO Y SUS MANUFACTURAS "-->
+			<!-- "780000 - PLOMO Y SUS MANUFACTURAS "-->
+			<!-- "790000 - CINC Y SUS MANUFACTURAS "-->
+			<!-- "800000 - ESTAÑO Y SUS MANUFACTURAS "-->
+			<!-- "810000 - LOS DEMAS METALES COMUNES; CERMETS; MANUFACTURAS DE ESTAS MATERIAS "-->
+			<!-- "820000 - HERRAMIENTAS Y UTILES, ARTICULOS DE CUCHILLERIA Y CUBIERTOS DE MESA, DE METAL COMUN, PARTES DE ESTOS ARTICULOS, DE METAL COMUN"-->
+			<!-- "830000 - MANUFACTURAS DIVERSAS DE METAL COMUN "-->
+			<!-- "840000 - REACTORES NUCLEARES, CALDERAS, MAQUINAS, APARATOS Y ARTEFACTOS MECANICOS; PARTES DE ESTAS MAQUINAS O APARATOS"-->
+			<!-- "850000 - MAQUINAS, APARATOS Y MATERIAL ELÉCTRICO, Y SUS PARTES; APARATOS DE GRABACION O REPRODUCCION DE SONIDO, APARATOS DE GRABACION O REPRODUCCION DE IMAGEN Y SONIDO EN TELEVISION, Y LAS PARTES Y ACCESORIOS DE ESTOS APARATOS "-->
+			<!-- "860000 - VEHICULOS Y MATERIAL PARA VIAS FÉRREAS O SIMILARES, Y SUS PARTES; APARATOS MECANICOS, INCLUSO ELECTROMECANICOS, DE SEÑALIZACION PARA VIAS DE COMUNICACION"-->
+			<!-- "870000 - VEHICULOS AUTOMOVILES, TRACTORES, VELOCIPEDOS Y DEMAS VEHICULOS TERRESTRES, SUS PARTES Y ACCESORIOS"-->
+			<!-- "880000 - AERONAVES, VEHICULOS ESPACIALES, Y SUS PARTES "-->
+			<!-- "890000 - BARCOS Y DEMAS ARTEFACTOS FLOTANTES "-->
+			<!-- "900000 - INSTRUMENTOS Y APARATOS DE OPTICA, FOTOGRAFIA O CINEMATOGRAFIA, DE MEDIDA, CONTROL O PRECISION; INSTRUMENTOS Y APARATOS MEDICOQUIRURGICOS; PARTES Y ACCESORIOS DE ESTOS INSTRUMENTOS O APARATOS "-->
+			<!-- "910000 - APARATOS DE RELOJERIA Y SUS PARTES "-->
+			<!-- "920000 - INSTRUMENTOS MUSICALES; SUS PARTES Y ACCESORIOS "-->
+			<!-- "930000 - ARMAS, MUNICIONES, Y SUS PARTES Y ACCESORIOS "-->
+			<!-- "940000 - MUEBLES; MOBILIARIO MEDICOQUIRURGICO; ARTICULOS DE CAMA Y SIMILARES; APARATOS DE ALUMBRADO NO EXPRESADOS NI COMPRENDIDOS EN OTRA PARTE; ANUNCIOS, LETREROS Y PLACAS INDICADORAS, LUMINOSOS Y ARTICULOS SIMILARES; CONSTRUCCIONES PREFABRICADAS"-->
+			<!-- "950000 - JUGUETES, JUEGOS Y ARTICULOS PARA RECREO O DEPORTE; SUS PARTES Y ACCESORIOS "-->
+			<!-- "960000 - MANUFACTURAS DIVERSAS "-->
+			<!-- "970000 - OBJETOS DE ARTE O COLECCION Y ANTIGÜEDADES "-->
+			<!-- "980000 - CONJUNTOS INDUSTRIALES "-->
+			<!-- "990000 - MERCANCIAS POR CORREO"-->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TIPODECL_ENUM">
+		<xs:annotation>
+			<xs:documentation>Valores del tipo de declaración</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Positiva"/>
+			<xs:enumeration value="Negativa"/>
+			<xs:enumeration value="Movimiento"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

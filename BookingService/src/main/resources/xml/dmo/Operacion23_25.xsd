@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp1 U (http://www.xmlspy.com) by any (Ru-Board) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dmo="http://www.sepblac.es/DMO" targetNamespace="http://www.sepblac.es/DMO">
+	<xs:include schemaLocation="dmo_tiposdatos.xsd" id="tiposdatos"/>
+	<xs:include schemaLocation="dmo_estructuras.xsd" id="estructuras"/>
+	<xs:include schemaLocation="dmo_campostasados.xsd" id="campostasados"/>
+	<xs:include schemaLocation="dmo_divisas.xsd" id="divisas"/>
+	<xs:element name="Operacion23_25">
+		<xs:annotation>
+			<xs:documentation>Estructura de la Operacion de tipo 23 al 25</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Operacion">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NumOperacion">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+										<xs:totalDigits value="5"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="TipoOperacion">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+										<xs:totalDigits value="2"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="CodigoS1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="25"/>
+										<xs:minLength value="25"/>
+										<xs:pattern value="[0][0][0][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z]"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="MovMediosPagos">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="FechaMovimiento" type="dmo:FECHA_GEN"/>
+										<xs:element name="Concepto" type="dmo:TIPCONCMP_ENUM"/>
+										<xs:element name="TipoMovimiento" type="dmo:TIPMOVMP_ENUM"/>
+										<xs:element name="PaisPartida" type="dmo:PAIS_ENUM"/>
+										<xs:element name="PaisLlegada" type="dmo:PAIS_ENUM"/>
+										<xs:element name="LocalidadPartida">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:minLength value="1"/>
+													<xs:maxLength value="80"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="LocalidadLlegada">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:minLength value="1"/>
+													<xs:maxLength value="80"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="MedioTransporte">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="80"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="CodAduanaPasoFronterizo" type="dmo:ADU_PF_ENUM" minOccurs="0"/>
+										<xs:element name="AduanaPasoFronterizo" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:minLength value="1"/>
+													<xs:maxLength value="80"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="MediosPago">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="MedioPago" maxOccurs="3">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Medio" type="dmo:MEDPA_ENUM"/>
+													<xs:element name="Moneda" type="dmo:DIVISA_ENUM"/>
+													<xs:element name="Importe">
+														<xs:simpleType>
+															<xs:restriction base="xs:decimal">
+																<xs:totalDigits value="16"/>
+																<xs:fractionDigits value="2"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="ImporteTotalLetra">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="200"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="ImporteTotalCifra">
+											<xs:simpleType>
+												<xs:restriction base="xs:decimal">
+													<xs:totalDigits value="16"/>
+													<xs:fractionDigits value="2"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="OrigenDestinoMediosPago">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Origen" type="dmo:ORIMEDPA_ENUM"/>
+										<xs:element name="Destino" type="dmo:DESMEDPA_ENUM"/>
+										<xs:element name="Descripcion">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="150"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="CodBalanzaPagos" type="dmo:CODBP_ENUM" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="FirmaDeclaracion">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Lugar">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:minLength value="1"/>
+													<xs:maxLength value="80"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="FechaFirmaDeclaracion" type="dmo:FECHA_GEN"/>
+										<xs:element name="HoraFirmaDeclaracion" type="dmo:HORA"/>
+										<xs:element name="FirmaDeclarante" type="dmo:TIPFIRMA_ENUM"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DiligenciaEntidad" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Entidad">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:length value="4"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="Importe">
+											<xs:simpleType>
+												<xs:restriction base="xs:decimal">
+													<xs:totalDigits value="16"/>
+													<xs:fractionDigits value="2"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="FechaDiligenciaEntidad" type="dmo:FECHA_GEN"/>
+										<xs:element name="HoraDiligenciaEntidad" type="dmo:HORA"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DiligenciaAduanas" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="CodAduanaControl" type="dmo:ADUANACONTROL_ENUM"/>
+										<xs:element name="AduanaControl" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:minLength value="1"/>
+													<xs:maxLength value="80"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="Verificado" type="xs:boolean"/>
+										<xs:element name="FechaDiligenciaAduanas" type="dmo:FECHA_GEN"/>
+										<xs:element name="HoraDiligenciaAduanas" type="dmo:HORA"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Intervinientes">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Declarante">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="PersonaFisica">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="CDPERSONA">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:maxLength value="10"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="NombreRazonSocial" minOccurs="0">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:maxLength value="80"/>
+																<xs:minLength value="1"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="PrimerApellido" minOccurs="0">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:maxLength value="40"/>
+																<xs:minLength value="1"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="SegundoApellido" minOccurs="0">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:maxLength value="40"/>
+																<xs:minLength value="1"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="PaisNacionalidad" type="dmo:PAIS_ENUM"/>
+													<xs:element name="FechaNacimiento" type="dmo:FECHA"/>
+													<xs:element name="PaisNacimiento" type="dmo:PAIS_ENUM"/>
+													<xs:element name="Profesion">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:maxLength value="30"/>
+																<xs:minLength value="1"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="DocIdentificativo" type="dmo:DOCIDENTIF_PF"/>
+													<xs:element name="Domicilio" type="dmo:DOMICILIO_S1"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Propietario" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0">
+										<xs:element name="PersonaFisica" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="CDPERSONA">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:maxLength value="10"/>
+																<xs:minLength value="1"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="NombreRazonSocial" minOccurs="0">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:maxLength value="80"/>
+																<xs:minLength value="1"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="PrimerApellido" minOccurs="0">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:maxLength value="40"/>
+																<xs:minLength value="1"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="SegundoApellido" minOccurs="0">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:maxLength value="40"/>
+																<xs:minLength value="1"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="PaisNacionalidad" type="dmo:PAIS_ENUM"/>
+													<xs:element name="FechaNacimiento" type="dmo:FECHA"/>
+													<xs:element name="PaisNacimiento" type="dmo:PAIS_ENUM"/>
+													<xs:element name="Profesion">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:maxLength value="30"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="DocIdentificativo" type="dmo:DOCIDENTIF_PF"/>
+													<xs:element name="Domicilio" type="dmo:DOMICILIO_S1"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Sociedad" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="CDPERSONA">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:maxLength value="10"/>
+																<xs:minLength value="1"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="RazonSocial">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:maxLength value="80"/>
+																<xs:minLength value="1"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="PaisNacionalidad" type="dmo:PAIS_ENUM" minOccurs="0"/>
+													<xs:element name="FechaConstitucion" type="dmo:FECHA"/>
+													<xs:element name="PaisConstitucion" type="dmo:PAIS_ENUM"/>
+													<xs:element name="FormaSocietaria" type="dmo:FORMASOC_ENUM"/>
+													<xs:element name="DocIdentificativo" type="dmo:DOCIDENTIF_PJ"/>
+													<xs:element name="Domicilio" type="dmo:DOMICILIO_S1"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

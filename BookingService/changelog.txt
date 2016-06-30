@@ -1,0 +1,7 @@
+CHANGELOG REPORTINGWEB
+
+ReportingWeb - Versión 2.9.2
+
+Medium 	AMLCHECK-474	Formato Fecha- Fraccionado y Positivo	Story		Alberto Olivan	DONE
+Medium 	AMLCHECK-476	Nº de Cuenta-Fraccionado y Positivo	Story		Alberto Olivan	DONE
+Low		AMLCHECK-575	Crear XML salida tipo OperationsImport	Story		Alberto Olivan DONE

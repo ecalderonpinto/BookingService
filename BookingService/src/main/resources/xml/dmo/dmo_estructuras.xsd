@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp1 U (http://www.xmlspy.com) by any (Ru-Board) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dmo="http://www.sepblac.es/DMO" targetNamespace="http://www.sepblac.es/DMO">
+	<xs:include schemaLocation="dmo_paises.xsd" id="paises"/>
+	<xs:include schemaLocation="dmo_divisas.xsd" id="divisas"/>
+	<xs:include schemaLocation="dmo_provincias.xsd" id="provincias"/>
+	<xs:include schemaLocation="dmo_municipios.xsd" id="municipios"/>
+	<xs:include schemaLocation="dmo_campostasados.xsd" id="tasados"/>
+	<xs:include schemaLocation="dmo_tiposdatos.xsd" id="tiposdatos"/>
+	<xs:include schemaLocation="dmo_caracteristicasOperaciones.xsd"/>
+	<xs:include schemaLocation="dmo_relacionesPersonaCuenta.xsd"/>
+	<xs:complexType name="DOCIDENTIF">
+		<xs:annotation>
+			<xs:documentation>Clase general de documento identificativo</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="PaisExpedicion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="dmo:PAIS_ENUM"/>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="NumDocIdentif" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="15"/>
+					<xs:minLength value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="DOCIDENTIF_PF">
+		<xs:annotation>
+			<xs:documentation>Documento identificativo de personas fisicas</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="dmo:DOCIDENTIF">
+				<xs:sequence>
+					<xs:element name="TipoDocIdentif">
+						<xs:simpleType>
+							<xs:restriction base="dmo:TIPDIPF_ENUM"/>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DOCIDENTIF_PJ">
+		<xs:annotation>
+			<xs:documentation>Documento identificativo de personas juridicas</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="dmo:DOCIDENTIF">
+				<xs:sequence>
+					<xs:element name="TipoDocIdentif">
+						<xs:simpleType>
+							<xs:restriction base="dmo:TIPDIPJ_ENUM"/>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TELEFONO">
+		<xs:annotation>
+			<xs:documentation>Telefono de persona fisica o juridica</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="Telefono" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="20"/>
+					<xs:minLength value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="DOMICILIO">
+		<xs:annotation>
+			<xs:documentation>Clase general de domicilio</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TipoVia" type="dmo:TIPVIA_ENUM" minOccurs="0"/>
+			<xs:element name="NombreVia" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="150"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NumeroVia" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="5"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="OtrosDatos" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Pais">
+				<xs:simpleType>
+					<xs:restriction base="dmo:PAIS_ENUM"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:choice minOccurs="0">
+				<xs:element name="Provincia">
+					<xs:simpleType>
+						<xs:restriction base="dmo:PROV_ENUM"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ProvinciaExtranjera">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="80"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:choice>
+			<xs:choice>
+				<xs:element name="Municipio" type="dmo:MUN_ENUM"/>
+				<xs:element name="MunicipioExtranjero">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="80"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:choice>
+			<xs:choice minOccurs="0">
+				<xs:element name="CodPostal">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:length value="5"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="CodPostalExtrajero">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:choice>
+			<xs:element name="NumApartado" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Localidad" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="80"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DOMICILIO_CP">
+		<xs:annotation>
+			<xs:documentation>Clase general de domicilio</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TipoVia" type="dmo:TIPVIA_ENUM" minOccurs="0"/>
+			<xs:element name="NombreVia" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="150"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NumeroVia" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="5"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="OtrosDatos" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Pais">
+				<xs:simpleType>
+					<xs:restriction base="dmo:PAIS_ENUM"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:choice minOccurs="0">
+				<xs:element name="Provincia">
+					<xs:simpleType>
+						<xs:restriction base="dmo:PROV_ENUM"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ProvinciaExtranjera">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="80"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:choice>
+			<xs:choice minOccurs="0">
+				<xs:element name="Municipio" type="dmo:MUN_ENUM"/>
+				<xs:element name="MunicipioExtranjero">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="80"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:choice>
+			<xs:choice minOccurs="0">
+				<xs:element name="CodPostal">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:length value="5"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="CodPostalExtrajero">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:choice>
+			<xs:element name="NumApartado" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Localidad" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="80"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DOMICILIO_S1">
+		<xs:annotation>
+			<xs:documentation>Clase de domicilio para operaciones S1 (Sin apartado de correos)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TipoVia" type="dmo:TIPVIA_ENUM" minOccurs="0"/>
+			<xs:element name="NombreVia">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="150"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NumeroVia" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="5"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="OtrosDatos" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Pais">
+				<xs:simpleType>
+					<xs:restriction base="dmo:PAIS_ENUM"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:choice minOccurs="0">
+				<xs:element name="CodPostal">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:length value="5"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="CodPostalExtrajero">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:choice>
+			<xs:element name="Localidad">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="80"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CABECERAOP">
+		<xs:annotation>
+			<xs:documentation>Cabecera de Operacion</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="NumOperacion">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="5"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TipoOperacion">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Caracteristicas">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Caracteristica" maxOccurs="unbounded">
+							<xs:simpleType>
+								<xs:restriction base="dmo:CARACTERISTICAS_ENUM">
+									<xs:totalDigits value="1"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="FechaOperacion" type="dmo:FECHA_GEN"/>
+			<xs:element name="HoraOperacion" type="dmo:HORA" minOccurs="0"/>
+			<xs:element name="Importe" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="16"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Divisa" type="dmo:DIVISA_ENUM" minOccurs="0"/>
+			<xs:element name="ImporteEnEuros" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="16"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PaisOrigen" type="dmo:PAIS_ENUM" minOccurs="0"/>
+			<xs:choice minOccurs="0">
+				<xs:element name="ProvinciaOrigen" type="dmo:PROV_ENUM"/>
+				<xs:element name="ProvinciaOrigenEx">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="80"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:choice>
+			<xs:choice minOccurs="0">
+				<xs:element name="MunicipioOrigen" type="dmo:MUN_ENUM"/>
+				<xs:element name="MunicipioOrigenEx">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="80"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:choice>
+			<xs:element name="PaisDestino" type="dmo:PAIS_ENUM" minOccurs="0"/>
+			<xs:choice minOccurs="0">
+				<xs:element name="ProvinciaDestino" type="dmo:PROV_ENUM"/>
+				<xs:element name="ProvinciaDestinoEx">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="80"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:choice>
+			<xs:choice minOccurs="0">
+				<xs:element name="MunicipioDestino" type="dmo:MUN_ENUM"/>
+				<xs:element name="MunicipioDestinoEx">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="80"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:choice>
+			<xs:element name="Oficina" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="4"/>
+						<xs:pattern value="[0-9][0-9][0-9][0-9]"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NumeroCuenta" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="20"/>
+						<xs:pattern value="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CABECERAOP_S1">
+		<xs:annotation>
+			<xs:documentation>Cabecera de Operacion para operaciones S1</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="NumOperacion">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="5"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TipoOperacion">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Caracteristicas">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Caracteristica" maxOccurs="unbounded">
+							<xs:simpleType>
+								<xs:restriction base="dmo:CARACTERISTICAS_ENUM">
+									<xs:totalDigits value="1"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="FechaOperacion" type="dmo:FECHA_GEN"/>
+			<xs:element name="HoraOperacion" type="dmo:HORA" minOccurs="0"/>
+			<xs:element name="Importe">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="16"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Divisa" type="dmo:DIVISA_ENUM"/>
+			<xs:element name="ImporteEnEuros">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="16"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PaisOrigen" type="dmo:PAIS_ENUM"/>
+			<xs:choice minOccurs="0">
+				<xs:element name="ProvinciaOrigen" type="dmo:PROV_ENUM"/>
+				<xs:element name="ProvinciaOrigenEx">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="80"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:choice>
+			<xs:choice>
+				<xs:element name="MunicipioOrigen" type="dmo:MUN_ENUM"/>
+				<xs:element name="MunicipioOrigenEx">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="80"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:choice>
+			<xs:element name="Oficina">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="4"/>
+						<xs:pattern value="[0-9][0-9][0-9][0-9]"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NumeroCuenta" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="20"/>
+						<xs:pattern value="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CODIGOS1" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="25"/>
+						<xs:minLength value="25"/>
+						<xs:pattern value="[0][0][0][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z][0-9|a-z|A-Z]"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PERSONAFIS">
+		<xs:annotation>
+			<xs:documentation>Persona Fisica genérica</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPERSONA">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Nombre" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="80"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PrimerApellido" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="40"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="SegundoApellido" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="40"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Pais" type="dmo:PAIS_ENUM" minOccurs="0"/>
+			<xs:element name="DocIdentifsPF">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="DocIdentifPF" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="dmo:DOCIDENTIF_PF"/>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DomiciliosPF">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="DomicilioPF" type="dmo:DOMICILIO" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Telefonos">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Telefono" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="dmo:TELEFONO"/>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Relacion" type="dmo:REL_PER_CUENTA_ENUM" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PERSONAJUR">
+		<xs:annotation>
+			<xs:documentation>Persona Juridica (Sociedad) genérica</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPERSONA">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="RazonSocial" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="80"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PaisNacionalidad" type="dmo:PAIS_ENUM" minOccurs="0"/>
+			<xs:element name="DocIdentifsPJ">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="DocIdentifPJ" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="dmo:DOCIDENTIF_PJ"/>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DomiciliosPJ">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="DomicilioPJ" type="dmo:DOMICILIO" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Telefonos">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Telefono" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="dmo:TELEFONO"/>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Relacion" type="dmo:REL_PER_CUENTA_ENUM" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

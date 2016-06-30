@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing 
+		infrastructure -->
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<mvc:annotation-driven />
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
+		up static resources in the ${webappRoot}/resources directory -->
+	<!-- <resources mapping="/resources/**" location="/resources/" /> -->
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
+		in the /WEB-INF/views directory -->
+	<!-- <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
+		<beans:property name="prefix" value="/WEB-INF/views/" /> <beans:property 
+		name="suffix" value=".jsp" /> </beans:bean> -->
+	<context:component-scan base-package="com" />
+
+	<!-- Multipart Resolver for forms with files -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+
+	<!-- start: Tiles View Resolver -->
+	<bean id="tilesViewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.tiles3.TilesView" />
+	</bean>
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions" value="/WEB-INF/tiles.xml" />
+	</bean>
+	<!-- end: Tiles View Resolver -->
+
+	<!-- start: Quartz Configuration -->
+	<!-- Job simple. Al lanzar la planificación se hará el método <targetMethod> 
+		de la clase <targetObjetc> -->
+	<!--
+	<bean id="testJob"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="loaderJob" />
+		<property name="targetMethod" value="run" />
+	</bean>
+	-->
+	<!-- Configuración del Trigger asignándole el job anterior -->
+	<!--
+	<bean id="cronTrigger"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="testJob" />
+		<property name="cronExpression" value="0/59 * * * * ?" />
+	</bean>
+	-->
+	<!-- Scheduler Factory Bean to Configure Quartz Scheduler -->
+	<!--
+	<bean id="quartzBean" name="quartzBean"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="jobDetails">
+			<list>
+				<ref bean="testJob" />
+			</list>
+		</property>
+
+		<property name="triggers">
+			<list>
+				<ref bean="cronTrigger" />
+			</list>
+		</property>
+	</bean>
+	-->
+	<!-- Run the job every 2 seconds with initial delay of 1 second -->
+	<!-- <beans:bean id="simpleTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean"> 
+		<beans:property name="jobDetail" ref="simpleJobDetail" /> <beans:property 
+		name="startDelay" value="1000" /> <beans:property name="repeatInterval" value="2000" 
+		/> </beans:bean> -->
+	<!-- For times when you need more complex processing, passing data to the 
+		scheduled job -->
+	<!-- <beans:bean name="complexJobDetail" class="org.springframework.scheduling.quartz.JobDetailFactoryBean"> 
+		<beans:property name="jobClass" value="com.websystique.spring.quartz.ScheduledJob" 
+		/> <beans:property name="jobDataMap"> <beans:map> <beans:entry key="anotherBean" 
+		value-ref="anotherBean" /> </beans:map> </beans:property> <beans:property 
+		name="durability" value="true" /> </beans:bean> -->
+	<!-- end: Quartz Configuration -->
+
+</beans>

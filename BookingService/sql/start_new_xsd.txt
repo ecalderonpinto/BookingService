@@ -1,0 +1,10 @@
+# to start a new Report Catalog follow this steps:
+
+# 1 copy all *.xsd in a new folder in /src/main/resources/xml/NEW
+
+# 2 Right click in Eclipse main.xsd -> Generate -> JAXB Classes ... -> Set package like /com/reportingtool/xml/NEW
+# See new classes generated.
+
+# 3 Design reportFields and install new ReportCatalog and company if necessary in /com/entities/install/InstallNEW.java
+
+# 4 Make Import XML: /com/reportingtool/creation/LoadXMLNEW.java Export: /com/reportingtool/creation/GenerateXMLNEW.java

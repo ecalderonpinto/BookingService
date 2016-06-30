@@ -1,0 +1,15 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dmo="http://www.sepblac.es/DMO" targetNamespace="http://www.sepblac.es/DMO">
+	<xs:simpleType name="REL_PER_CUENTA_ENUM">
+		<xs:annotation>
+			<xs:documentation>Lista de Relaciones Persona-Cuenta</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="9"/>
+			<!-- 1 - Titular -->
+			<!-- 2 - Firma autorizada -->
+			<!-- 9 - Desconocido -->
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

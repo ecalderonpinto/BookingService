@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dmo="http://www.sepblac.es/DMO" targetNamespace="http://www.sepblac.es/DMO">
+	<xs:simpleType name="DIVISA_ENUM">
+		<xs:annotation>
+			<xs:documentation>Lista de divisas</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="978"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="764"/>
+			<xs:enumeration value="590"/>
+			<xs:enumeration value="230"/>
+			<xs:enumeration value="862"/>
+			<xs:enumeration value="68"/>
+			<xs:enumeration value="986"/>
+			<xs:enumeration value="288"/>
+			<xs:enumeration value="40"/>
+			<xs:enumeration value="188"/>
+			<xs:enumeration value="222"/>
+			<xs:enumeration value="558"/>
+			<xs:enumeration value="203"/>
+			<xs:enumeration value="208"/>
+			<xs:enumeration value="703"/>
+			<xs:enumeration value="233"/>
+			<xs:enumeration value="352"/>
+			<xs:enumeration value="578"/>
+			<xs:enumeration value="752"/>
+			<xs:enumeration value="268"/>
+			<xs:enumeration value="999"/>
+			<xs:enumeration value="909"/>
+			<xs:enumeration value="270"/>
+			<xs:enumeration value="807"/>
+			<xs:enumeration value="960"/>
+			<xs:enumeration value="12"/>
+			<xs:enumeration value="48"/>
+			<xs:enumeration value="368"/>
+			<xs:enumeration value="400"/>
+			<xs:enumeration value="414"/>
+			<xs:enumeration value="434"/>
+			<xs:enumeration value="788"/>
+			<xs:enumeration value="504"/>
+			<xs:enumeration value="784"/>
+			<xs:enumeration value="964"/>
+			<xs:enumeration value="678"/>
+			<xs:enumeration value="36"/>
+			<xs:enumeration value="124"/>
+			<xs:enumeration value="52"/>
+			<xs:enumeration value="84"/>
+			<xs:enumeration value="96"/>
+			<xs:enumeration value="951"/>
+			<xs:enumeration value="242"/>
+			<xs:enumeration value="328"/>
+			<xs:enumeration value="344"/>
+			<xs:enumeration value="90"/>
+			<xs:enumeration value="44"/>
+			<xs:enumeration value="60"/>
+			<xs:enumeration value="136"/>
+			<xs:enumeration value="516"/>
+			<xs:enumeration value="702"/>
+			<xs:enumeration value="780"/>
+			<xs:enumeration value="716"/>
+			<xs:enumeration value="388"/>
+			<xs:enumeration value="430"/>
+			<xs:enumeration value="554"/>
+			<xs:enumeration value="840"/>
+			<xs:enumeration value="997"/>
+			<xs:enumeration value="998"/>
+			<xs:enumeration value="704"/>
+			<xs:enumeration value="300"/>
+			<xs:enumeration value="51"/>
+			<xs:enumeration value="968"/>
+			<xs:enumeration value="132"/>
+			<xs:enumeration value="626"/>
+			<xs:enumeration value="620"/>
+			<xs:enumeration value="533"/>
+			<xs:enumeration value="532"/>
+			<xs:enumeration value="740"/>
+			<xs:enumeration value="528"/>
+			<xs:enumeration value="348"/>
+			<xs:enumeration value="56"/>
+			<xs:enumeration value="952"/>
+			<xs:enumeration value="950"/>
+			<xs:enumeration value="953"/>
+			<xs:enumeration value="976"/>
+			<xs:enumeration value="108"/>
+			<xs:enumeration value="262"/>
+			<xs:enumeration value="324"/>
+			<xs:enumeration value="174"/>
+			<xs:enumeration value="646"/>
+			<xs:enumeration value="250"/>
+			<xs:enumeration value="442"/>
+			<xs:enumeration value="450"/>
+			<xs:enumeration value="756"/>
+			<xs:enumeration value="332"/>
+			<xs:enumeration value="600"/>
+			<xs:enumeration value="980"/>
+			<xs:enumeration value="804"/>
+			<xs:enumeration value="598"/>
+			<xs:enumeration value="418"/>
+			<xs:enumeration value="191"/>
+			<xs:enumeration value="454"/>
+			<xs:enumeration value="973"/>
+			<xs:enumeration value="104"/>
+			<xs:enumeration value="981"/>
+			<xs:enumeration value="428"/>
+			<xs:enumeration value="8"/>
+			<xs:enumeration value="340"/>
+			<xs:enumeration value="694"/>
+			<xs:enumeration value="642"/>
+			<xs:enumeration value="498"/>
+			<xs:enumeration value="100"/>
+			<xs:enumeration value="975"/>
+			<xs:enumeration value="196"/>
+			<xs:enumeration value="238"/>
+			<xs:enumeration value="654"/>
+			<xs:enumeration value="818"/>
+			<xs:enumeration value="826"/>
+			<xs:enumeration value="292"/>
+			<xs:enumeration value="372"/>
+			<xs:enumeration value="422"/>
+			<xs:enumeration value="760"/>
+			<xs:enumeration value="736"/>
+			<xs:enumeration value="748"/>
+			<xs:enumeration value="380"/>
+			<xs:enumeration value="470"/>
+			<xs:enumeration value="792"/>
+			<xs:enumeration value="440"/>
+			<xs:enumeration value="426"/>
+			<xs:enumeration value="795"/>
+			<xs:enumeration value="31"/>
+			<xs:enumeration value="276"/>
+			<xs:enumeration value="977"/>
+			<xs:enumeration value="278"/>
+			<xs:enumeration value="246"/>
+			<xs:enumeration value="508"/>
+			<xs:enumeration value="566"/>
+			<xs:enumeration value="232"/>
+			<xs:enumeration value="64"/>
+			<xs:enumeration value="891"/>
+			<xs:enumeration value="901"/>
+			<xs:enumeration value="376"/>
+			<xs:enumeration value="604"/>
+			<xs:enumeration value="959"/>
+			<xs:enumeration value="842"/>
+			<xs:enumeration value="958"/>
+			<xs:enumeration value="478"/>
+			<xs:enumeration value="776"/>
+			<xs:enumeration value="446"/>
+			<xs:enumeration value="724"/>
+			<xs:enumeration value="20"/>
+			<xs:enumeration value="32"/>
+			<xs:enumeration value="152"/>
+			<xs:enumeration value="170"/>
+			<xs:enumeration value="192"/>
+			<xs:enumeration value="214"/>
+			<xs:enumeration value="608"/>
+			<xs:enumeration value="624"/>
+			<xs:enumeration value="484"/>
+			<xs:enumeration value="858"/>
+			<xs:enumeration value="72"/>
+			<xs:enumeration value="320"/>
+			<xs:enumeration value="710"/>
+			<xs:enumeration value="682"/>
+			<xs:enumeration value="634"/>
+			<xs:enumeration value="364"/>
+			<xs:enumeration value="512"/>
+			<xs:enumeration value="887"/>
+			<xs:enumeration value="116"/>
+			<xs:enumeration value="458"/>
+			<xs:enumeration value="974"/>
+			<xs:enumeration value="643"/>
+			<xs:enumeration value="462"/>
+			<xs:enumeration value="690"/>
+			<xs:enumeration value="480"/>
+			<xs:enumeration value="144"/>
+			<xs:enumeration value="356"/>
+			<xs:enumeration value="524"/>
+			<xs:enumeration value="586"/>
+			<xs:enumeration value="360"/>
+			<xs:enumeration value="404"/>
+			<xs:enumeration value="834"/>
+			<xs:enumeration value="706"/>
+			<xs:enumeration value="800"/>
+			<xs:enumeration value="417"/>
+			<xs:enumeration value="972"/>
+			<xs:enumeration value="860"/>
+			<xs:enumeration value="50"/>
+			<xs:enumeration value="882"/>
+			<xs:enumeration value="398"/>
+			<xs:enumeration value="705"/>
+			<xs:enumeration value="496"/>
+			<xs:enumeration value="990"/>
+			<xs:enumeration value="548"/>
+			<xs:enumeration value="410"/>
+			<xs:enumeration value="408"/>
+			<xs:enumeration value="392"/>
+			<xs:enumeration value="156"/>
+			<xs:enumeration value="985"/>
+			<xs:enumeration value="967"/>
+			<!--<xs:maxLength value="44"/>-->
+			<!--978-EURO-->
+			<!--4-AFGHANI-->
+			<!--764-BAHT-->
+			<!--590-BALBOA-->
+			<!--230-BIRR ETIOPE-->
+			<!--862-BOLIVAR-->
+			<!--68-BOLIVIANO-->
+			<!--986-BRASILIAN REAL-->
+			<!--288-CEDI-->
+			<!--40-CHELIN AUSTRIACO-->
+			<!--188-COLON COSTA RICA-->
+			<!--222-COLON SALVADOR-->
+			<!--558-CORDOBA ORO-->
+			<!--203-CORONA CHECA-->
+			<!--208-CORONA DANESA-->
+			<!--703-CORONA ESLOVACA-->
+			<!--233-CORONA ESTONA-->
+			<!--352-CORONA ISLANDESA-->
+			<!--578-CORONA NORUEGA-->
+			<!--752-CORONA SUECA-->
+			<!--268-CUPON GEORGIANO-->
+			<!--999-C/V PTS. DIVISA NO COTIZADA-->
+			<!--909-CV.EURO CUALQUIER MONEDA S/CDG-->
+			<!--270-DALASI-->
+			<!--807-DENAR-->
+			<!--960-DERECHOS ESPECIALES DE GIRO-->
+			<!--12-DINAR ARGELINO-->
+			<!--48-DINAR DE BAHREIN-->
+			<!--368-DINAR IRAQUI-->
+			<!--400-DINAR JORDANO-->
+			<!--414-DINAR KUWAITI-->
+			<!--434-DINAR LIBIO-->
+			<!--788-DINAR TUNECINO-->
+			<!--504-DIRHAM MARROQUI-->
+			<!--784-DIRHAM UNION EMIRATOS ARABES-->
+			<!--964-DIVISAS NO COTIZADAS.CV.EN PTS-->
+			<!--678-DOBRA-->
+			<!--36-DOLAR AUSTRALIANO-->
+			<!--124-DOLAR CANADIENSE-->
+			<!--52-DOLAR DE BARBADOS-->
+			<!--84-DOLAR DE BELICE-->
+			<!--96-DOLAR DE BRUNEI-->
+			<!--951-DOLAR DE CARIBES ORIENTALES-->
+			<!--242-DOLAR DE FIDJI-->
+			<!--328-DOLAR DE GUAYANA-->
+			<!--344-DOLAR DE HONG KONG-->
+			<!--90-DOLAR DE ISLAS SALOMON-->
+			<!--44-DOLAR DE LAS BAHAMAS-->
+			<!--60-DOLAR DE LAS BERMUDAS-->
+			<!--136-DOLAR DE LAS ISLAS CAIMAN-->
+			<!--516-DOLAR DE NAMIBIA-->
+			<!--702-DOLAR DE SINGAPUR-->
+			<!--780-DOLAR DE TRINIDAD Y TOBAGO-->
+			<!--716-DOLAR DE ZIMBABWE-->
+			<!--388-DOLAR JAMAICANO-->
+			<!--430-DOLAR LIBERIANO-->
+			<!--554-DOLAR NEOZELANDES-->
+			<!--840-DOLAR USA-->
+			<!--997-DOLAR USA (DIA SIGUIENTE)-->
+			<!--998-DOLAR USA (MISMO DIA)-->
+			<!--704-DONG-->
+			<!--300-DRACMA GRIEGO-->
+			<!--51-DRAM ARMENIO-->
+			<!--968-E.C.U. I.M.E.-->
+			<!--132-ESCUDO DE CABO VERDE-->
+			<!--626-ESCUDO DE TIMOR-->
+			<!--620-ESCUDO PORTUGUES-->
+			<!--533-FLORIN DE ARUBA-->
+			<!--532-FLORIN DE LAS ANTILLAS-->
+			<!--740-FLORIN DE SURINAM-->
+			<!--528-FLORIN HOLANDES-->
+			<!--348-FORINT-->
+			<!--56-FRANCO BELGA-->
+			<!--952-FRANCO CFA-BCEAO-->
+			<!--950-FRANCO CFA-BEAC-->
+			<!--953-FRANCO CFP-->
+			<!--976-FRANCO CONGOLES-->
+			<!--108-FRANCO DE BURUNDI-->
+			<!--262-FRANCO DE DJIBOUTI-->
+			<!--324-FRANCO DE GUINEA-->
+			<!--174-FRANCO DE LAS COMORES-->
+			<!--646-FRANCO DE RUANDA-->
+			<!--250-FRANCO FRANCES-->
+			<!--442-FRANCO LUXEMBURGUES-->
+			<!--450-FRANCO MALGACHE-->
+			<!--756-FRANCO SUIZO-->
+			<!--332-GOURDE-->
+			<!--600-GUARANI-->
+			<!--980-HRYVNIA-->
+			<!--804-KARBOVANET-->
+			<!--598-KINA-->
+			<!--418-KIP-->
+			<!--191-KUNA-->
+			<!--454-KWACHA-->
+			<!--973-KWANZA-->
+			<!--104-KYAT-->
+			<!--981-LARI-->
+			<!--428-LATS DE LETONIA-->
+			<!--8-LEK-->
+			<!--340-LEMPIRA-->
+			<!--694-LEONE-->
+			<!--642-LEU-->
+			<!--498-LEU MOLDAVIA-->
+			<!--100-LEV-->
+			<!--975-LEV BULGARO NUEVO-->
+			<!--196-LIBRA CHIPRIOTA-->
+			<!--238-LIBRA DE LAS ISLAS FALKLAND-->
+			<!--654-LIBRA DE SANTA ELENA-->
+			<!--818-LIBRA EGIPCIA-->
+			<!--826-LIBRA ESTERLINA-->
+			<!--292-LIBRA GIBRALTARENA-->
+			<!--372-LIBRA IRLANDESA-->
+			<!--422-LIBRA LIBANESA-->
+			<!--760-LIBRA SIRIA-->
+			<!--736-LIBRA SUDANESA-->
+			<!--748-LILANGENI-->
+			<!--380-LIRA ITALIANA-->
+			<!--470-LIRA MALTESA-->
+			<!--792-LIRA TURCA-->
+			<!--440-LITAS LITUANO-->
+			<!--426-LOTI-->
+			<!--795-MANAT-->
+			<!--31-MANAT AZERBAIYANO-->
+			<!--276-MARCO ALEMAN-->
+			<!--977-MARCO CONVERTIBLE-->
+			<!--278-MARCO DE LA RDA-->
+			<!--246-MARCO FINLANDES-->
+			<!--508-METICAL-->
+			<!--566-NAIRA-->
+			<!--232-NAKFA-->
+			<!--64-NGULTRUM-->
+			<!--891-NUEVO DINAR-->
+			<!--901-NUEVO DOLAR DE TAIWAN-->
+			<!--376-NUEVO SHEKEL ISRAELI-->
+			<!--604-NUEVO SOL-->
+			<!--959-ORO-->
+			<!--842-ORO DOLAR-->
+			<!--958-ORO EURO-->
+			<!--478-OUGUIYA-->
+			<!--776-PA'ANGA-->
+			<!--446-PATACA-->
+			<!--724-PESETA ESP.-->
+			<!--20-PESETAS CON ANDORRA-->
+			<!--32-PESO ARGENTINO-->
+			<!--152-PESO CHILENO-->
+			<!--170-PESO COLOMBIANO-->
+			<!--192-PESO CUBANO-->
+			<!--214-PESO DOMINICANO-->
+			<!--608-PESO FILIPINO-->
+			<!--624-PESO GUINEA-BISSAU-->
+			<!--484-PESO MEJICANO-->
+			<!--858-PESO URUGUAYO-->
+			<!--72-PULA-->
+			<!--320-QUETZAL-->
+			<!--710-RAND-->
+			<!--682-RIAL ARABIA SAUDI-->
+			<!--634-RIAL DE QATAR-->
+			<!--364-RIAL IRANI-->
+			<!--512-RIAL OMANI-->
+			<!--887-RIAL YEMENI-->
+			<!--116-RIEL-->
+			<!--458-RINGGIT-->
+			<!--974-RUBLO BIELORRUSO-->
+			<!--643-RUBLO RUSIA-->
+			<!--462-RUPIA DE LAS MALDIVAS-->
+			<!--690-RUPIA DE LAS SEYCHELLES-->
+			<!--480-RUPIA DE MAURICIO-->
+			<!--144-RUPIA DE SRI LANKA-->
+			<!--356-RUPIA INDIA-->
+			<!--524-RUPIA NEPALESA-->
+			<!--586-RUPIA PAKISTANI-->
+			<!--360-RUPIAH-->
+			<!--404-SHILLING DE KENIA-->
+			<!--834-SHILLING DE TANZANIA-->
+			<!--706-SHILLING SOMALI-->
+			<!--800-SHILLING UGANDES-->
+			<!--417-SOM-->
+			<!--972-SOMONI-->
+			<!--860-SUM DE UZBEKISTAN-->
+			<!--50-TAKA-->
+			<!--882-TALA-->
+			<!--398-TENGE-->
+			<!--705-TOLAR-->
+			<!--496-TUGRIK-->
+			<!--990-UNIDADES DE FOMENTO-->
+			<!--548-VATU-->
+			<!--410-WON-->
+			<!--408-WON DE COREA DEL NORTE-->
+			<!--392-YEN JAPONES-->
+			<!--156-YUAN RENMINBI-->
+			<!--985-ZLOTY-->
+			<!--967-(000) ONZAS TROY DE ORO-->
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

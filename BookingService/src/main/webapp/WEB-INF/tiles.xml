@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="base.template" template="/template.jsp" />
+
+	<definition name="login" template="/login.jsp" />
+
+	<!-- ERROR -->
+	<definition name="403" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Error 403" />
+		<put-attribute name="mainContent" value="/error/403.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+	
+	<definition name="error" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Error" />
+		<put-attribute name="mainContent" value="/error/error.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<!-- ADMIN -->
+	<definition name="admin" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Admin" />
+		<put-attribute name="mainContent" value="/admin/admin.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+	
+	<definition name="usermanager" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - User Manager" />
+		<put-attribute name="mainContent" value="/admin/usermanager.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="userdetailmanager" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - User Detail" />
+		<put-attribute name="mainContent" value="/admin/userdetailmanager.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+	
+	<!-- USER -->
+	<definition name="dashboard" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Scheduler Dashboard" />
+		<put-attribute name="mainContent" value="/dashboard.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="viewerrors" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Load Errors" />
+		<put-attribute name="mainContent" value="/viewerrors.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="user" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - User Manager" />
+		<put-attribute name="mainContent" value="/user.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="userdetail" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - User Detail" />
+		<put-attribute name="mainContent" value="/userdetail.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+	
+	<definition name="userchangepass" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - User Change Password" />
+		<put-attribute name="mainContent" value="/userchangepass.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="datamanager" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Data Manager" />
+		<put-attribute name="mainContent" value="/datamanager.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="fileconfig" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Config" />
+		<put-attribute name="mainContent" value="/fileconfig.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="reportcatalog" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - DM - Report Catalog" />
+		<put-attribute name="mainContent" value="/reportcatalog.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+	
+	<definition name="reportcatalogdetail" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - DM - Report Catalog Detail" />
+		<put-attribute name="mainContent" value="/reportcatalogdetail.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="reportfielddetail" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - DM - Report Field Detail" />
+		<put-attribute name="mainContent" value="/reportfielddetail.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="filecolumdetail" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - DM - File Colum Detail" />
+		<put-attribute name="mainContent" value="/filecolumdetail.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="fileconfigdetail" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - DM - File Config Detail" />
+		<put-attribute name="mainContent" value="/fileconfigdetail.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="companydetail" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - DM - Company Detail" />
+		<put-attribute name="mainContent" value="/companydetail.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="loaddetail" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - DM - Load Detail" />
+		<put-attribute name="mainContent" value="/loaddetail.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="rawdetail" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - DM - Load - Raw Detail" />
+		<put-attribute name="mainContent" value="/rawdetail.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="loaderror" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Load Error" />
+		<put-attribute name="mainContent" value="/loaderror.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="reporterror" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Report Error" />
+		<put-attribute name="mainContent" value="/reporterror.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="reportdataerror" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Report Data Error" />
+		<put-attribute name="mainContent" value="/reportdataerror.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="reportfieldlist" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Report Field List" />
+		<put-attribute name="mainContent" value="/reportfieldlist.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="filecolumlist" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - File Colum List" />
+		<put-attribute name="mainContent" value="/filecolumlist.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="fundreports" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - DM - Fund Reports" />
+		<put-attribute name="mainContent" value="/fundreports.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="companyreports" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - DM - Company Reports" />
+		<put-attribute name="mainContent" value="/companyreports.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="viewxml" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Report in XML" />
+		<put-attribute name="mainContent" value="/viewxml.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="loadsassigntoreport" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Loads Assign" />
+		<put-attribute name="mainContent" value="/loadsassign.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="loadxml" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Load XML" />
+		<put-attribute name="mainContent" value="/loadxml.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="loads" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Loads" />
+		<put-attribute name="mainContent" value="/loads.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="reportexecution" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Report Execution" />
+		<put-attribute name="mainContent" value="/reportexecution.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="reportexecutiontest" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Report Execution" />
+		<put-attribute name="mainContent" value="/reportexecutiontest.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="reportexecutiondetail" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Report Execution Detail" />
+		<put-attribute name="mainContent" value="/reportexecutiondetail.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+
+	<definition name="scheduler/dashboard" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Scheduler Dashboard" />
+		<put-attribute name="mainContent" value="/dashboard.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+	
+	<definition name="departmentreports" extends="base.template">
+		<put-attribute name="headerTitle" value="RT - Department Reports" />
+		<put-attribute name="mainContent" value="/departmentreports.jsp" />
+		<put-attribute name="modalWindow" value="" />
+	</definition>
+	
+	<!-- OTHERS -->
+
+	<definition name="error.500" extends="base.template">
+		<put-attribute name="body" value="/WEB-INF/spring/jsp/error/500.jsp" />
+		<put-list-attribute name="resourcesCss">
+			<add-attribute value="layout/error.css" />
+			<add-attribute value="design/error.css" />
+		</put-list-attribute>
+		<put-list-attribute name="resourcesJs">
+		</put-list-attribute>
+	</definition>
+
+	<definition name="message.security.details" extends="base.template">
+		<put-attribute name="body"
+			value="/WEB-INF/spring/jsp/securities/messageSecurityDetails.jsp" />
+		<put-list-attribute name="resourcesCss">
+			<add-attribute value="layout/error.css" />
+			<add-attribute value="design/error.css" />
+		</put-list-attribute>
+		<put-list-attribute name="resourcesJs">
+		</put-list-attribute>
+	</definition>
+
+	<definition name="message.security.original" extends="base.template">
+		<put-attribute name="body"
+			value="/WEB-INF/spring/jsp/securities/messageSecurityOriginalPopUp.jsp" />
+		<put-list-attribute name="resourcesCss">
+			<add-attribute value="layout/error.css" />
+			<add-attribute value="design/error.css" />
+		</put-list-attribute>
+		<put-list-attribute name="resourcesJs">
+		</put-list-attribute>
+	</definition>
+
+	<definition name="admin.normalization.load" extends="base.template">
+		<put-attribute name="body"
+			value="/WEB-INF/spring/jsp/admin/normalizationConfig.jsp" />
+		<put-list-attribute name="resourcesCss">
+			<add-attribute value="layout/error.css" />
+			<add-attribute value="design/error.css" />
+		</put-list-attribute>
+		<put-list-attribute name="resourcesJs">
+		</put-list-attribute>
+	</definition>
+
+	<definition name="event.static.list" extends="base.template">
+		<put-attribute name="body"
+			value="/WEB-INF/spring/jsp/statics/eventList.jsp" />
+		<put-list-attribute name="resourcesCss">
+			<add-attribute value="layout/error.css" />
+			<add-attribute value="design/error.css" />
+		</put-list-attribute>
+		<put-list-attribute name="resourcesJs">
+		</put-list-attribute>
+	</definition>
+
+	<definition name="event.group.list" extends="base.template">
+		<put-attribute name="body"
+			value="/WEB-INF/spring/jsp/group/eventGroupList.jsp" />
+		<put-list-attribute name="resourcesCss">
+			<add-attribute value="layout/error.css" />
+			<add-attribute value="design/error.css" />
+		</put-list-attribute>
+		<put-list-attribute name="resourcesJs">
+		</put-list-attribute>
+	</definition>
+
+	<definition name="error.500" extends="base.template">
+		<put-attribute name="body" value="/WEB-INF/spring/jsp/error/500.jsp" />
+		<put-list-attribute name="resourcesCss">
+			<add-attribute value="layout/error.css" />
+			<add-attribute value="design/error.css" />
+		</put-list-attribute>
+		<put-list-attribute name="resourcesJs">
+		</put-list-attribute>
+	</definition>
+
+	<definition name="message.security.details" extends="base.template">
+		<put-attribute name="body"
+			value="/WEB-INF/spring/jsp/securities/messageSecurityDetails.jsp" />
+		<put-list-attribute name="resourcesCss">
+			<add-attribute value="layout/error.css" />
+			<add-attribute value="design/error.css" />
+		</put-list-attribute>
+		<put-list-attribute name="resourcesJs">
+		</put-list-attribute>
+	</definition>
+
+	<definition name="message.security.original" extends="base.template">
+		<put-attribute name="body"
+			value="/WEB-INF/spring/jsp/securities/messageSecurityOriginalPopUp.jsp" />
+		<put-list-attribute name="resourcesCss">
+			<add-attribute value="layout/error.css" />
+			<add-attribute value="design/error.css" />
+		</put-list-attribute>
+		<put-list-attribute name="resourcesJs">
+		</put-list-attribute>
+	</definition>
+
+	<definition name="admin.normalization.load" extends="base.template">
+		<put-attribute name="body"
+			value="/WEB-INF/spring/jsp/admin/normalizationConfig.jsp" />
+		<put-list-attribute name="resourcesCss">
+			<add-attribute value="layout/error.css" />
+			<add-attribute value="design/error.css" />
+		</put-list-attribute>
+		<put-list-attribute name="resourcesJs">
+		</put-list-attribute>
+	</definition>
+
+</tiles-definitions>

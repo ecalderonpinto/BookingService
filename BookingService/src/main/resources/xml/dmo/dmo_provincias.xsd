@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dmo="http://www.sepblac.es/DMO" targetNamespace="http://www.sepblac.es/DMO">
+	<xs:include schemaLocation="dmo_municipios.xsd" id="municipios"/>
+	<xs:simpleType name="PROV_ENUM">
+		<xs:annotation>
+			<xs:documentation>Nombres y codigos de provincia</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="33"/>
+			<xs:enumeration value="5"/>
+			<xs:enumeration value="6"/>
+			<xs:enumeration value="7"/>
+			<xs:enumeration value="8"/>
+			<xs:enumeration value="9"/>
+			<xs:enumeration value="10"/>
+			<xs:enumeration value="11"/>
+			<xs:enumeration value="39"/>
+			<xs:enumeration value="12"/>
+			<xs:enumeration value="51"/>
+			<xs:enumeration value="13"/>
+			<xs:enumeration value="14"/>
+			<xs:enumeration value="15"/>
+			<xs:enumeration value="16"/>
+			<xs:enumeration value="17"/>
+			<xs:enumeration value="18"/>
+			<xs:enumeration value="19"/>
+			<xs:enumeration value="20"/>
+			<xs:enumeration value="21"/>
+			<xs:enumeration value="22"/>
+			<xs:enumeration value="23"/>
+			<xs:enumeration value="24"/>
+			<xs:enumeration value="25"/>
+			<xs:enumeration value="27"/>
+			<xs:enumeration value="28"/>
+			<xs:enumeration value="29"/>
+			<xs:enumeration value="52"/>
+			<xs:enumeration value="30"/>
+			<xs:enumeration value="31"/>
+			<xs:enumeration value="32"/>
+			<xs:enumeration value="34"/>
+			<xs:enumeration value="35"/>
+			<xs:enumeration value="36"/>
+			<xs:enumeration value="26"/>
+			<xs:enumeration value="37"/>
+			<xs:enumeration value="38"/>
+			<xs:enumeration value="40"/>
+			<xs:enumeration value="41"/>
+			<xs:enumeration value="42"/>
+			<xs:enumeration value="43"/>
+			<xs:enumeration value="44"/>
+			<xs:enumeration value="45"/>
+			<xs:enumeration value="46"/>
+			<xs:enumeration value="47"/>
+			<xs:enumeration value="48"/>
+			<xs:enumeration value="49"/>
+			<xs:enumeration value="50"/>
+			<!--<xs:maxLength value="45"/>-->
+			<!--<xs:enumeration value="1-Alava"/>
+			<xs:enumeration value="2-Albacete"/>
+			<xs:enumeration value="3-Alicante/Alacant"/>
+			<xs:enumeration value="4-Almería"/>
+			<xs:enumeration value="33-Asturias"/>
+			<xs:enumeration value="5-Avila"/>
+			<xs:enumeration value="6-Badajoz"/>
+			<xs:enumeration value="7-Balears (Illes)"/>
+			<xs:enumeration value="8-Barcelona"/>
+			<xs:enumeration value="9-Burgos"/>
+			<xs:enumeration value="10-Cáceres"/>
+			<xs:enumeration value="11-Cádiz"/>
+			<xs:enumeration value="39-Cantabria"/>
+			<xs:enumeration value="12-Castellón/Castelló"/>
+			<xs:enumeration value="51-Ceuta"/>
+			<xs:enumeration value="13-Ciudad Real"/>
+			<xs:enumeration value="14-Córdoba"/>
+			<xs:enumeration value="15-Coruña (A)"/>
+			<xs:enumeration value="16-Cuenca"/>
+			<xs:enumeration value="17-Girona"/>
+			<xs:enumeration value="18-Granada"/>
+			<xs:enumeration value="19-Guadalajara"/>
+			<xs:enumeration value="20-Guipúzcoa"/>
+			<xs:enumeration value="21-Huelva"/>
+			<xs:enumeration value="22-Huesca"/>
+			<xs:enumeration value="23-Jaén"/>
+			<xs:enumeration value="24-León"/>
+			<xs:enumeration value="25-Lleida"/>
+			<xs:enumeration value="27-Lugo"/>
+			<xs:enumeration value="28-Madrid"/>
+			<xs:enumeration value="29-Málaga"/>
+			<xs:enumeration value="52-Melilla"/>
+			<xs:enumeration value="30-Murcia"/>
+			<xs:enumeration value="31-Navarra"/>
+			<xs:enumeration value="32-Ourense"/>
+			<xs:enumeration value="34-Palencia"/>
+			<xs:enumeration value="35-Palmas (Las)"/>
+			<xs:enumeration value="36-Pontevedra"/>
+			<xs:enumeration value="26-Rioja (La)"/>
+			<xs:enumeration value="37-Salamanca"/>
+			<xs:enumeration value="38-Santa Cruz de Tenerife"/>
+			<xs:enumeration value="40-Segovia"/>
+			<xs:enumeration value="41-Sevilla"/>
+			<xs:enumeration value="42-Soria"/>
+			<xs:enumeration value="43-Tarragona"/>
+			<xs:enumeration value="44-Teruel"/>
+			<xs:enumeration value="45-Toledo"/>
+			<xs:enumeration value="46-Valencia/Valencia"/>
+			<xs:enumeration value="47-Valladolid"/>
+			<xs:enumeration value="48-Vizcaya"/>
+			<xs:enumeration value="49-Zamora"/>
+			<xs:enumeration value="50-Zaragoza"/>-->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="PROVINCIAS">
+		<xs:annotation>
+			<xs:documentation>Coleccion que relaciona las provincias con los municipios</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="PROVINCIA1" type="dmo:PROV1"/>
+				<xs:element name="PROVINCIA2" type="dmo:PROV2"/>
+				<xs:element name="PROVINCIA3" type="dmo:PROV3"/>
+				<xs:element name="PROVINCIA4" type="dmo:PROV4"/>
+				<xs:element name="PROVINCIA5" type="dmo:PROV5"/>
+				<xs:element name="PROVINCIA6" type="dmo:PROV6"/>
+				<xs:element name="PROVINCIA7" type="dmo:PROV7"/>
+				<xs:element name="PROVINCIA8" type="dmo:PROV8"/>
+				<xs:element name="PROVINCIA9" type="dmo:PROV9"/>
+				<xs:element name="PROVINCIA10" type="dmo:PROV10"/>
+				<xs:element name="PROVINCIA11" type="dmo:PROV11"/>
+				<xs:element name="PROVINCIA12" type="dmo:PROV12"/>
+				<xs:element name="PROVINCIA13" type="dmo:PROV13"/>
+				<xs:element name="PROVINCIA14" type="dmo:PROV14"/>
+				<xs:element name="PROVINCIA15" type="dmo:PROV15"/>
+				<xs:element name="PROVINCIA16" type="dmo:PROV16"/>
+				<xs:element name="PROVINCIA17" type="dmo:PROV17"/>
+				<xs:element name="PROVINCIA18" type="dmo:PROV18"/>
+				<xs:element name="PROVINCIA19" type="dmo:PROV19"/>
+				<xs:element name="PROVINCIA20" type="dmo:PROV20"/>
+				<xs:element name="PROVINCIA21" type="dmo:PROV21"/>
+				<xs:element name="PROVINCIA22" type="dmo:PROV22"/>
+				<xs:element name="PROVINCIA23" type="dmo:PROV23"/>
+				<xs:element name="PROVINCIA24" type="dmo:PROV24"/>
+				<xs:element name="PROVINCIA25" type="dmo:PROV25"/>
+				<xs:element name="PROVINCIA26" type="dmo:PROV26"/>
+				<xs:element name="PROVINCIA27" type="dmo:PROV27"/>
+				<xs:element name="PROVINCIA28" type="dmo:PROV28"/>
+				<xs:element name="PROVINCIA29" type="dmo:PROV29"/>
+				<xs:element name="PROVINCIA30" type="dmo:PROV30"/>
+				<xs:element name="PROVINCIA31" type="dmo:PROV31"/>
+				<xs:element name="PROVINCIA32" type="dmo:PROV32"/>
+				<xs:element name="PROVINCIA33" type="dmo:PROV33"/>
+				<xs:element name="PROVINCIA34" type="dmo:PROV34"/>
+				<xs:element name="PROVINCIA35" type="dmo:PROV35"/>
+				<xs:element name="PROVINCIA36" type="dmo:PROV36"/>
+				<xs:element name="PROVINCIA37" type="dmo:PROV37"/>
+				<xs:element name="PROVINCIA38" type="dmo:PROV38"/>
+				<xs:element name="PROVINCIA39" type="dmo:PROV39"/>
+				<xs:element name="PROVINCIA40" type="dmo:PROV40"/>
+				<xs:element name="PROVINCIA41" type="dmo:PROV41"/>
+				<xs:element name="PROVINCIA42" type="dmo:PROV42"/>
+				<xs:element name="PROVINCIA43" type="dmo:PROV43"/>
+				<xs:element name="PROVINCIA44" type="dmo:PROV44"/>
+				<xs:element name="PROVINCIA45" type="dmo:PROV45"/>
+				<xs:element name="PROVINCIA46" type="dmo:PROV46"/>
+				<xs:element name="PROVINCIA47" type="dmo:PROV47"/>
+				<xs:element name="PROVINCIA48" type="dmo:PROV48"/>
+				<xs:element name="PROVINCIA49" type="dmo:PROV49"/>
+				<xs:element name="PROVINCIA50" type="dmo:PROV50"/>
+				<xs:element name="PROVINCIA51" type="dmo:PROV51"/>
+				<xs:element name="PROVINCIA52" type="dmo:PROV52"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="PROV1">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 1 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="1"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV2">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 2 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="2"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP2"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV3">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 3 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="3"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP3"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV4">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 4 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="4"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP4"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV5">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 5 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="5"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP5"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV6">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 6 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="6"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP6"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV7">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 7 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="7"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP7"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV8">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 8 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="8"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP8"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV9">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 9 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="9"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP9"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV10">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 10 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="10"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP10"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV11">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 11 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="11"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP11"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV12">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 12 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="12"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP12"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV13">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 13 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="13"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP13"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV14">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 14 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="14"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP14"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV15">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 15 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="15"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP15"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV16">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 16 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="16"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP16"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV17">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 17 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="17"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP17"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV18">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 18 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="18"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP18"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV19">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 19 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="19"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP19"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV20">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 20 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="20"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP20"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV21">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 21 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="21"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP21"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV22">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 22 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="22"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP22"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV23">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 23 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="23"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP23"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV24">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 24 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="24"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP24"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV25">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 25 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="25"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP25"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV26">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 26 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="26"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP26"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV27">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 27 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="27"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP27"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV28">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 28 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="28"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP28"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV29">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 29 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="29"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP29"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV30">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 30 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="30"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP30"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV31">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 31 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="31"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP31"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV32">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 32 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="32"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP32"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV33">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 33 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="33"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP33"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV34">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 34 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="34"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP34"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV35">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 35 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="35"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP35"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV36">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 36 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="36"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP36"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV37">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 37 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="37"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP37"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV38">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 38 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="38"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP38"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV39">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 39 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="39"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP39"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV40">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 40 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="40"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP40"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV41">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 40 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="41"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP41"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV42">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 41 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="42"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP42"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV43">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 42 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="43"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP43"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV44">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 43 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="44"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP44"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV45">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 44 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="45"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP45"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV46">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 45 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="46"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP46"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV47">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 46 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="47"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP47"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV48">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 47 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="48"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP48"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV49">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 48 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="49"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP49"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV50">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 49 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="50"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP50"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV51">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 50 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="51"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP51"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PROV52">
+		<xs:annotation>
+			<xs:documentation>Tipo de dato Provincia 51 (provincia + coleccion de municipios)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CDPROVINCIA" type="dmo:PROV_ENUM" fixed="52"/>
+			<xs:element name="MUNICIPIOS" type="dmo:DSMUNICIP52"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

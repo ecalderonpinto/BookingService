@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp1 U (http://www.xmlspy.com) by any (Ru-Board) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dmo="http://www.sepblac.es/DMO" targetNamespace="http://www.sepblac.es/DMO">
+	<xs:simpleType name="PAIS_ENUM">
+		<xs:annotation>
+			<xs:documentation>Nombres y codigos de paises</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="3"/>
+			<xs:enumeration value="724"/>
+			<xs:enumeration value="004"/>
+			<xs:enumeration value="008"/>
+			<xs:enumeration value="958"/>
+			<xs:enumeration value="020"/>
+			<xs:enumeration value="024"/>
+			<xs:enumeration value="660"/>
+			<xs:enumeration value="010"/>
+			<xs:enumeration value="028"/>
+			<xs:enumeration value="530"/>
+			<xs:enumeration value="956"/>
+			<xs:enumeration value="682"/>
+			<xs:enumeration value="012"/>
+			<xs:enumeration value="032"/>
+			<xs:enumeration value="051"/>
+			<xs:enumeration value="533"/>
+			<xs:enumeration value="036"/>
+			<xs:enumeration value="040"/>
+			<xs:enumeration value="031"/>
+			<xs:enumeration value="044"/>
+			<xs:enumeration value="048"/>
+			<xs:enumeration value="050"/>
+			<xs:enumeration value="052"/>
+			<xs:enumeration value="056"/>
+			<xs:enumeration value="084"/>
+			<xs:enumeration value="204"/>
+			<xs:enumeration value="060"/>
+			<xs:enumeration value="112"/>
+			<xs:enumeration value="068"/>
+			<xs:enumeration value="070"/>
+			<xs:enumeration value="072"/>
+			<xs:enumeration value="074"/>
+			<xs:enumeration value="076"/>
+			<xs:enumeration value="096"/>
+			<xs:enumeration value="100"/>
+			<xs:enumeration value="854"/>
+			<xs:enumeration value="108"/>
+			<xs:enumeration value="064"/>
+			<xs:enumeration value="132"/>
+			<xs:enumeration value="136"/>
+			<xs:enumeration value="116"/>
+			<xs:enumeration value="120"/>
+			<xs:enumeration value="124"/>
+			<xs:enumeration value="148"/>
+			<xs:enumeration value="200"/>
+			<xs:enumeration value="152"/>
+			<xs:enumeration value="156"/>
+			<xs:enumeration value="196"/>
+			<xs:enumeration value="162"/>
+			<xs:enumeration value="975"/>
+			<xs:enumeration value="166"/>
+			<xs:enumeration value="170"/>
+			<xs:enumeration value="174"/>
+			<xs:enumeration value="178"/>
+			<xs:enumeration value="184"/>
+			<xs:enumeration value="408"/>
+			<xs:enumeration value="410"/>
+			<xs:enumeration value="384"/>
+			<xs:enumeration value="188"/>
+			<xs:enumeration value="191"/>
+			<xs:enumeration value="192"/>
+			<xs:enumeration value="208"/>
+			<xs:enumeration value="262"/>
+			<xs:enumeration value="212"/>
+			<xs:enumeration value="218"/>
+			<xs:enumeration value="818"/>
+			<xs:enumeration value="784"/>
+			<xs:enumeration value="232"/>
+			<xs:enumeration value="703"/>
+			<xs:enumeration value="705"/>
+			<xs:enumeration value="840"/>
+			<xs:enumeration value="233"/>
+			<xs:enumeration value="231"/>
+			<xs:enumeration value="643"/>
+			<xs:enumeration value="234"/>
+			<xs:enumeration value="242"/>
+			<xs:enumeration value="608"/>
+			<xs:enumeration value="246"/>
+			<xs:enumeration value="250"/>
+			<xs:enumeration value="266"/>
+			<xs:enumeration value="270"/>
+			<xs:enumeration value="274"/>
+			<xs:enumeration value="268"/>
+			<xs:enumeration value="288"/>
+			<xs:enumeration value="292"/>
+			<xs:enumeration value="308"/>
+			<xs:enumeration value="300"/>
+			<xs:enumeration value="304"/>
+			<xs:enumeration value="312"/>
+			<xs:enumeration value="316"/>
+			<xs:enumeration value="320"/>
+			<xs:enumeration value="971"/>
+			<xs:enumeration value="324"/>
+			<xs:enumeration value="226"/>
+			<xs:enumeration value="624"/>
+			<xs:enumeration value="328"/>
+			<xs:enumeration value="254"/>
+			<xs:enumeration value="332"/>
+			<xs:enumeration value="334"/>
+			<xs:enumeration value="340"/>
+			<xs:enumeration value="344"/>
+			<xs:enumeration value="348"/>
+			<xs:enumeration value="356"/>
+			<xs:enumeration value="360"/>
+			<xs:enumeration value="364"/>
+			<xs:enumeration value="368"/>
+			<xs:enumeration value="372"/>
+			<xs:enumeration value="965"/>
+			<xs:enumeration value="352"/>
+			<xs:enumeration value="964"/>
+			<xs:enumeration value="239"/>
+			<xs:enumeration value="581"/>
+			<xs:enumeration value="376"/>
+			<xs:enumeration value="380"/>
+			<xs:enumeration value="388"/>
+			<xs:enumeration value="392"/>
+			<xs:enumeration value="972"/>
+			<xs:enumeration value="400"/>
+			<xs:enumeration value="398"/>
+			<xs:enumeration value="404"/>
+			<xs:enumeration value="417"/>
+			<xs:enumeration value="296"/>
+			<xs:enumeration value="414"/>
+			<xs:enumeration value="418"/>
+			<xs:enumeration value="426"/>
+			<xs:enumeration value="428"/>
+			<xs:enumeration value="422"/>
+			<xs:enumeration value="430"/>
+			<xs:enumeration value="434"/>
+			<xs:enumeration value="438"/>
+			<xs:enumeration value="440"/>
+			<xs:enumeration value="442"/>
+			<xs:enumeration value="446"/>
+			<xs:enumeration value="807"/>
+			<xs:enumeration value="450"/>
+			<xs:enumeration value="458"/>
+			<xs:enumeration value="454"/>
+			<xs:enumeration value="462"/>
+			<xs:enumeration value="466"/>
+			<xs:enumeration value="470"/>
+			<xs:enumeration value="238"/>
+			<xs:enumeration value="580"/>
+			<xs:enumeration value="504"/>
+			<xs:enumeration value="584"/>
+			<xs:enumeration value="474"/>
+			<xs:enumeration value="480"/>
+			<xs:enumeration value="478"/>
+			<xs:enumeration value="175"/>
+			<xs:enumeration value="484"/>
+			<xs:enumeration value="583"/>
+			<xs:enumeration value="498"/>
+			<xs:enumeration value="492"/>
+			<xs:enumeration value="496"/>
+			<xs:enumeration value="500"/>
+			<xs:enumeration value="508"/>
+			<xs:enumeration value="104"/>
+			<xs:enumeration value="516"/>
+			<xs:enumeration value="520"/>
+			<xs:enumeration value="524"/>
+			<xs:enumeration value="558"/>
+			<xs:enumeration value="562"/>
+			<xs:enumeration value="566"/>
+			<xs:enumeration value="570"/>
+			<xs:enumeration value="574"/>
+			<xs:enumeration value="578"/>
+			<xs:enumeration value="540"/>
+			<xs:enumeration value="554"/>
+			<xs:enumeration value="946"/>
+			<xs:enumeration value="938"/>
+			<xs:enumeration value="942"/>
+			<xs:enumeration value="512"/>
+			<xs:enumeration value="528"/>
+			<xs:enumeration value="586"/>
+			<xs:enumeration value="585"/>
+			<xs:enumeration value="973"/>
+			<xs:enumeration value="275"/>
+			<xs:enumeration value="591"/>
+			<xs:enumeration value="598"/>
+			<xs:enumeration value="600"/>
+			<xs:enumeration value="604"/>
+			<xs:enumeration value="612"/>
+			<xs:enumeration value="258"/>
+			<xs:enumeration value="616"/>
+			<xs:enumeration value="620"/>
+			<xs:enumeration value="630"/>
+			<xs:enumeration value="634"/>
+			<xs:enumeration value="954"/>
+			<xs:enumeration value="826"/>
+			<xs:enumeration value="140"/>
+			<xs:enumeration value="203"/>
+			<xs:enumeration value="180"/>
+			<xs:enumeration value="214"/>
+			<xs:enumeration value="276"/>
+			<xs:enumeration value="710"/>
+			<xs:enumeration value="638"/>
+			<xs:enumeration value="646"/>
+			<xs:enumeration value="642"/>
+			<xs:enumeration value="732"/>
+			<xs:enumeration value="090"/>
+			<xs:enumeration value="222"/>
+			<xs:enumeration value="882"/>
+			<xs:enumeration value="016"/>
+			<xs:enumeration value="659"/>
+			<xs:enumeration value="674"/>
+			<xs:enumeration value="666"/>
+			<xs:enumeration value="670"/>
+			<xs:enumeration value="654"/>
+			<xs:enumeration value="662"/>
+			<xs:enumeration value="336"/>
+			<xs:enumeration value="678"/>
+			<xs:enumeration value="686"/>
+			<xs:enumeration value="967"/>
+			<xs:enumeration value="690"/>
+			<xs:enumeration value="694"/>
+			<xs:enumeration value="702"/>
+			<xs:enumeration value="760"/>
+			<xs:enumeration value="706"/>
+			<xs:enumeration value="144"/>
+			<xs:enumeration value="736"/>
+			<xs:enumeration value="752"/>
+			<xs:enumeration value="756"/>
+			<xs:enumeration value="740"/>
+			<xs:enumeration value="744"/>
+			<xs:enumeration value="748"/>
+			<xs:enumeration value="158"/>
+			<xs:enumeration value="834"/>
+			<xs:enumeration value="762"/>
+			<xs:enumeration value="086"/>
+			<xs:enumeration value="260"/>
+			<xs:enumeration value="764"/>
+			<xs:enumeration value="626"/>
+			<xs:enumeration value="768"/>
+			<xs:enumeration value="772"/>
+			<xs:enumeration value="776"/>
+			<xs:enumeration value="780"/>
+			<xs:enumeration value="788"/>
+			<xs:enumeration value="796"/>
+			<xs:enumeration value="795"/>
+			<xs:enumeration value="792"/>
+			<xs:enumeration value="798"/>
+			<xs:enumeration value="804"/>
+			<xs:enumeration value="800"/>
+			<xs:enumeration value="810"/>
+			<xs:enumeration value="858"/>
+			<xs:enumeration value="860"/>
+			<xs:enumeration value="548"/>
+			<xs:enumeration value="862"/>
+			<xs:enumeration value="704"/>
+			<xs:enumeration value="850"/>
+			<xs:enumeration value="092"/>
+			<xs:enumeration value="876"/>
+			<xs:enumeration value="887"/>
+			<xs:enumeration value="891"/>
+			<xs:enumeration value="929"/>
+			<xs:enumeration value="894"/>
+			<xs:enumeration value="716"/>
+			<!--<xs:maxLength value="43"/>-->
+			<!-- "724-España"/>
+			"004-Afganistan"/>
+			"008-Albania"/>
+			"958-Alemania"/>
+			"020-Andorra"/>
+			"024-Angola"/>
+			"660-Anguilla"/>
+			"010-Antartida"/>
+			"028-Antigua y Barbuda"/>
+			"530-Antillas Neerlandesas"/>
+			"956-Ant.Repub. Yugoslava Macedonia"/>
+			"682-Arabia Saudita"/>
+			"012-Argelia"/>
+			"032-Argentina"/>
+			"051-Armenia"/>
+			"533-Aruba"/>
+			"036-Australia"/>
+			"040-Austria"/>
+			"031-Azerbaiyan"/>
+			"044-Bahamas"/>
+			"048-Bahrein"/>
+			"050-Bangladesh"/>
+			"052-Barbados"/>
+			"056-Belgica"/>
+			"084-Belice"/>
+			"204-Benin"/>
+			"060-Bermudas"/>
+			"112-Bielorrusia"/>
+			"068-Bolivia"/>
+			"070-Bosnia-Herzegovina"/>
+			"072-Botswana"/>
+			"074-Bouvet,Isla"/>
+			"076-Brasil"/>
+			"096-Brunei"/>
+			"100-Bulgaria"/>
+			"854-Burkina-Faso"/>
+			"108-Burundi"/>
+			"064-Butan"/>
+			"132-Cabo Verde,Republica De"/>
+			"136-Caiman,Islas"/>
+			"116-Camboya"/>
+			"120-Camerun"/>
+			"124-Canada"/>
+			"148-Chad"/>
+			"200-Checoslovaquia"/>
+			"152-Chile"/>
+			"156-China"/>
+			"196-Chipre"/>
+			"162-Christmas,Isla"/>
+			"975-Cisjordania/Franja De Gaza"/>
+			"166-Cocos,Islas"/>
+			"170-Colombia"/>
+			"174-Comores"/>
+			"178-Congo"/>
+			"184-Cook,Islas"/>
+			"408-Corea Del Norte"/>
+			"410-Corea Del Sur"/>
+			"384-Costa De Marfil"/>
+			"188-Costa Rica"/>
+			"191-Croacia"/>
+			"192-Cuba"/>
+			"208-Dinamarca"/>
+			"262-Djibouti"/>
+			"212-Dominica"/>
+			"218-Ecuador"/>
+			"818-Egipto"/>
+			"784-Emiratos Arabes Unidos"/>
+			"232-Eritrea"/>
+			"703-Eslovaquia"/>
+			"705-Eslovenia"/>
+			"840-Estados Unidos De America"/>
+			"233-Estonia"/>
+			"231-Etiopia"/>
+			"643-Federacion Rusa"/>
+			"234-Feroe,Islas"/>
+			"242-Fiji"/>
+			"608-Filipinas"/>
+			"246-Finlandia"/>
+			"250-Francia"/>
+			"266-Gabon"/>
+			"270-Gambia"/>
+			"274-Gaza Y Jerico"/>
+			"268-Georgia"/>
+			"288-Ghana"/>
+			"292-Gibraltar"/>
+			"308-Granada(Inc.Granadinas Sur)"/>
+			"300-Grecia"/>
+			"304-Groenlandia"/>
+			"312-Guadalupe"/>
+			"316-Guam"/>
+			"320-Guatemala"/>
+			"971-Guernsey"/>
+			"324-Guinea"/>
+			"226-Guinea Ecuatorial"/>
+			"624-Guinea-Bissau"/>
+			"328-Guyana"/>
+			"254-Guyana Francesa"/>
+			"332-Haiti"/>
+			"334-Heard Y Mcdonald,Islas"/>
+			"340-Honduras"/>
+			"344-Hong-Kong"/>
+			"348-Hungria"/>
+			"356-India"/>
+			"360-Indonesia"/>
+			"364-Iran"/>
+			"368-Iraq"/>
+			"372-Irlanda"/>
+			"965-Isla De Man"/>
+			"352-Islandia"/>
+			"964-Islas Anglonormandas"/>
+			"239-Islas Sur Georgia Y Sandwich"/>
+			"581-Is.Menores Alejadas Est.Unidos"/>
+			"376-Israel"/>
+			"380-Italia"/>
+			"388-Jamaica"/>
+			"392-Japon"/>
+			"972-Jersey"/>
+			"400-Jordania"/>
+			"398-Kazajistan"/>
+			"404-Kenia"/>
+			"417-Kirguizistan"/>
+			"296-Kiribati"/>
+			"414-Kuwait"/>
+			"418-Laos"/>
+			"426-Lesotho"/>
+			"428-Letonia"/>
+			"422-Libano"/>
+			"430-Liberia"/>
+			"434-Libia"/>
+			"438-Liechtenstein"/>
+			"440-Lituania"/>
+			"442-Luxemburgo"/>
+			"446-Macao"/>
+			"807-Macedonia"/>
+			"450-Madagascar"/>
+			"458-Malasia"/>
+			"454-Malawi"/>
+			"462-Maldivas,Islas"/>
+			"466-Mali"/>
+			"470-Malta"/>
+			"238-Malvinas,Islas"/>
+			"580-Marianas Del Norte,Islas"/>
+			"504-Marruecos"/>
+			"584-Marshall,Islas"/>
+			"474-Martinica"/>
+			"480-Mauricio"/>
+			"478-Mauritania"/>
+			"175-Mayotte"/>
+			"484-Mejico"/>
+			"583-Micronesia"/>
+			"498-Moldavia"/>
+			"492-Monaco"/>
+			"496-Mongolia"/>
+			"500-Montserrat"/>
+			"508-Mozambique"/>
+			"104-Myanmar"/>
+			"516-Namibia"/>
+			"520-Nauru"/>
+			"524-Nepal"/>
+			"558-Nicaragua"/>
+			"562-Niger"/>
+			"566-Nigeria"/>
+			"570-Niue"/>
+			"574-Norfolk,Isla"/>
+			"578-Noruega"/>
+			"540-Nueva Caledonia"/>
+			"554-Nueva Zelanda"/>
+			"946-Oceania Americana"/>
+			"938-Oceania Australiana"/>
+			"942-Oceania Neo-Zelandesa"/>
+			"512-Oman"/>
+			"528-Paises Bajos"/>
+			"586-Pakistan"/>
+			"585-Palau"/>
+			"973-Palestina, Autonomia"/>
+			"275-Palestina, Territorios Ocupad."/>
+			"591-Panama"/>
+			"598-Papua-Nueva Guinea"/>
+			"600-Paraguay"/>
+			"604-Peru"/>
+			"612-Pitcairn,Islas"/>
+			"258-Polinesia Francesa"/>
+			"616-Polonia"/>
+			"620-Portugal"/>
+			"630-Puerto Rico"/>
+			"634-Qatar"/>
+			"954-Regiones Polares"/>
+			"826-Reino Unido"/>
+			"140-Republica Centroafricana"/>
+			"203-Republica Checa"/>
+			"180-Republica Democrat. Congo"/>
+			"214-Republica Dominicana"/>
+			"276-Republica Federal De Alemania"/>
+			"710-Republica Sudafricana"/>
+			"638-Reunion"/>
+			"646-Ruanda"/>
+			"642-Rumania"/>
+			"732-Sahara Occidental"/>
+			"090-Salomon,Islas"/>
+			"222-Salvador,El"/>
+			"882-Samoa"/>
+			"016-Samoa Americana"/>
+			"659-San Cristobal Y Nevis"/>
+			"674-San Marino"/>
+			"666-San Pedro Y Miquelon"/>
+			"670-San Vicente Y Granadinas Norte"/>
+			"654-Santa Elena Y Dependencias"/>
+			"662-Santa Lucia"/>
+			"336-Santa Sede (Est.Ciud.Vaticano)"/>
+			"678-Santo Tome Y Principe"/>
+			"686-Senegal"/>
+			"967-Serbia Y Montenegro"/>
+			"690-Seychelles"/>
+			"694-Sierra Leona"/>
+			"702-Singapur"/>
+			"760-Siria"/>
+			"706-Somalia"/>
+			"144-Sri Lanka"/>
+			"736-Sudan"/>
+			"752-Suecia"/>
+			"756-Suiza"/>
+			"740-Surinam"/>
+			"744-Svalbard Y Jan Mayen,Islas"/>
+			"748-Swaziland"/>
+			"158-Taiwan"/>
+			"834-Tanzania"/>
+			"762-Tayikistan"/>
+			"086-Terr.Britanico Oceano Indico"/>
+			"260-Territorios Franceses Del Sur"/>
+			"764-Thailandia"/>
+			"626-Timor Oriental"/>
+			"768-Togo"/>
+			"772-Tokelau"/>
+			"776-Tonga"/>
+			"780-Trinidad Y Tobago"/>
+			"788-Tunez"/>
+			"796-Turcas Y Caicos, Islas"/>
+			"795-Turkmenistan"/>
+			"792-Turquia"/>
+			"798-Tuvalu"/>
+			"804-Ucrania"/>
+			"800-Uganda"/>
+			"810-Union Sovietica"/>
+			"858-Uruguay"/>
+			"860-Uzbekistan"/>
+			"548-Vanuatu"/>
+			"862-Venezuela"/>
+			"704-Vietnam"/>
+			"850-Virgenes Americanas,Islas"/>
+			"092-Virgenes Britanicas,Islas"/>
+			"876-Wallis Y Futuna,Islas"/>
+			"887-Yemen"/>
+			"891-Yugoslavia"/>
+			"929-Zaire, Republica De"/>
+			"894-Zambia"/>
+			"716-Zimbabwe"/>-->
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
